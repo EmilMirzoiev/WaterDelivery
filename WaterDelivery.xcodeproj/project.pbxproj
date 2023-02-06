@@ -1,0 +1,1015 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		200950F829350D6A0081D290 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200950F729350D6A0081D290 /* AppDelegate.swift */; };
+		200950FA29350D6A0081D290 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200950F929350D6A0081D290 /* SceneDelegate.swift */; };
+		200950FF29350D6A0081D290 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 200950FD29350D6A0081D290 /* Main.storyboard */; };
+		2009510129350D6C0081D290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2009510029350D6C0081D290 /* Assets.xcassets */; };
+		2009510429350D6C0081D290 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2009510229350D6C0081D290 /* LaunchScreen.storyboard */; };
+		2009510F29350D6D0081D290 /* WaterDeliveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009510E29350D6D0081D290 /* WaterDeliveryTests.swift */; };
+		2009511929350D6D0081D290 /* WaterDeliveryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009511829350D6D0081D290 /* WaterDeliveryUITests.swift */; };
+		2009511B29350D6D0081D290 /* WaterDeliveryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009511A29350D6D0081D290 /* WaterDeliveryUITestsLaunchTests.swift */; };
+		2016C79D2968166B006143E3 /* BasketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016C79C2968166B006143E3 /* BasketManager.swift */; };
+		2016C79F296816C4006143E3 /* BasketProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016C79E296816C4006143E3 /* BasketProduct.swift */; };
+		2016C7A72968A742006143E3 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016C7A62968A742006143E3 /* BasketViewController.swift */; };
+		2016C7BB2968B76F006143E3 /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016C7B92968B76F006143E3 /* BasketTableViewCell.swift */; };
+		2016C7BC2968B76F006143E3 /* BasketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2016C7BA2968B76F006143E3 /* BasketTableViewCell.xib */; };
+		20197767295DA1BF00E5EC10 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20197766295DA1BF00E5EC10 /* UserProfileViewController.swift */; };
+		202014B929606680003BD9F5 /* LoginWithPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202014B829606680003BD9F5 /* LoginWithPhoneViewController.swift */; };
+		203540382982C1D1005EE637 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203540372982C1D1005EE637 /* Double+Extension.swift */; };
+		2035403A2983DB24005EE637 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203540392983DB24005EE637 /* MapManager.swift */; };
+		20369DFE293615690050E8AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20369DFD293615690050E8AD /* User.swift */; };
+		20369E00293615820050E8AD /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20369DFF293615820050E8AD /* Address.swift */; };
+		203FC3122949033A00C4C4A4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203FC3112949033A00C4C4A4 /* SplashViewController.swift */; };
+		2040FB0B2970236800FD1D2E /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040FB0A2970236800FD1D2E /* PaymentViewController.swift */; };
+		20507B7329755D38009EBCC9 /* SellPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20507B7229755D38009EBCC9 /* SellPoint.swift */; };
+		20507B7529755FD5009EBCC9 /* Firestore+SellPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20507B7429755FD5009EBCC9 /* Firestore+SellPoints.swift */; };
+		205F067C2961BCF9005401BC /* PhoneSmsCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F067B2961BCF9005401BC /* PhoneSmsCodeViewController.swift */; };
+		205F067E2961ECCF005401BC /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F067D2961ECCF005401BC /* AuthManager.swift */; };
+		20667CED2951E8220001933B /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20667CEC2951E8220001933B /* ProductsViewController.swift */; };
+		20667CF82951FC240001933B /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20667CF62951FC240001933B /* ProductCollectionViewCell.swift */; };
+		20667CF92951FC240001933B /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20667CF72951FC240001933B /* ProductCollectionViewCell.xib */; };
+		2081DD6529562D340073D6FE /* EditUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2081DD6429562D340073D6FE /* EditUserProfileViewController.swift */; };
+		208C100129536DD400BE7316 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C100029536DD400BE7316 /* BaseViewController.swift */; };
+		2098CAA62947A04C00D08552 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2098CAA52947A04C00D08552 /* GoogleService-Info.plist */; };
+		20AB51CC29707078009C1B57 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB51CB29707078009C1B57 /* GoogleMapsViewController.swift */; };
+		20B3A98C296DB06A00C7C6D9 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A98B296DB06A00C7C6D9 /* StorageManager.swift */; };
+		20B3A98E296EF4D300C7C6D9 /* CreateUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A98D296EF4D300C7C6D9 /* CreateUserProfileViewController.swift */; };
+		20CB027F294A2C5F0005F2B5 /* Firestore+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB027E294A2C5E0005F2B5 /* Firestore+User.swift */; };
+		20CB0281294BAC260005F2B5 /* Firestore+Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB0280294BAC260005F2B5 /* Firestore+Products.swift */; };
+		20CB0283294BAC380005F2B5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB0282294BAC380005F2B5 /* Product.swift */; };
+		20DCFED72977160200D644D5 /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DCFED62977160200D644D5 /* MyOrdersViewController.swift */; };
+		20DCFED92977280500D644D5 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DCFED82977280500D644D5 /* Order.swift */; };
+		20DCFEDB2978095700D644D5 /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DCFEDA2978095700D644D5 /* OrderManager.swift */; };
+		20DCFEDF29780C9100D644D5 /* MyOrdersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DCFEDD29780C9100D644D5 /* MyOrdersTableViewCell.swift */; };
+		20DCFEE029780C9100D644D5 /* MyOrdersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20DCFEDE29780C9100D644D5 /* MyOrdersTableViewCell.xib */; };
+		20F17D45297E981F0071F59C /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F17D44297E981F0071F59C /* OrderDetailsViewController.swift */; };
+		46A0A66493DA8ACF430FFF5E /* Pods_WaterDelivery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B8AA3DF0B9E28943D34504 /* Pods_WaterDelivery.framework */; };
+		C5F6218E1093F738E70A0F6B /* Pods_WaterDelivery_WaterDeliveryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3878374CA1C3AEA08D412F1A /* Pods_WaterDelivery_WaterDeliveryUITests.framework */; };
+		D42A51B4B05B57822E96E675 /* Pods_WaterDeliveryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA53CB0977340FDC6E9A5337 /* Pods_WaterDeliveryTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2009510B29350D6D0081D290 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 200950EC29350D6A0081D290 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 200950F329350D6A0081D290;
+			remoteInfo = WaterDelivery;
+		};
+		2009511529350D6D0081D290 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 200950EC29350D6A0081D290 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 200950F329350D6A0081D290;
+			remoteInfo = WaterDelivery;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0102132AC8BE6ED943F2871E /* Pods-WaterDeliveryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDeliveryTests.release.xcconfig"; path = "Target Support Files/Pods-WaterDeliveryTests/Pods-WaterDeliveryTests.release.xcconfig"; sourceTree = "<group>"; };
+		05B8AA3DF0B9E28943D34504 /* Pods_WaterDelivery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterDelivery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		200950F429350D6A0081D290 /* WaterDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		200950F729350D6A0081D290 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		200950F929350D6A0081D290 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		200950FE29350D6A0081D290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2009510029350D6C0081D290 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2009510329350D6C0081D290 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2009510529350D6C0081D290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2009510A29350D6D0081D290 /* WaterDeliveryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterDeliveryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2009510E29350D6D0081D290 /* WaterDeliveryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDeliveryTests.swift; sourceTree = "<group>"; };
+		2009511429350D6D0081D290 /* WaterDeliveryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterDeliveryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2009511829350D6D0081D290 /* WaterDeliveryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDeliveryUITests.swift; sourceTree = "<group>"; };
+		2009511A29350D6D0081D290 /* WaterDeliveryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDeliveryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2016C79C2968166B006143E3 /* BasketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketManager.swift; sourceTree = "<group>"; };
+		2016C79E296816C4006143E3 /* BasketProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProduct.swift; sourceTree = "<group>"; };
+		2016C7A62968A742006143E3 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		2016C7B92968B76F006143E3 /* BasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
+		2016C7BA2968B76F006143E3 /* BasketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketTableViewCell.xib; sourceTree = "<group>"; };
+		20197766295DA1BF00E5EC10 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		202014B829606680003BD9F5 /* LoginWithPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithPhoneViewController.swift; sourceTree = "<group>"; };
+		203540372982C1D1005EE637 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		203540392983DB24005EE637 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		20369DFD293615690050E8AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		20369DFF293615820050E8AD /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		203FC3112949033A00C4C4A4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		2040FB0A2970236800FD1D2E /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		20507B7229755D38009EBCC9 /* SellPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellPoint.swift; sourceTree = "<group>"; };
+		20507B7429755FD5009EBCC9 /* Firestore+SellPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+SellPoints.swift"; sourceTree = "<group>"; };
+		205F067B2961BCF9005401BC /* PhoneSmsCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSmsCodeViewController.swift; sourceTree = "<group>"; };
+		205F067D2961ECCF005401BC /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		20667CEC2951E8220001933B /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		20667CF62951FC240001933B /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		20667CF72951FC240001933B /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		2081DD6429562D340073D6FE /* EditUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserProfileViewController.swift; sourceTree = "<group>"; };
+		208C100029536DD400BE7316 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2098CAA52947A04C00D08552 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		20AB51CB29707078009C1B57 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
+		20B3A98B296DB06A00C7C6D9 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		20B3A98D296EF4D300C7C6D9 /* CreateUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserProfileViewController.swift; sourceTree = "<group>"; };
+		20CB027E294A2C5E0005F2B5 /* Firestore+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+User.swift"; sourceTree = "<group>"; };
+		20CB0280294BAC260005F2B5 /* Firestore+Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+Products.swift"; sourceTree = "<group>"; };
+		20CB0282294BAC380005F2B5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		20DCFED62977160200D644D5 /* MyOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersViewController.swift; sourceTree = "<group>"; };
+		20DCFED82977280500D644D5 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		20DCFEDA2978095700D644D5 /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
+		20DCFEDD29780C9100D644D5 /* MyOrdersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersTableViewCell.swift; sourceTree = "<group>"; };
+		20DCFEDE29780C9100D644D5 /* MyOrdersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyOrdersTableViewCell.xib; sourceTree = "<group>"; };
+		20F17D44297E981F0071F59C /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		263E29DA281F89B4B9473E9B /* Pods-WaterDelivery-WaterDeliveryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDelivery-WaterDeliveryUITests.debug.xcconfig"; path = "Target Support Files/Pods-WaterDelivery-WaterDeliveryUITests/Pods-WaterDelivery-WaterDeliveryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2BE2913195A53FCDA7413C87 /* Pods-WaterDelivery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDelivery.release.xcconfig"; path = "Target Support Files/Pods-WaterDelivery/Pods-WaterDelivery.release.xcconfig"; sourceTree = "<group>"; };
+		3878374CA1C3AEA08D412F1A /* Pods_WaterDelivery_WaterDeliveryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterDelivery_WaterDeliveryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98176251DE117A1EABD017C8 /* Pods-WaterDelivery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDelivery.debug.xcconfig"; path = "Target Support Files/Pods-WaterDelivery/Pods-WaterDelivery.debug.xcconfig"; sourceTree = "<group>"; };
+		AEF50E47F9D8EB7B3348C659 /* Pods-WaterDeliveryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDeliveryTests.debug.xcconfig"; path = "Target Support Files/Pods-WaterDeliveryTests/Pods-WaterDeliveryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA53CB0977340FDC6E9A5337 /* Pods_WaterDeliveryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterDeliveryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3CF706B09DEDA2FBE730F1C /* Pods-WaterDelivery-WaterDeliveryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterDelivery-WaterDeliveryUITests.release.xcconfig"; path = "Target Support Files/Pods-WaterDelivery-WaterDeliveryUITests/Pods-WaterDelivery-WaterDeliveryUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		200950F129350D6A0081D290 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46A0A66493DA8ACF430FFF5E /* Pods_WaterDelivery.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2009510729350D6D0081D290 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D42A51B4B05B57822E96E675 /* Pods_WaterDeliveryTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2009511129350D6D0081D290 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5F6218E1093F738E70A0F6B /* Pods_WaterDelivery_WaterDeliveryUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		200950EB29350D6A0081D290 = {
+			isa = PBXGroup;
+			children = (
+				200950F629350D6A0081D290 /* WaterDelivery */,
+				2009510D29350D6D0081D290 /* WaterDeliveryTests */,
+				2009511729350D6D0081D290 /* WaterDeliveryUITests */,
+				200950F529350D6A0081D290 /* Products */,
+				EB361A264E3DDB505F2F58D6 /* Pods */,
+				D543CA70ED75B8BBA0ECB258 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		200950F529350D6A0081D290 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				200950F429350D6A0081D290 /* WaterDelivery.app */,
+				2009510A29350D6D0081D290 /* WaterDeliveryTests.xctest */,
+				2009511429350D6D0081D290 /* WaterDeliveryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		200950F629350D6A0081D290 /* WaterDelivery */ = {
+			isa = PBXGroup;
+			children = (
+				200950F729350D6A0081D290 /* AppDelegate.swift */,
+				200950F929350D6A0081D290 /* SceneDelegate.swift */,
+				20369DED29360C8E0050E8AD /* Models */,
+				203FC31A29491A9200C4C4A4 /* Managers */,
+				20667CEB2950FAD80001933B /* Views */,
+				20667CEA2950F9D00001933B /* Controllers */,
+				20369E01293615CB0050E8AD /* Extensions */,
+				2009510029350D6C0081D290 /* Assets.xcassets */,
+				2009510229350D6C0081D290 /* LaunchScreen.storyboard */,
+				2009510529350D6C0081D290 /* Info.plist */,
+				2098CAA52947A04C00D08552 /* GoogleService-Info.plist */,
+			);
+			path = WaterDelivery;
+			sourceTree = "<group>";
+		};
+		2009510D29350D6D0081D290 /* WaterDeliveryTests */ = {
+			isa = PBXGroup;
+			children = (
+				2009510E29350D6D0081D290 /* WaterDeliveryTests.swift */,
+			);
+			path = WaterDeliveryTests;
+			sourceTree = "<group>";
+		};
+		2009511729350D6D0081D290 /* WaterDeliveryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2009511829350D6D0081D290 /* WaterDeliveryUITests.swift */,
+				2009511A29350D6D0081D290 /* WaterDeliveryUITestsLaunchTests.swift */,
+			);
+			path = WaterDeliveryUITests;
+			sourceTree = "<group>";
+		};
+		20095127293510C90081D290 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				202014B829606680003BD9F5 /* LoginWithPhoneViewController.swift */,
+				205F067B2961BCF9005401BC /* PhoneSmsCodeViewController.swift */,
+				20B3A98D296EF4D300C7C6D9 /* CreateUserProfileViewController.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		2016C7B72968B742006143E3 /* BasketTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2016C7B92968B76F006143E3 /* BasketTableViewCell.swift */,
+				2016C7BA2968B76F006143E3 /* BasketTableViewCell.xib */,
+			);
+			path = BasketTableViewCell;
+			sourceTree = "<group>";
+		};
+		20369DED29360C8E0050E8AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20369DFD293615690050E8AD /* User.swift */,
+				20369DFF293615820050E8AD /* Address.swift */,
+				20CB0282294BAC380005F2B5 /* Product.swift */,
+				2016C79E296816C4006143E3 /* BasketProduct.swift */,
+				20DCFED82977280500D644D5 /* Order.swift */,
+				20507B7229755D38009EBCC9 /* SellPoint.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		20369E01293615CB0050E8AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				203540372982C1D1005EE637 /* Double+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		203FC31A29491A9200C4C4A4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				205F067D2961ECCF005401BC /* AuthManager.swift */,
+				20CB027E294A2C5E0005F2B5 /* Firestore+User.swift */,
+				20B3A98B296DB06A00C7C6D9 /* StorageManager.swift */,
+				20CB0280294BAC260005F2B5 /* Firestore+Products.swift */,
+				2016C79C2968166B006143E3 /* BasketManager.swift */,
+				20DCFEDA2978095700D644D5 /* OrderManager.swift */,
+				20507B7429755FD5009EBCC9 /* Firestore+SellPoints.swift */,
+				203540392983DB24005EE637 /* MapManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		20667CEA2950F9D00001933B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				20095127293510C90081D290 /* Authorization */,
+				203FC3112949033A00C4C4A4 /* SplashViewController.swift */,
+				208C100029536DD400BE7316 /* BaseViewController.swift */,
+				20667CEC2951E8220001933B /* ProductsViewController.swift */,
+				20197766295DA1BF00E5EC10 /* UserProfileViewController.swift */,
+				2081DD6429562D340073D6FE /* EditUserProfileViewController.swift */,
+				2016C7A62968A742006143E3 /* BasketViewController.swift */,
+				2040FB0A2970236800FD1D2E /* PaymentViewController.swift */,
+				20DCFED62977160200D644D5 /* MyOrdersViewController.swift */,
+				20F17D44297E981F0071F59C /* OrderDetailsViewController.swift */,
+				20AB51CB29707078009C1B57 /* GoogleMapsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		20667CEB2950FAD80001933B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				200950FD29350D6A0081D290 /* Main.storyboard */,
+				20667CF52951FBFF0001933B /* ProductCollectionViewCell */,
+				2016C7B72968B742006143E3 /* BasketTableViewCell */,
+				20DCFEDC29780C6700D644D5 /* MyOrdersTableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		20667CF52951FBFF0001933B /* ProductCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				20667CF62951FC240001933B /* ProductCollectionViewCell.swift */,
+				20667CF72951FC240001933B /* ProductCollectionViewCell.xib */,
+			);
+			path = ProductCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		20DCFEDC29780C6700D644D5 /* MyOrdersTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				20DCFEDD29780C9100D644D5 /* MyOrdersTableViewCell.swift */,
+				20DCFEDE29780C9100D644D5 /* MyOrdersTableViewCell.xib */,
+			);
+			name = MyOrdersTableViewCell;
+			sourceTree = "<group>";
+		};
+		D543CA70ED75B8BBA0ECB258 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				05B8AA3DF0B9E28943D34504 /* Pods_WaterDelivery.framework */,
+				3878374CA1C3AEA08D412F1A /* Pods_WaterDelivery_WaterDeliveryUITests.framework */,
+				DA53CB0977340FDC6E9A5337 /* Pods_WaterDeliveryTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB361A264E3DDB505F2F58D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98176251DE117A1EABD017C8 /* Pods-WaterDelivery.debug.xcconfig */,
+				2BE2913195A53FCDA7413C87 /* Pods-WaterDelivery.release.xcconfig */,
+				263E29DA281F89B4B9473E9B /* Pods-WaterDelivery-WaterDeliveryUITests.debug.xcconfig */,
+				E3CF706B09DEDA2FBE730F1C /* Pods-WaterDelivery-WaterDeliveryUITests.release.xcconfig */,
+				AEF50E47F9D8EB7B3348C659 /* Pods-WaterDeliveryTests.debug.xcconfig */,
+				0102132AC8BE6ED943F2871E /* Pods-WaterDeliveryTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		200950F329350D6A0081D290 /* WaterDelivery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2009511E29350D6D0081D290 /* Build configuration list for PBXNativeTarget "WaterDelivery" */;
+			buildPhases = (
+				9FC95DB1D225D450FE5F8567 /* [CP] Check Pods Manifest.lock */,
+				200950F029350D6A0081D290 /* Sources */,
+				200950F129350D6A0081D290 /* Frameworks */,
+				200950F229350D6A0081D290 /* Resources */,
+				3992AE6609594FF4F646DEB3 /* [CP] Embed Pods Frameworks */,
+				46D9C6323D7E93BF4C6862A4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WaterDelivery;
+			productName = WaterDelivery;
+			productReference = 200950F429350D6A0081D290 /* WaterDelivery.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2009510929350D6D0081D290 /* WaterDeliveryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2009512129350D6D0081D290 /* Build configuration list for PBXNativeTarget "WaterDeliveryTests" */;
+			buildPhases = (
+				8954C37A6062F03BA2398E8F /* [CP] Check Pods Manifest.lock */,
+				2009510629350D6D0081D290 /* Sources */,
+				2009510729350D6D0081D290 /* Frameworks */,
+				2009510829350D6D0081D290 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2009510C29350D6D0081D290 /* PBXTargetDependency */,
+			);
+			name = WaterDeliveryTests;
+			productName = WaterDeliveryTests;
+			productReference = 2009510A29350D6D0081D290 /* WaterDeliveryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2009511329350D6D0081D290 /* WaterDeliveryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2009512429350D6D0081D290 /* Build configuration list for PBXNativeTarget "WaterDeliveryUITests" */;
+			buildPhases = (
+				7908D8AD924DC7EE4D9F12D6 /* [CP] Check Pods Manifest.lock */,
+				2009511029350D6D0081D290 /* Sources */,
+				2009511129350D6D0081D290 /* Frameworks */,
+				2009511229350D6D0081D290 /* Resources */,
+				01899ABA2246DDF7A9092A54 /* [CP] Embed Pods Frameworks */,
+				AF128AE7E46F229736AEDDF9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2009511629350D6D0081D290 /* PBXTargetDependency */,
+			);
+			name = WaterDeliveryUITests;
+			productName = WaterDeliveryUITests;
+			productReference = 2009511429350D6D0081D290 /* WaterDeliveryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		200950EC29350D6A0081D290 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					200950F329350D6A0081D290 = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1420;
+					};
+					2009510929350D6D0081D290 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 200950F329350D6A0081D290;
+					};
+					2009511329350D6D0081D290 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 200950F329350D6A0081D290;
+					};
+				};
+			};
+			buildConfigurationList = 200950EF29350D6A0081D290 /* Build configuration list for PBXProject "WaterDelivery" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 200950EB29350D6A0081D290;
+			productRefGroup = 200950F529350D6A0081D290 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				200950F329350D6A0081D290 /* WaterDelivery */,
+				2009510929350D6D0081D290 /* WaterDeliveryTests */,
+				2009511329350D6D0081D290 /* WaterDeliveryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		200950F229350D6A0081D290 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2009510429350D6C0081D290 /* LaunchScreen.storyboard in Resources */,
+				20DCFEE029780C9100D644D5 /* MyOrdersTableViewCell.xib in Resources */,
+				2098CAA62947A04C00D08552 /* GoogleService-Info.plist in Resources */,
+				2016C7BC2968B76F006143E3 /* BasketTableViewCell.xib in Resources */,
+				20667CF92951FC240001933B /* ProductCollectionViewCell.xib in Resources */,
+				2009510129350D6C0081D290 /* Assets.xcassets in Resources */,
+				200950FF29350D6A0081D290 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2009510829350D6D0081D290 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2009511229350D6D0081D290 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01899ABA2246DDF7A9092A54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterDelivery-WaterDeliveryUITests/Pods-WaterDelivery-WaterDeliveryUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterDelivery-WaterDeliveryUITests/Pods-WaterDelivery-WaterDeliveryUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterDelivery-WaterDeliveryUITests/Pods-WaterDelivery-WaterDeliveryUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3992AE6609594FF4F646DEB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterDelivery/Pods-WaterDelivery-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterDelivery/Pods-WaterDelivery-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterDelivery/Pods-WaterDelivery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46D9C6323D7E93BF4C6862A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterDelivery/Pods-WaterDelivery-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterDelivery/Pods-WaterDelivery-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterDelivery/Pods-WaterDelivery-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7908D8AD924DC7EE4D9F12D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WaterDelivery-WaterDeliveryUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8954C37A6062F03BA2398E8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WaterDeliveryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC95DB1D225D450FE5F8567 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WaterDelivery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF128AE7E46F229736AEDDF9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterDelivery-WaterDeliveryUITests/Pods-WaterDelivery-WaterDeliveryUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterDelivery-WaterDeliveryUITests/Pods-WaterDelivery-WaterDeliveryUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterDelivery-WaterDeliveryUITests/Pods-WaterDelivery-WaterDeliveryUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		200950F029350D6A0081D290 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20AB51CC29707078009C1B57 /* GoogleMapsViewController.swift in Sources */,
+				205F067E2961ECCF005401BC /* AuthManager.swift in Sources */,
+				20B3A98C296DB06A00C7C6D9 /* StorageManager.swift in Sources */,
+				2016C79D2968166B006143E3 /* BasketManager.swift in Sources */,
+				2081DD6529562D340073D6FE /* EditUserProfileViewController.swift in Sources */,
+				203540382982C1D1005EE637 /* Double+Extension.swift in Sources */,
+				20B3A98E296EF4D300C7C6D9 /* CreateUserProfileViewController.swift in Sources */,
+				20507B7529755FD5009EBCC9 /* Firestore+SellPoints.swift in Sources */,
+				20667CED2951E8220001933B /* ProductsViewController.swift in Sources */,
+				2016C7A72968A742006143E3 /* BasketViewController.swift in Sources */,
+				20CB0283294BAC380005F2B5 /* Product.swift in Sources */,
+				2016C79F296816C4006143E3 /* BasketProduct.swift in Sources */,
+				202014B929606680003BD9F5 /* LoginWithPhoneViewController.swift in Sources */,
+				208C100129536DD400BE7316 /* BaseViewController.swift in Sources */,
+				20DCFED92977280500D644D5 /* Order.swift in Sources */,
+				20DCFEDF29780C9100D644D5 /* MyOrdersTableViewCell.swift in Sources */,
+				20369E00293615820050E8AD /* Address.swift in Sources */,
+				203FC3122949033A00C4C4A4 /* SplashViewController.swift in Sources */,
+				2035403A2983DB24005EE637 /* MapManager.swift in Sources */,
+				200950F829350D6A0081D290 /* AppDelegate.swift in Sources */,
+				20CB027F294A2C5F0005F2B5 /* Firestore+User.swift in Sources */,
+				20507B7329755D38009EBCC9 /* SellPoint.swift in Sources */,
+				200950FA29350D6A0081D290 /* SceneDelegate.swift in Sources */,
+				20CB0281294BAC260005F2B5 /* Firestore+Products.swift in Sources */,
+				20DCFED72977160200D644D5 /* MyOrdersViewController.swift in Sources */,
+				20F17D45297E981F0071F59C /* OrderDetailsViewController.swift in Sources */,
+				205F067C2961BCF9005401BC /* PhoneSmsCodeViewController.swift in Sources */,
+				2040FB0B2970236800FD1D2E /* PaymentViewController.swift in Sources */,
+				20DCFEDB2978095700D644D5 /* OrderManager.swift in Sources */,
+				20197767295DA1BF00E5EC10 /* UserProfileViewController.swift in Sources */,
+				2016C7BB2968B76F006143E3 /* BasketTableViewCell.swift in Sources */,
+				20369DFE293615690050E8AD /* User.swift in Sources */,
+				20667CF82951FC240001933B /* ProductCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2009510629350D6D0081D290 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2009510F29350D6D0081D290 /* WaterDeliveryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2009511029350D6D0081D290 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2009511B29350D6D0081D290 /* WaterDeliveryUITestsLaunchTests.swift in Sources */,
+				2009511929350D6D0081D290 /* WaterDeliveryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2009510C29350D6D0081D290 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 200950F329350D6A0081D290 /* WaterDelivery */;
+			targetProxy = 2009510B29350D6D0081D290 /* PBXContainerItemProxy */;
+		};
+		2009511629350D6D0081D290 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 200950F329350D6A0081D290 /* WaterDelivery */;
+			targetProxy = 2009511529350D6D0081D290 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		200950FD29350D6A0081D290 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				200950FE29350D6A0081D290 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2009510229350D6C0081D290 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2009510329350D6C0081D290 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2009511C29350D6D0081D290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2009511D29350D6D0081D290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2009511F29350D6D0081D290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98176251DE117A1EABD017C8 /* Pods-WaterDelivery.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LB5X526724;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WaterDelivery/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emilmirzoiev.WaterDelivery;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2009512029350D6D0081D290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BE2913195A53FCDA7413C87 /* Pods-WaterDelivery.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LB5X526724;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WaterDelivery/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emilmirzoiev.WaterDelivery;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		2009512229350D6D0081D290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEF50E47F9D8EB7B3348C659 /* Pods-WaterDeliveryTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 84D2P3Z3B6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emilmirzoiev.WaterDeliveryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterDelivery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WaterDelivery";
+			};
+			name = Debug;
+		};
+		2009512329350D6D0081D290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0102132AC8BE6ED943F2871E /* Pods-WaterDeliveryTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 84D2P3Z3B6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emilmirzoiev.WaterDeliveryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterDelivery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WaterDelivery";
+			};
+			name = Release;
+		};
+		2009512529350D6D0081D290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 263E29DA281F89B4B9473E9B /* Pods-WaterDelivery-WaterDeliveryUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 84D2P3Z3B6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emilmirzoiev.WaterDeliveryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WaterDelivery;
+			};
+			name = Debug;
+		};
+		2009512629350D6D0081D290 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3CF706B09DEDA2FBE730F1C /* Pods-WaterDelivery-WaterDeliveryUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 84D2P3Z3B6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emilmirzoiev.WaterDeliveryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WaterDelivery;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		200950EF29350D6A0081D290 /* Build configuration list for PBXProject "WaterDelivery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2009511C29350D6D0081D290 /* Debug */,
+				2009511D29350D6D0081D290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2009511E29350D6D0081D290 /* Build configuration list for PBXNativeTarget "WaterDelivery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2009511F29350D6D0081D290 /* Debug */,
+				2009512029350D6D0081D290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2009512129350D6D0081D290 /* Build configuration list for PBXNativeTarget "WaterDeliveryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2009512229350D6D0081D290 /* Debug */,
+				2009512329350D6D0081D290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2009512429350D6D0081D290 /* Build configuration list for PBXNativeTarget "WaterDeliveryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2009512529350D6D0081D290 /* Debug */,
+				2009512629350D6D0081D290 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 200950EC29350D6A0081D290 /* Project object */;
+}

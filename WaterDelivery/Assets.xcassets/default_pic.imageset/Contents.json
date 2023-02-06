@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Лаймовое и Синее Спортивное Неоновое Спортивные товары и напитки Лента в социальных сетях Статическое Рекламное объявление.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
