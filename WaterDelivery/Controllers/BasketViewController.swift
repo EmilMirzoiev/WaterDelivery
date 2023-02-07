@@ -44,7 +44,7 @@ class BasketViewController: BaseViewController , UITableViewDataSource, UITableV
     
     func createEmptyBasketLabel() -> UILabel {
         let label = UILabel()
-        label.text = "Basket is empty. Go and get some refreshing drink!"
+        label.text = "Basket is empty"
         label.textAlignment = .center
         return label
     }

@@ -22,6 +22,7 @@
 		2016C7BC2968B76F006143E3 /* BasketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2016C7BA2968B76F006143E3 /* BasketTableViewCell.xib */; };
 		20197767295DA1BF00E5EC10 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20197766295DA1BF00E5EC10 /* UserProfileViewController.swift */; };
 		202014B929606680003BD9F5 /* LoginWithPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202014B829606680003BD9F5 /* LoginWithPhoneViewController.swift */; };
+		202DE2DA29917DFD00BB2718 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202DE2D929917DFD00BB2718 /* Constants.swift */; };
 		203540382982C1D1005EE637 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203540372982C1D1005EE637 /* Double+Extension.swift */; };
 		2035403A2983DB24005EE637 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203540392983DB24005EE637 /* MapManager.swift */; };
 		20369DFE293615690050E8AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20369DFD293615690050E8AD /* User.swift */; };
@@ -94,6 +95,7 @@
 		2016C7BA2968B76F006143E3 /* BasketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketTableViewCell.xib; sourceTree = "<group>"; };
 		20197766295DA1BF00E5EC10 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		202014B829606680003BD9F5 /* LoginWithPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithPhoneViewController.swift; sourceTree = "<group>"; };
+		202DE2D929917DFD00BB2718 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		203540372982C1D1005EE637 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		203540392983DB24005EE637 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		20369DFD293615690050E8AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				20667CEB2950FAD80001933B /* Views */,
 				20667CEA2950F9D00001933B /* Controllers */,
 				20369E01293615CB0050E8AD /* Extensions */,
+				202DE2D829917DEF00BB2718 /* Constants */,
 				2009510029350D6C0081D290 /* Assets.xcassets */,
 				2009510229350D6C0081D290 /* LaunchScreen.storyboard */,
 				2009510529350D6C0081D290 /* Info.plist */,
@@ -233,6 +236,14 @@
 				2016C7BA2968B76F006143E3 /* BasketTableViewCell.xib */,
 			);
 			path = BasketTableViewCell;
+			sourceTree = "<group>";
+		};
+		202DE2D829917DEF00BB2718 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				202DE2D929917DFD00BB2718 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		20369DED29360C8E0050E8AD /* Models */ = {
@@ -622,6 +633,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20AB51CC29707078009C1B57 /* GoogleMapsViewController.swift in Sources */,
+				202DE2DA29917DFD00BB2718 /* Constants.swift in Sources */,
 				205F067E2961ECCF005401BC /* AuthManager.swift in Sources */,
 				20B3A98C296DB06A00C7C6D9 /* StorageManager.swift in Sources */,
 				2016C79D2968166B006143E3 /* BasketManager.swift in Sources */,
