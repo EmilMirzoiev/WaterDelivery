@@ -51,6 +51,11 @@ class ProductsViewController: BaseViewController {
         if let destination = segue.destination as? BasketViewController {
             destination.basketManager = basketManager
         }
+        if let destination = segue.destination as? OrderCustomTableViewController {
+            guard let currentUser = Auth.auth().currentUser else { return }
+            let order = Order(products: basketManager.getAllProducts(), condition: .processing, orderPrice: basketManager.getTotalAmount(), userId: currentUser.uid, createdDate: Date(), orderId: Int.random(in: 0..<1000000))
+            destination.order = order
+        }
     }
     
     @IBAction func accountDetails(_ sender: Any) {

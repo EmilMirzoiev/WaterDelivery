@@ -14,6 +14,11 @@ struct Order: Codable {
     var userId: String?
     var createdDate: Date?
     var orderId: Int
+    var deliveryAddress: String?
+    var buildingNumber: String?
+    var doNotCallMe: Bool = false
+    var withoutContact: Bool = false
+    var payByCreditCard: Bool = false // or true for cash
     
     //  Create a computed property totalAmount that calculates the total amount of the order. This is done by iterating over the products in the order and adding up the price of each item. The result is rounded to two decimal places.
     var totalAmount: Double {
