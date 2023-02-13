@@ -28,8 +28,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         priceButton.layer.cornerRadius = 8
     }
     
-    
-    //Create fetchProductsImage method that fetches the product's image from Firebase Storage and sets it on the productImageView.
+//    Create fetchProductsImage method that fetches the product's image from Firebase Storage and sets it on the productImageView.
     func fetchProductsImage(folderName: String, uid: String) {
         let productRef = Storage.storage().reference().child(folderName).child("\(uid).png")
         // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)

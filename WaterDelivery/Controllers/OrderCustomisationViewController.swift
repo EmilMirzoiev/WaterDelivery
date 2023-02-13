@@ -20,6 +20,7 @@ class OrderCustomTableViewController: UIViewController {
     var user: User?
     var order: Order?
     var dataSource: [OrderCell] = []
+    var basketManager: BasketManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +34,13 @@ class OrderCustomTableViewController: UIViewController {
         guard let user = Auth.auth().currentUser else { return }
         userManager.loadUserData(by: user.uid) { [weak self] user in
             self?.user = user
-//            self?.fillUserInfo()
         }
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tapGesture.cancelsTouchesInView = false
+        tableView.addGestureRecognizer(tapGesture)
     }
     
-    //Create a function called updateButton() that updates the title of the checkout button based on the total amount in the basket.
     func updateButton() {
         guard let products = order?.products else { return }
         let basketManager = BasketManager(products: products)
@@ -72,22 +75,16 @@ class OrderCustomTableViewController: UIViewController {
             checkoutButton.isHidden = true
             return
         }
-                
+        
         let separator = SeparatorTableViewCell()
         dataSource.append(.separator(separator))
         
-        let addressCellModel = OrderTextFieldTableViewCell.Model(value: order?.deliveryAddress ?? "", fieldName: "Delivery Address Street") { value in
+        let addressCellModel = OrderTextFieldTableViewCell.Model(value: order?.deliveryAddress ?? "", fieldName: "Delivery Address Street and Building Number") { value in
             self.order?.deliveryAddress = value
-            self.prepareDataSource()
-        }
-    
-        let addressBuildingNumberCellModel = OrderTextFieldTableViewCell.Model(value: order?.buildingNumber ?? "", fieldName: "Delivery Address Building Number") { value in
-            self.order?.buildingNumber = value
             self.prepareDataSource()
         }
         
         dataSource.append(.textField(addressCellModel))
-        dataSource.append(.textField(addressBuildingNumberCellModel))
         dataSource.append(.separator(separator))
         
         let notificationSwitcherViewModel = OrderSwitcherTableViewCell.Model(value: order?.doNotCallMe ?? false, fieldName: "Call me 30 minutes before delivery") { value in
@@ -103,11 +100,12 @@ class OrderCustomTableViewController: UIViewController {
         dataSource.append(.switcher(notificationSwitcherViewModel))
         dataSource.append(.switcher(deliveryWithoutContact))
         
-        let paymentMethodModel = OrderSegmentedControlTableViewCell.Model(value: order?.payByCreditCard ?? false) { value in
-            self.order?.payByCreditCard = value
+        let paymentMethodModel = OrderSegmentedControlTableViewCell.Model(value: order?.paymentMethod ?? "Cash On Delivery") { value in
+            self.order?.paymentMethod = value
             self.prepareDataSource()
         }
-
+        
+        dataSource.append(.separator(separator))
         dataSource.append(.paymentMethod(paymentMethodModel))
         
         tableView.reloadData()
@@ -121,8 +119,14 @@ class OrderCustomTableViewController: UIViewController {
         tableView.register(.init(nibName: String(describing: OrderSwitcherTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: OrderSwitcherTableViewCell.self))
         tableView.register(.init(nibName: String(describing: BasketTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: BasketTableViewCell.self))
         tableView.register(SeparatorTableViewCell.self, forCellReuseIdentifier: "SeparatorTableViewCell")
-        tableView.register(OrderSegmentedControlTableViewCell.self, forCellReuseIdentifier: "OrderSegmentedControlTableViewCell")
+        tableView.register(UINib(nibName: "OrderSegmentedControlTableViewCell", bundle: nil), forCellReuseIdentifier: "OrderSegmentedControlTableViewCell")
+        
     }
+    
+    @objc func hideKeyboard() {
+        tableView.endEditing(true)
+    }
+    
 }
 
 extension OrderCustomTableViewController: UITableViewDelegate, UITableViewDataSource {
@@ -136,22 +140,23 @@ extension OrderCustomTableViewController: UITableViewDelegate, UITableViewDataSo
         case .product(let model):
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BasketTableViewCell.self), for: indexPath) as! BasketTableViewCell
             cell.fill(with: model)
+            cell.plusProductButton.isHidden = true
+            cell.minusProductButton.isHidden = true
             return cell
         case .separator(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SeparatorTableViewCell.self), for: indexPath) as! SeparatorTableViewCell
             return cell
         case .textField(let model):
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: OrderTextFieldTableViewCell.self), for: indexPath) as! OrderTextFieldTableViewCell
-            cell.fill(with: model)
+            cell.fill(with: model, address: user?.address?.street)
             return cell
         case .switcher(let model):
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: OrderSwitcherTableViewCell.self), for: indexPath) as! OrderSwitcherTableViewCell
             cell.fill(with: model)
             return cell
-        case .paymentMethod(let model):
-               let cell = tableView.dequeueReusableCell(withIdentifier: "OrderSegmentedControlTableViewCell", for: indexPath) as! OrderSegmentedControlTableViewCell
-               cell.fill(with: model)
-               return cell
+        case .paymentMethod(_):
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OrderSegmentedControlTableViewCell", for: indexPath) as! OrderSegmentedControlTableViewCell
+            return cell
         }
     }
 }

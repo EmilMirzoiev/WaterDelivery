@@ -353,7 +353,6 @@
 				20667CF52951FBFF0001933B /* ProductCollectionViewCell */,
 				2016C7B72968B742006143E3 /* BasketTableViewCell */,
 				20DCFEDC29780C6700D644D5 /* MyOrdersTableViewCell */,
-				208991482997F39800314421 /* SeparatorTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -376,6 +375,7 @@
 				2089913B2995834A00314421 /* OrderSwitcherTableViewCell.xib */,
 				2089914A2998117A00314421 /* OrderSegmentedControlTableViewCell.swift */,
 				2089914B2998117A00314421 /* OrderSegmentedControlTableViewCell.xib */,
+				208991482997F39800314421 /* SeparatorTableViewCell.swift */,
 			);
 			path = CustomOrderCells;
 			sourceTree = "<group>";

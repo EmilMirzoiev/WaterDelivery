@@ -10,14 +10,14 @@ import UIKit
 class OrderSegmentedControlTableViewCell: UITableViewCell {
     
     struct Model {
-        var value: Bool
-        var completion: ((Bool) -> Void)?
+        var value: String
+        var completion: ((String) -> Void)?
     }
     
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
-    var completion: ((Bool) -> Void)?
-    var value: Bool = false
-
+    @IBOutlet weak var paymentTypeSegmentedControl: UISegmentedControl!
+    var completion: ((String) -> Void)?
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
@@ -28,14 +28,19 @@ class OrderSegmentedControlTableViewCell: UITableViewCell {
         completion = model.completion
     }
     
-    @IBAction func choosePaymentMethodsegmentedControlAction(_ sender: UISegmentedControl) {
-        switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            value = false
-        case 1:
-            value = true
-        default:
-            print("Something wrong")
+    @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            if let tableView = superview as? UITableView,
+               let dataSource = tableView.dataSource as? OrderCustomTableViewController {
+                dataSource.order?.paymentMethod = "Cash on Delivery"
+                print("Cash on Delivery")
+            }
+        } else if sender.selectedSegmentIndex == 1 {
+            if let tableView = superview as? UITableView,
+               let dataSource = tableView.dataSource as? OrderCustomTableViewController {
+                dataSource.order?.paymentMethod = "Online Payment"
+                print("Online Payment")
+            }
         }
     }
 }

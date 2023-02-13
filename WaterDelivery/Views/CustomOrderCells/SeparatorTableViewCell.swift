@@ -21,7 +21,7 @@ class SeparatorTableViewCell: UITableViewCell {
             separatorView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             separatorView.topAnchor.constraint(equalTo: contentView.topAnchor),
             separatorView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            separatorView.heightAnchor.constraint(equalToConstant: 50)
+            separatorView.heightAnchor.constraint(equalToConstant: 75)
         ])
     }
     

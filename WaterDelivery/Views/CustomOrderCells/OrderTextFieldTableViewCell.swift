@@ -24,10 +24,10 @@ class OrderTextFieldTableViewCell: UITableViewCell {
         selectionStyle = .none
     }
 
-    func fill(with model: Any) {
+    func fill(with model: Any, address: String?) {
         guard let model = model as? Model else { return }
         textField.placeholder = model.fieldName
-        textField.text = model.value
+        textField.text = address ?? model.value
         completion = model.completion
     }
 }
@@ -36,5 +36,10 @@ extension OrderTextFieldTableViewCell: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let text = textField.text else {return}
         completion?(text)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // dismisses the keyboard
+        return true
     }
 }
