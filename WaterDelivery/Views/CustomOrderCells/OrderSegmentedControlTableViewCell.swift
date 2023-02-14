@@ -14,6 +14,7 @@ class OrderSegmentedControlTableViewCell: UITableViewCell {
         var completion: ((String) -> Void)?
     }
     
+    
     @IBOutlet weak var paymentTypeSegmentedControl: UISegmentedControl!
     var completion: ((String) -> Void)?
     
@@ -30,17 +31,19 @@ class OrderSegmentedControlTableViewCell: UITableViewCell {
     
     @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            if let tableView = superview as? UITableView,
-               let dataSource = tableView.dataSource as? OrderCustomTableViewController {
-                dataSource.order?.paymentMethod = "Cash on Delivery"
-                print("Cash on Delivery")
-            }
+            completion?("Cash On Delivery")
+//            if let tableView = superview as? UITableView,
+//               let dataSource = tableView.dataSource as? OrderCustomTableViewController {
+//                dataSource.order?.paymentMethod = "Cash on Delivery"
+//                print("Cash on Delivery")
+//            }
         } else if sender.selectedSegmentIndex == 1 {
-            if let tableView = superview as? UITableView,
-               let dataSource = tableView.dataSource as? OrderCustomTableViewController {
-                dataSource.order?.paymentMethod = "Online Payment"
-                print("Online Payment")
-            }
+            completion?("Online Payment")
+//            if let tableView = superview as? UITableView,
+//               let dataSource = tableView.dataSource as? OrderCustomTableViewController {
+//                dataSource.order?.paymentMethod = "Online Payment"
+//                print("Online Payment")
+//            }
         }
     }
 }

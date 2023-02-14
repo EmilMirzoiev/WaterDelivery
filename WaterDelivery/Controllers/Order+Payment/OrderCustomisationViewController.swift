@@ -127,6 +127,13 @@ class OrderCustomTableViewController: UIViewController {
         tableView.endEditing(true)
     }
     
+    //Create a prepare for segue function that passes the order data to the PaymentViewController when the checkout button is tapped.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PaymentViewController {
+            destination.order = order
+        }
+    }
+    
 }
 
 extension OrderCustomTableViewController: UITableViewDelegate, UITableViewDataSource {

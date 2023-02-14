@@ -329,17 +329,11 @@
 			isa = PBXGroup;
 			children = (
 				20095127293510C90081D290 /* Authorization */,
+				2070DAD3299BC1180060FE52 /* UserProfile */,
+				2070DAD4299BC13A0060FE52 /* Order+Payment */,
 				203FC3112949033A00C4C4A4 /* SplashViewController.swift */,
 				208C100029536DD400BE7316 /* BaseViewController.swift */,
-				20667CEC2951E8220001933B /* ProductsViewController.swift */,
-				2081DD6429562D340073D6FE /* EditUserProfileViewController.swift */,
-				2016C7A62968A742006143E3 /* BasketViewController.swift */,
-				2040FB0A2970236800FD1D2E /* PaymentViewController.swift */,
-				20DCFED62977160200D644D5 /* MyOrdersViewController.swift */,
-				20F17D44297E981F0071F59C /* OrderDetailsViewController.swift */,
 				20AB51CB29707078009C1B57 /* GoogleMapsViewController.swift */,
-				202DE2DD299255C900BB2718 /* UserProfileTableViewController.swift */,
-				2089912A29952DFA00314421 /* OrderCustomisationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -364,6 +358,28 @@
 				20667CF72951FC240001933B /* ProductCollectionViewCell.xib */,
 			);
 			path = ProductCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		2070DAD3299BC1180060FE52 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				202DE2DD299255C900BB2718 /* UserProfileTableViewController.swift */,
+				2081DD6429562D340073D6FE /* EditUserProfileViewController.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		2070DAD4299BC13A0060FE52 /* Order+Payment */ = {
+			isa = PBXGroup;
+			children = (
+				20667CEC2951E8220001933B /* ProductsViewController.swift */,
+				2016C7A62968A742006143E3 /* BasketViewController.swift */,
+				2089912A29952DFA00314421 /* OrderCustomisationViewController.swift */,
+				2040FB0A2970236800FD1D2E /* PaymentViewController.swift */,
+				20DCFED62977160200D644D5 /* MyOrdersViewController.swift */,
+				20F17D44297E981F0071F59C /* OrderDetailsViewController.swift */,
+			);
+			path = "Order+Payment";
 			sourceTree = "<group>";
 		};
 		2089913529957C1400314421 /* CustomOrderCells */ = {
