@@ -8,9 +8,22 @@
 import UIKit
 import Kingfisher
 
-class UserImageTableViewCell: UITableViewCell {
+struct ImageViewModel {
+    var imageURL: String = ""
+    var completion: (() -> ())?
+    
+    init(imageURL: String, completion: @escaping () -> Void) {
+        self.imageURL = imageURL
+        self.completion = completion
+    }
+}
 
+class UserImageTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var editPhoto: UIButton!
     @IBOutlet weak var userAccountImage: UIImageView!
+    
+    weak var delegate: UserImageTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,4 +44,12 @@ class UserImageTableViewCell: UITableViewCell {
         userAccountImage.kf.setImage(with: sourceURL)
     }
     
+    @IBAction func editPhotoButton(_ sender: Any) {
+        delegate?.editPhotoButtonTapped()
+        print("edit photo button tapped")
+    }
+}
+
+protocol UserImageTableViewCellDelegate: AnyObject {
+    func editPhotoButtonTapped()
 }

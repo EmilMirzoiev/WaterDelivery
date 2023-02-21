@@ -19,7 +19,7 @@ struct Order: Codable {
     var buildingNumber: String?
     var doNotCallMe: Bool = false
     var withoutContact: Bool = false
-    var paymentMethod: String = "Cash on delivery"
+    var paymentMethod: PaymentMethod = .cash
     
     //  Create a computed property totalAmount that calculates the total amount of the order. This is done by iterating over the products in the order and adding up the price of each item. The result is rounded to two decimal places.
     var totalAmount: Double {
@@ -36,4 +36,8 @@ struct Order: Codable {
 
 enum Condition: Codable {
     case processing, shipping, completed, cancelled
+}
+
+enum PaymentMethod: Int, Codable {
+    case cash, card
 }

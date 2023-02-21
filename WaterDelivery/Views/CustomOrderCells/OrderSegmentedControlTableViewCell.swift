@@ -10,14 +10,12 @@ import UIKit
 class OrderSegmentedControlTableViewCell: UITableViewCell {
     
     struct Model {
-        var value: String
-        var completion: ((String) -> Void)?
+        var value: PaymentMethod
+        var completion: ((PaymentMethod) -> Void)?
     }
     
-    
     @IBOutlet weak var paymentTypeSegmentedControl: UISegmentedControl!
-    var completion: ((String) -> Void)?
-    
+    var completion: ((PaymentMethod) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,24 +24,12 @@ class OrderSegmentedControlTableViewCell: UITableViewCell {
     
     func fill(with model: Any) {
         guard let model = model as? Model else { return }
+        paymentTypeSegmentedControl.selectedSegmentIndex = model.value.rawValue
         completion = model.completion
     }
     
     @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
-            completion?("Cash On Delivery")
-//            if let tableView = superview as? UITableView,
-//               let dataSource = tableView.dataSource as? OrderCustomTableViewController {
-//                dataSource.order?.paymentMethod = "Cash on Delivery"
-//                print("Cash on Delivery")
-//            }
-        } else if sender.selectedSegmentIndex == 1 {
-            completion?("Online Payment")
-//            if let tableView = superview as? UITableView,
-//               let dataSource = tableView.dataSource as? OrderCustomTableViewController {
-//                dataSource.order?.paymentMethod = "Online Payment"
-//                print("Online Payment")
-//            }
-        }
+        guard let selectedPaymentMethod = PaymentMethod.init(rawValue: paymentTypeSegmentedControl.selectedSegmentIndex) else { return }
+        completion?(selectedPaymentMethod)
     }
 }
