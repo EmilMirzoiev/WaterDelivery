@@ -26,6 +26,7 @@ class BasketViewController: BaseViewController , UITableViewDataSource, UITableV
         tableView.delegate = self
         tableView.register(.init(nibName: "BasketTableViewCell", bundle: nil), forCellReuseIdentifier: "BasketTableViewCell")
         updateButton()
+        checkoutButton.layer.cornerRadius = 8 
     }
     
     //Create a function called updateButton() that updates the title of the checkout button based on the total amount in the basket.
@@ -98,9 +99,9 @@ class BasketViewController: BaseViewController , UITableViewDataSource, UITableV
         .delete
     }
     
-    //Create a prepare for segue function that passes the order data to the PaymentViewController when the checkout button is tapped.
+    //Create a prepare for segue function that passes the order data to the OrderCustomTableViewController when the checkout button is tapped.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? PaymentViewController {
+        if let destination = segue.destination as? OrderCustomTableViewController {
             guard let currentUser = Auth.auth().currentUser,
                   let basketManager = basketManager else { return }
             let order = Order(products: basketManager.getAllProducts(), condition: .processing, orderPrice: basketManager.getTotalAmount(), userId: currentUser.uid, createdDate: Date(), orderId: Int.random(in: 0..<1000000))

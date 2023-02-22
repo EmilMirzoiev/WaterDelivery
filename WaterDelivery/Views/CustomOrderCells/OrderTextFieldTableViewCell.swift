@@ -29,15 +29,19 @@ class OrderTextFieldTableViewCell: UITableViewCell {
         textField.placeholder = model.fieldName
         textField.text = address ?? model.value
         completion = model.completion
+        if let tableView = superview as? UITableView,
+           let dataSource = tableView.dataSource as? OrderCustomTableViewController {
+            dataSource.order?.deliveryAddress = textField.text
+        }
     }
 }
 
 extension OrderTextFieldTableViewCell: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
-        guard let text = textField.text else {return}
-        completion?(text)
+//        guard let text = textField.text else {return}
+//        completion?(text)
     }
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // dismisses the keyboard
         return true

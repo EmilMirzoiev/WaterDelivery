@@ -48,7 +48,6 @@ class UserProfileTableViewController: UIViewController {
         
         dataSource.removeAll()
         
-        
         guard let image = user?.imageURL else { return }
         let imageViewModel = ImageViewModel (imageURL: image) {
             print("imageURL: \(image)")
@@ -56,7 +55,6 @@ class UserProfileTableViewController: UIViewController {
         
         let userImage = ProfileCells.image(imageViewModel)
         dataSource.append(.images([userImage]))
-        
         
         let userNameTextFieldViewModel = LabelViewModel(titleLabel: "Full name", valueLabel: user?.name ?? "") { [weak self] fullName in
             guard let self = self else { return }
@@ -102,7 +100,7 @@ class UserProfileTableViewController: UIViewController {
             self.performSegue(withIdentifier: "editProfile", sender: nil)
         }
         
-        let logoutButtonViewModel = ButtonViewModel(buttonName: "Logout") {
+        let logoutButtonViewModel = ButtonViewModel(buttonName: "Sign Out") {
             do {
                 try Auth.auth().signOut()
                 let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -156,13 +154,14 @@ extension UserProfileTableViewController: UITableViewDelegate, UITableViewDataSo
             switch imageCell {
             case .image(let viewModel):
                 let cell = tableView.dequeueReusableCell(withIdentifier: "UserImageTableViewCell", for: indexPath) as! UserImageTableViewCell
+                cell.editPhoto.isHidden = true
                 cell.fill(with: viewModel)
                 return cell
             default: return UITableViewCell()
             }
-        case .labels(let textFields):
-            let textFieldCell = textFields[indexPath.row]
-            switch textFieldCell {
+        case .labels(let labels):
+            let labelCells = labels[indexPath.row]
+            switch labelCells {
             case .label(let viewModel):
                 let cell = tableView.dequeueReusableCell(withIdentifier: "UserInfoTableViewCell", for: indexPath) as! UserInfoTableViewCell
                 cell.fill(with: viewModel)
