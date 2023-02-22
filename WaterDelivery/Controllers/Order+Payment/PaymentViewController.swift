@@ -93,7 +93,6 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
         
         if receipt.status.rawValue == 4 {
             print("Success")
-            goToHomegape()
             updateOrdersList()
             clearFieldsInfo()
         } else {
@@ -103,14 +102,14 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
     }
     
     func updateOrdersList() {
-        userOrderManager.save(order: order)
+        userOrderManager.save(order: order) { [weak self] in
+            self?.goToHomegape()
+        }
     }
     
     func goToHomegape() {
         showAlert(title: "Success", message: "Payment was successful. Please wait for delivery") {
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let goToHomepage = storyBoard.instantiateViewController(withIdentifier: "ProductsViewController") as! ProductsViewController
-            self.navigationController?.pushViewController(goToHomepage, animated: true)
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
 

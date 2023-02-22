@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,19 +17,20 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zxz-aE-778">
-                        <rect key="frame" x="12" y="12" width="448" height="391"/>
+                        <rect key="frame" x="186" y="12" width="100" height="100"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="zxz-aE-778" secondAttribute="height" multiplier="448:391" id="pbW-A6-GcN"/>
+                            <constraint firstAttribute="height" constant="100" id="DrI-RY-fRN"/>
+                            <constraint firstAttribute="width" constant="100" id="t3a-FZ-eQE"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nz2-GD-iF0">
-                        <rect key="frame" x="215.33333333333334" y="415" width="41.333333333333343" height="21"/>
+                        <rect key="frame" x="215.33333333333334" y="124" width="41.333333333333343" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1u-K8-MVI">
-                        <rect key="frame" x="198.66666666666666" y="448" width="74.999999999999972" height="35"/>
+                        <rect key="frame" x="198.66666666666666" y="157" width="74.999999999999972" height="35"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                         <connections>
@@ -41,7 +43,6 @@
             <constraints>
                 <constraint firstItem="zxz-aE-778" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="3wh-fz-5bY"/>
                 <constraint firstItem="C1u-K8-MVI" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="4hD-T1-dZb"/>
-                <constraint firstItem="zxz-aE-778" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.949153" id="Aeb-af-IuQ"/>
                 <constraint firstItem="nz2-GD-iF0" firstAttribute="top" secondItem="zxz-aE-778" secondAttribute="bottom" constant="12" id="FEp-VN-NbT"/>
                 <constraint firstItem="nz2-GD-iF0" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="YLt-dL-qEJ"/>
                 <constraint firstItem="zxz-aE-778" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="kH6-wR-JsY"/>

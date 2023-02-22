@@ -21,9 +21,10 @@ class OrderManager {
     let db = Firestore.firestore()
 
     //  Define a save method that takes an Order object as an argument. This method will be used to save the Order object in Firebase. You can use the setData method of the Firestore library to save the Order object in the Firebase database.
-    func save(order: Order) {
+    func save(order: Order, completion: @escaping () -> Void) {
         do {
             try db.collection("Orders").document("\(order.orderId)").setData(from: order)
+            completion()
         } catch let error {
             print("\(error)")
         }

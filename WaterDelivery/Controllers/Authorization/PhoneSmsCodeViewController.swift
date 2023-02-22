@@ -36,7 +36,12 @@ class PhoneSmsCodeViewController: BaseViewController {
                     let userManager = UserManager()
                     userManager.checkIfUserExist(id: user.uid) { isExist in
                         if isExist {
-                            self?.showProductsVC()
+                            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "ProductsViewController") as! ProductsViewController
+                            let navigationController = UINavigationController.init(rootViewController: viewController)
+                            UIApplication.shared.windows.first?.rootViewController = navigationController
+                            UIApplication.shared.windows.first?.makeKeyAndVisible()
+                            
                         } else {
                             userManager.saveUserFields(user: .init(uid: user.uid))
                             self?.showNextVC()

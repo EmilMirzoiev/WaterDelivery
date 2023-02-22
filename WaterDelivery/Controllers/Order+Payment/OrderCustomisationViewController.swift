@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-class OrderCustomTableViewController: UIViewController {
+class OrderCustomTableViewController: BaseViewController {
     
     enum OrderCell {
         case textField(Any), switcher(Any), paymentMethod(Any), product(BasketProduct), separator(Any)
@@ -30,10 +30,18 @@ class OrderCustomTableViewController: UIViewController {
         updateButton()
         checkoutButton.layer.cornerRadius = 8
         
+        order?.deliveryAddress = user?.address?.street ?? ""
+        order?.doNotCallMe = false
+        order?.withoutContact = false
+        order?.paymentMethod = .cash
+        
+        
         let userManager = UserManager()
         guard let user = Auth.auth().currentUser else { return }
         userManager.loadUserData(by: user.uid) { [weak self] user in
             self?.user = user
+            self?.order?.deliveryAddress = user.address?.street ?? ""
+            self?.prepareDataSource()
         }
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
@@ -56,6 +64,18 @@ class OrderCustomTableViewController: UIViewController {
     }
     
     @IBAction func checkoutButtonTapped(_ sender: Any) {
+        if let paymentMethod = order?.paymentMethod, paymentMethod == .card {
+            performSegue(withIdentifier: "goToPayment", sender: self)
+        } else {
+            let userOrderManager = OrderManager()
+            guard let order = order else { return }
+            userOrderManager.save(order: order) { [weak self] in
+                self?.navigationController?.popToRootViewController(animated: true)
+                DispatchQueue.main.async {
+                    self?.showAlert(title: "Success", message: "Order was places successfully. Please wait for delivery", completion: {})
+                }
+            }
+        }
     }
     
     func prepareDataSource() {
@@ -85,7 +105,6 @@ class OrderCustomTableViewController: UIViewController {
         }
         
         dataSource.append(.textField(addressCellModel))
-        dataSource.append(.separator(separator))
         
         let notificationSwitcherViewModel = OrderSwitcherTableViewCell.Model(value: order?.doNotCallMe ?? false, fieldName: "Call me 30 minutes before delivery") { value in
             self.order?.doNotCallMe = value
@@ -100,12 +119,11 @@ class OrderCustomTableViewController: UIViewController {
         dataSource.append(.switcher(notificationSwitcherViewModel))
         dataSource.append(.switcher(deliveryWithoutContact))
         
-        let paymentMethodModel = OrderSegmentedControlTableViewCell.Model(value: order?.paymentMethod ?? "Cash On Delivery") { value in
+        let paymentMethodModel = OrderSegmentedControlTableViewCell.Model(value: order?.paymentMethod ?? .cash ) { value in
             self.order?.paymentMethod = value
             self.prepareDataSource()
         }
         
-        dataSource.append(.separator(separator))
         dataSource.append(.paymentMethod(paymentMethodModel))
         
         tableView.reloadData()
@@ -120,13 +138,18 @@ class OrderCustomTableViewController: UIViewController {
         tableView.register(.init(nibName: String(describing: BasketTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: BasketTableViewCell.self))
         tableView.register(SeparatorTableViewCell.self, forCellReuseIdentifier: "SeparatorTableViewCell")
         tableView.register(UINib(nibName: "OrderSegmentedControlTableViewCell", bundle: nil), forCellReuseIdentifier: "OrderSegmentedControlTableViewCell")
-        
     }
     
     @objc func hideKeyboard() {
         tableView.endEditing(true)
     }
     
+    //Create a prepare for segue function that passes the order data to the PaymentViewController when the checkout button is tapped.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PaymentViewController {
+            destination.order = order
+        }
+    }
 }
 
 extension OrderCustomTableViewController: UITableViewDelegate, UITableViewDataSource {
@@ -154,8 +177,9 @@ extension OrderCustomTableViewController: UITableViewDelegate, UITableViewDataSo
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: OrderSwitcherTableViewCell.self), for: indexPath) as! OrderSwitcherTableViewCell
             cell.fill(with: model)
             return cell
-        case .paymentMethod(_):
+        case .paymentMethod(let model):
             let cell = tableView.dequeueReusableCell(withIdentifier: "OrderSegmentedControlTableViewCell", for: indexPath) as! OrderSegmentedControlTableViewCell
+            cell.fill(with: model)
             return cell
         }
     }

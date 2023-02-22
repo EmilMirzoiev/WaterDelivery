@@ -75,9 +75,11 @@ class CreateUserProfileViewController: BaseViewController {
             userManager.saveUserFields(user: user)
         }
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let products = storyBoard.instantiateViewController(withIdentifier: "ProductsViewController") as! ProductsViewController
-        self.navigationController?.pushViewController(products, animated: true)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "ProductsViewController") as! ProductsViewController
+        let navigationController = UINavigationController.init(rootViewController: viewController)
+        UIApplication.shared.windows.first?.rootViewController = navigationController
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
     
     //Add an IBAction for the edit photo button, and in the method, call a presentPhotoActionSheet method to display an action sheet with options to take a photo or choose one from the photo library.

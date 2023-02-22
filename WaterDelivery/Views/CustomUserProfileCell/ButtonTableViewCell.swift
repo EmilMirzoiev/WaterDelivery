@@ -7,6 +7,16 @@
 
 import UIKit
 
+class ButtonViewModel {
+    var buttonName: String = ""
+    var completion: (() -> ())?
+    
+    init(buttonName: String, completion: @escaping () -> Void) {
+        self.buttonName = buttonName
+        self.completion = completion
+    }
+}
+
 class ButtonTableViewCell: UITableViewCell {
 
     @IBOutlet weak var button: UIButton!
