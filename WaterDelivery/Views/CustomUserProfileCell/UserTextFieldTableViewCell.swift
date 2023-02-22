@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserTextFieldTableViewCell: UITableViewCell {
+class UserTextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     struct Model {
         var value: String
@@ -22,6 +22,7 @@ class UserTextFieldTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
+        value.delegate = self
     }
     
     func fill(with model: Any) {
@@ -29,5 +30,10 @@ class UserTextFieldTableViewCell: UITableViewCell {
         fieldName.text = model.fieldName
         value.text = model.value
         completion = model.completion
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let text = value.text else { return }
+        completion?(text)
     }
 }

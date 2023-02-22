@@ -22,23 +22,12 @@ class EditUserProfileTableViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareUI()
         prepareTableView()
         loadUserData()
-        prepareUI()
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        let usernameIndexPath = IndexPath(row: 1, section: 0)
-        let countryIndexPath = IndexPath(row: 2, section: 0)
-        let cityIndexPath = IndexPath(row: 3, section: 0)
-        let streetIndexPath = IndexPath(row: 4, section: 0)
-        let zipCodeIndexPath = IndexPath(row: 5, section: 0)
-        
-        user?.name = getText(from: usernameIndexPath)
-        user?.address?.country = getText(from: countryIndexPath)
-        user?.address?.city = getText(from: cityIndexPath)
-        user?.address?.street = getText(from: streetIndexPath)
-        user?.address?.zipCode = getText(from: zipCodeIndexPath)
         
         if let user = user {
             let userManager = UserManager()
@@ -58,14 +47,6 @@ class EditUserProfileTableViewController: BaseViewController {
         guard let user = Auth.auth().currentUser else { return }
         userManager.loadUserData(by: user.uid) { [weak self] user in
             self?.user = user
-            self?.user?.name = user.name ?? ""
-            self?.user?.address?.country = user.address?.country ?? ""
-            self?.user?.address?.city = user.address?.city ?? ""
-            self?.user?.address?.street = user.address?.street ?? ""
-            self?.user?.address?.zipCode = user.address?.zipCode ?? ""
-            self?.user?.imageURL = user.imageURL
-            
-            
             self?.prepareDataSource()
         }
     }
@@ -80,22 +61,11 @@ class EditUserProfileTableViewController: BaseViewController {
     func prepareDataSource() {
         dataSource.removeAll()
         
-        let storageManager = StorageManager()
-        guard let uid = user?.uid else { return }
-        storageManager.getDownloadURL(folder: "avatars", userUid: uid) { [weak self] imageURL in
-            self?.user?.imageURL = imageURL
-        }
-        
         if let image = user?.imageURL {
             let imageViewModel = ImageViewModel (imageURL: image) {
-                print("imageURL: \(image)")
+                self.presentPhotoActionSheet()
             }
-            let userImage = EditUserProfileCell.image(imageViewModel)
-            dataSource.append(.image(userImage))
-            
-            if let cell = self.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? UserImageTableViewCell {
-                cell.fill(with: imageViewModel)
-            }
+            dataSource.append(.image(imageViewModel))
         }
         
         let usernameCellModel = UserTextFieldTableViewCell.Model(value: user?.name ?? "", fieldName: "Username") { value in
@@ -144,11 +114,8 @@ class EditUserProfileTableViewController: BaseViewController {
     }
 }
 
-extension EditUserProfileTableViewController: UITableViewDelegate, UITableViewDataSource, UserImageTableViewCellDelegate {
-    func editPhotoButtonTapped() {
-        presentPhotoActionSheet()
-    }
-    
+extension EditUserProfileTableViewController: UITableViewDelegate, UITableViewDataSource {
+  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         dataSource.count
     }
@@ -157,10 +124,7 @@ extension EditUserProfileTableViewController: UITableViewDelegate, UITableViewDa
         switch dataSource[indexPath.row] {
         case .image(let model):
             let cell = tableView.dequeueReusableCell(withIdentifier: "UserImageTableViewCell", for: indexPath) as! UserImageTableViewCell
-            cell.delegate = self
-            if model is ImageViewModel {
-                cell.fill(with: model as! ImageViewModel)
-            }
+            cell.fill(with: model)
             return cell
         case .textField(let model):
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UserTextFieldTableViewCell.self), for: indexPath) as! UserTextFieldTableViewCell

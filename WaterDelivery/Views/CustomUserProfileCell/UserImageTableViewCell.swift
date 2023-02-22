@@ -22,8 +22,7 @@ class UserImageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var editPhoto: UIButton!
     @IBOutlet weak var userAccountImage: UIImageView!
-    
-    weak var delegate: UserImageTableViewCellDelegate?
+    var completion: (() -> ())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,12 +43,18 @@ class UserImageTableViewCell: UITableViewCell {
         userAccountImage.kf.setImage(with: sourceURL)
     }
     
+    
+    func fill(with model: Any) {
+        guard let model = model as? ImageViewModel else { return }
+        self.completion = model.completion
+        let source = model.imageURL
+        guard let sourceURL = URL.init(string: source) else { return }
+        userAccountImage.kf.setImage(with: sourceURL)
+    }
+    
+    
     @IBAction func editPhotoButton(_ sender: Any) {
-        delegate?.editPhotoButtonTapped()
+        completion?()
         print("edit photo button tapped")
     }
-}
-
-protocol UserImageTableViewCellDelegate: AnyObject {
-    func editPhotoButtonTapped()
 }
