@@ -28,28 +28,20 @@ class BasketTableViewCell: UITableViewCell {
         selectionStyle = .none
     }
     
-    //Create a new function called fetchProductsImage(folderName: String, uid: String) to download an image from Firebase Storage and set it to the productImageView.
-    func fetchProductsImage(folderName: String, uid: String) {
-        let productRef = Storage.storage().reference().child(folderName).child("\(uid).png")
-        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-        productRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-          if let error = error {
-              print(error)
-          } else {
-            // Data for "folderName/uid.jpg" is returned
-              let image = UIImage(data: data!)
-              self.productImageView.image = image
-          }
-        }
-    }
-    
 //    Create a new function called fill(with model: BasketProduct) to fill the cell's UI elements with data from a BasketProduct model.
     func fill(with model: BasketProduct) {
         productName.text = "\(model.product.name ?? "")"
         productAmount.text = "\(model.count)"
-        
-        if let uid = model.product.uid {
-            fetchProductsImage(folderName: "products", uid: uid)
+
+        // Fetch the product image URL from Firebase Storage
+        let storageManager = StorageManager()
+        guard let uid = model.product.uid else { return }
+        storageManager.fetchProductImageURL(folderName: "products", uid: uid) { imageURL in
+            if let imageURL = imageURL {
+                // If the image URL is not nil, use Kingfisher to load the image from the URL
+                self.productImageView.kf.setImage(with: imageURL)
+                print(imageURL)
+            }
         }
     }
     

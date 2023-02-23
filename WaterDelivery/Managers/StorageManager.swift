@@ -32,4 +32,17 @@ class StorageManager {
             completion(urlString)
         }
     }
+    
+    // Create a method to fetch the product image from Firebase Storage and return it as a URL.
+        func fetchProductImageURL(folderName: String, uid: String, completion: @escaping (URL?) -> Void) {
+            let productRef = Storage.storage().reference().child(folderName).child("\(uid).png")
+            productRef.downloadURL { url, error in
+                if let error = error {
+                    print(error.localizedDescription)
+                    completion(nil)
+                } else {
+                    completion(url)
+                }
+            }
+        }
 }
