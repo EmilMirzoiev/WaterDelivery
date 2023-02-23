@@ -24,7 +24,7 @@
 		2016C7BB2968B76F006143E3 /* BasketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016C7B92968B76F006143E3 /* BasketTableViewCell.swift */; };
 		2016C7BC2968B76F006143E3 /* BasketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2016C7BA2968B76F006143E3 /* BasketTableViewCell.xib */; };
 		202014B929606680003BD9F5 /* LoginWithPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202014B829606680003BD9F5 /* LoginWithPhoneViewController.swift */; };
-		202DE2DA29917DFD00BB2718 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202DE2D929917DFD00BB2718 /* Keys.swift */; };
+		202DE2DA29917DFD00BB2718 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202DE2D929917DFD00BB2718 /* Constants.swift */; };
 		202DE2DE299255C900BB2718 /* UserProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202DE2DD299255C900BB2718 /* UserProfileTableViewController.swift */; };
 		202DE2E22992584700BB2718 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202DE2E02992584700BB2718 /* UserInfoTableViewCell.swift */; };
 		202DE2E32992584700BB2718 /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 202DE2E12992584700BB2718 /* UserInfoTableViewCell.xib */; };
@@ -113,7 +113,7 @@
 		2016C7B92968B76F006143E3 /* BasketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketTableViewCell.swift; sourceTree = "<group>"; };
 		2016C7BA2968B76F006143E3 /* BasketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketTableViewCell.xib; sourceTree = "<group>"; };
 		202014B829606680003BD9F5 /* LoginWithPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWithPhoneViewController.swift; sourceTree = "<group>"; };
-		202DE2D929917DFD00BB2718 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		202DE2D929917DFD00BB2718 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		202DE2DD299255C900BB2718 /* UserProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewController.swift; sourceTree = "<group>"; };
 		202DE2E02992584700BB2718 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
 		202DE2E12992584700BB2718 /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
@@ -273,7 +273,7 @@
 		202DE2D829917DEF00BB2718 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				202DE2D929917DFD00BB2718 /* Keys.swift */,
+				202DE2D929917DFD00BB2718 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -720,7 +720,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20AB51CC29707078009C1B57 /* GoogleMapsViewController.swift in Sources */,
-				202DE2DA29917DFD00BB2718 /* Keys.swift in Sources */,
+				202DE2DA29917DFD00BB2718 /* Constants.swift in Sources */,
 				205F067E2961ECCF005401BC /* AuthManager.swift in Sources */,
 				20B3A98C296DB06A00C7C6D9 /* StorageManager.swift in Sources */,
 				2089913C2995834A00314421 /* OrderSwitcherTableViewCell.swift in Sources */,
