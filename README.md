@@ -1,6 +1,6 @@
 # WaterDelivery
 
-## Welcome to my water delivery project!
+Welcome to my water delivery project!
 
 As part of our login process, you have the option to use your own mobile phone number to receive an authentication SMS.
 
