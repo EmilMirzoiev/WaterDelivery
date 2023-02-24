@@ -30,6 +30,7 @@
 		202DE2E32992584700BB2718 /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 202DE2E12992584700BB2718 /* UserInfoTableViewCell.xib */; };
 		202DE2E72992B0CB00BB2718 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202DE2E52992B0CB00BB2718 /* ButtonTableViewCell.swift */; };
 		202DE2E82992B0CB00BB2718 /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 202DE2E62992B0CB00BB2718 /* ButtonTableViewCell.xib */; };
+		2033EAFA29A7E31D00791FEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2033EAF929A7E31D00791FEE /* GoogleService-Info.plist */; };
 		203540382982C1D1005EE637 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203540372982C1D1005EE637 /* Double+Extension.swift */; };
 		2035403A2983DB24005EE637 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203540392983DB24005EE637 /* MapManager.swift */; };
 		20369DFE293615690050E8AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20369DFD293615690050E8AD /* User.swift */; };
@@ -54,7 +55,6 @@
 		2089914C2998117A00314421 /* OrderSegmentedControlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2089914A2998117A00314421 /* OrderSegmentedControlTableViewCell.swift */; };
 		2089914D2998117A00314421 /* OrderSegmentedControlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2089914B2998117A00314421 /* OrderSegmentedControlTableViewCell.xib */; };
 		208C100129536DD400BE7316 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C100029536DD400BE7316 /* BaseViewController.swift */; };
-		2098CAA62947A04C00D08552 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2098CAA52947A04C00D08552 /* GoogleService-Info.plist */; };
 		20AB51CC29707078009C1B57 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB51CB29707078009C1B57 /* GoogleMapsViewController.swift */; };
 		20B3A98C296DB06A00C7C6D9 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A98B296DB06A00C7C6D9 /* StorageManager.swift */; };
 		20B3A98E296EF4D300C7C6D9 /* CreateUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A98D296EF4D300C7C6D9 /* CreateUserProfileViewController.swift */; };
@@ -119,6 +119,7 @@
 		202DE2E12992584700BB2718 /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
 		202DE2E52992B0CB00BB2718 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		202DE2E62992B0CB00BB2718 /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
+		2033EAF929A7E31D00791FEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		203540372982C1D1005EE637 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		203540392983DB24005EE637 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		20369DFD293615690050E8AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -143,7 +144,6 @@
 		2089914A2998117A00314421 /* OrderSegmentedControlTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSegmentedControlTableViewCell.swift; sourceTree = "<group>"; };
 		2089914B2998117A00314421 /* OrderSegmentedControlTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSegmentedControlTableViewCell.xib; sourceTree = "<group>"; };
 		208C100029536DD400BE7316 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		2098CAA52947A04C00D08552 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		20AB51CB29707078009C1B57 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		20B3A98B296DB06A00C7C6D9 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		20B3A98D296EF4D300C7C6D9 /* CreateUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserProfileViewController.swift; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 				2009510029350D6C0081D290 /* Assets.xcassets */,
 				2009510229350D6C0081D290 /* LaunchScreen.storyboard */,
 				2009510529350D6C0081D290 /* Info.plist */,
-				2098CAA52947A04C00D08552 /* GoogleService-Info.plist */,
+				2033EAF929A7E31D00791FEE /* GoogleService-Info.plist */,
 			);
 			path = WaterDelivery;
 			sourceTree = "<group>";
@@ -548,7 +548,6 @@
 				202DE2E32992584700BB2718 /* UserInfoTableViewCell.xib in Resources */,
 				2009510429350D6C0081D290 /* LaunchScreen.storyboard in Resources */,
 				20DCFEE029780C9100D644D5 /* MyOrdersTableViewCell.xib in Resources */,
-				2098CAA62947A04C00D08552 /* GoogleService-Info.plist in Resources */,
 				202DE2E82992B0CB00BB2718 /* ButtonTableViewCell.xib in Resources */,
 				20004E7629A27BBC00BEBFE5 /* UserTextFieldTableViewCell.xib in Resources */,
 				2016C7BC2968B76F006143E3 /* BasketTableViewCell.xib in Resources */,
@@ -558,6 +557,7 @@
 				2009510129350D6C0081D290 /* Assets.xcassets in Resources */,
 				2089913D2995834A00314421 /* OrderSwitcherTableViewCell.xib in Resources */,
 				200950FF29350D6A0081D290 /* Main.storyboard in Resources */,
+				2033EAFA29A7E31D00791FEE /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -943,6 +943,7 @@
 				DEVELOPMENT_TEAM = LB5X526724;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WaterDelivery/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Water Delivery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -977,6 +978,7 @@
 				DEVELOPMENT_TEAM = LB5X526724;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WaterDelivery/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Water Delivery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1006,7 +1008,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 84D2P3Z3B6;
+				DEVELOPMENT_TEAM = LB5X526724;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
@@ -1027,7 +1029,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 84D2P3Z3B6;
+				DEVELOPMENT_TEAM = LB5X526724;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
@@ -1047,7 +1049,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 84D2P3Z3B6;
+				DEVELOPMENT_TEAM = LB5X526724;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.emilmirzoiev.WaterDeliveryUITests;
@@ -1066,7 +1068,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 84D2P3Z3B6;
+				DEVELOPMENT_TEAM = LB5X526724;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.emilmirzoiev.WaterDeliveryUITests;
