@@ -143,6 +143,11 @@
                                             <segue destination="t6t-J7-B3c" kind="show" id="S72-nK-uJG"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Sign out" id="6Dy-zM-JOE">
+                                        <connections>
+                                            <action selector="signOutButtonTapped:" destination="QhQ-eo-QQt" id="RdX-tg-obX"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>

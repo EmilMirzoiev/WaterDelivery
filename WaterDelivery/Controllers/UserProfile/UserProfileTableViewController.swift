@@ -48,13 +48,26 @@ class UserProfileTableViewController: UIViewController {
         
         dataSource.removeAll()
         
-        guard let image = user?.imageURL else { return }
-        let imageViewModel = ImageViewModel (imageURL: image) {
-            print("imageURL: \(image)")
-        }
+        //        guard let image = user?.imageURL else { return }
+        //        let imageViewModel = ImageViewModel (imageURL: image) {
+        //            print("imageURL: \(image)")
+        //        }
         
-        let userImage = ProfileCells.image(imageViewModel)
-        dataSource.append(.images([userImage]))
+        if let image = user?.imageURL {
+            let imageViewModel = ImageViewModel (imageURL: image) {
+                print("imageURL: \(image)")
+            }
+            let userImage = ProfileCells.image(imageViewModel)
+            dataSource.append(.images([userImage]))
+        } else {
+            // If the user's image URL is nil, add a default image view model.
+            let defaultImageURL = "https://firebasestorage.googleapis.com/v0/b/waterdelivery-6fadd.appspot.com/o/avatars%2FdefaultAvatar.jpg?alt=media&token=fe29b3a9-4464-4f48-b490-55b3362d98a8"
+            let defaultImageViewModel = ImageViewModel(imageURL: defaultImageURL) {
+            }
+            
+            let defaultUserImage = ProfileCells.image(defaultImageViewModel)
+            dataSource.append(.images([defaultUserImage]))
+        }
         
         let userNameTextFieldViewModel = LabelViewModel(titleLabel: "Full name", valueLabel: user?.name ?? "") { [weak self] fullName in
             guard let self = self else { return }

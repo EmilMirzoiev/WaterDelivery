@@ -24,6 +24,7 @@ class MyOrdersViewController: BaseViewController, UITableViewDelegate, UITableVi
         tableView.delegate = self
         tableView.register(.init(nibName: "MyOrdersTableViewCell", bundle: nil), forCellReuseIdentifier: "MyOrdersTableViewCell")
         getData()
+        prepareUI()
     }
     
     //In the getData method, retrieve the current user's ID from FirebaseAuth and use it to load all orders associated with that user using the orderManager's loadAllData method. Call the table view's reloadData method in the completion handler to refresh the table view's contents.
@@ -33,6 +34,21 @@ class MyOrdersViewController: BaseViewController, UITableViewDelegate, UITableVi
                 self?.tableView.reloadData()
             }
         }
+    }
+    
+    func prepareUI() {
+        if orderManager.orders.isEmpty {
+            tableView.backgroundView = createEmptyOrdersListLabel()
+        } else {
+            tableView.backgroundView = nil
+        }
+    }
+    
+    func createEmptyOrdersListLabel() -> UILabel {
+        let label = UILabel()
+        label.text = "You did not order anyting for now"
+        label.textAlignment = .center
+        return label
     }
     
     //Implement the tableView(_:numberOfRowsInSection:) method to return the number of orders stored in the orderManager.

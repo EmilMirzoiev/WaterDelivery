@@ -40,7 +40,6 @@ class BasketTableViewCell: UITableViewCell {
             if let imageURL = imageURL {
                 // If the image URL is not nil, use Kingfisher to load the image from the URL
                 self.productImageView.kf.setImage(with: imageURL)
-                print(imageURL)
             }
         }
     }

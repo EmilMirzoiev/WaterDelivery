@@ -21,6 +21,18 @@ class StorageManager {
         }
     }
     
+    func uploadDefaultAvatarURL(completion: @escaping (URL?) -> Void) {
+        let productRef = Storage.storage().reference().child("avatars").child("defaultAvatar.jpg")
+        productRef.downloadURL { url, error in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(nil)
+            } else {
+                completion(url)
+            }
+        }
+    }
+    
     //  Create another function called getDownloadURL that takes in a folder name, user ID, and a completion handler. This function uses the Firebase Storage SDK to retrieve the download URL from the database and return it in the completion handler.
     func getDownloadURL(folder: String, userUid: String, completion: @escaping (String) -> Void) {
         //get download url
@@ -34,15 +46,15 @@ class StorageManager {
     }
     
     // Create a method to fetch the product image from Firebase Storage and return it as a URL.
-        func fetchProductImageURL(folderName: String, uid: String, completion: @escaping (URL?) -> Void) {
-            let productRef = Storage.storage().reference().child(folderName).child("\(uid).png")
-            productRef.downloadURL { url, error in
-                if let error = error {
-                    print(error.localizedDescription)
-                    completion(nil)
-                } else {
-                    completion(url)
-                }
+    func fetchProductImageURL(folderName: String, uid: String, completion: @escaping (URL?) -> Void) {
+        let productRef = Storage.storage().reference().child(folderName).child("\(uid).png")
+        productRef.downloadURL { url, error in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(nil)
+            } else {
+                completion(url)
             }
         }
+    }
 }

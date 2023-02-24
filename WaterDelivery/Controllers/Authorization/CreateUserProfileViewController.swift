@@ -66,6 +66,26 @@ class CreateUserProfileViewController: BaseViewController {
     
     //Add an IBAction for the submit button, and in the method, update the user's name and address properties with the text field's text, and use the UserManager class to save the user's fields to Firebase.
     @IBAction func submitButtonTapped(_ sender: Any) {
+        // Check if all required fields are filled.
+        guard let fullname = fullnameTextField.text,
+              let country = countryTextField.text,
+              let city = cityTextField.text,
+              let street = streetTextField.text,
+              let zip = zipTextField.text,
+//              let image = user?.imageURL,
+//              !image.isEmpty,
+              !fullname.isEmpty,
+              !country.isEmpty,
+              !city.isEmpty,
+              !street.isEmpty,
+              !zip.isEmpty else {
+            // If not all required fields are filled, show an alert and return early.
+            let alert = UIAlertController(title: "Missing Information", message: "Please fill out all fields before proceeding.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            present(alert, animated: true)
+            return
+        }
+        
         user?.name = fullnameTextField.text
         let userAddress = Address.init(country: countryTextField.text, city: cityTextField.text, street: streetTextField.text, zipCode: zipTextField.text)
         user?.address = userAddress

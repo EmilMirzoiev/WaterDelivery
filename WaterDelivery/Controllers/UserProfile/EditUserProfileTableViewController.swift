@@ -66,6 +66,14 @@ class EditUserProfileTableViewController: BaseViewController {
                 self.presentPhotoActionSheet()
             }
             dataSource.append(.image(imageViewModel))
+        } else {
+            // If the user's image URL is nil, add a default image view model.
+            let defaultImageURL = "https://firebasestorage.googleapis.com/v0/b/waterdelivery-6fadd.appspot.com/o/avatars%2FdefaultAvatar.jpg?alt=media&token=fe29b3a9-4464-4f48-b490-55b3362d98a8"
+            let defaultImageViewModel = ImageViewModel(imageURL: defaultImageURL) {
+                self.presentPhotoActionSheet()
+                print("default user image")
+            }
+            dataSource.append(.image(defaultImageViewModel))
         }
         
         let usernameCellModel = UserTextFieldTableViewCell.Model(value: user?.name ?? "", fieldName: "Username") { value in

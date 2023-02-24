@@ -63,7 +63,19 @@ class ProductsViewController: BaseViewController {
     
     @IBAction func basketButtonTapped(_ sender: Any) {
     }
-
+    
+    @IBAction func signOutButtonTapped(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "initialNavigationController") as! UINavigationController
+            self.view.window?.rootViewController = viewController
+            self.view.window?.makeKeyAndVisible()
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+    }
+    
 }
 
 //The view controller conforms to the UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout protocol, and implements methods for handling the collection view layout, number of sections, number of items, and cell for item at indexPath.
