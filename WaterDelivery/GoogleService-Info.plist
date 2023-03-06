@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>44363599373-urph2rjj5ktiqf72ok9p37qdpd0k9db6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.44363599373-urph2rjj5ktiqf72ok9p37qdpd0k9db6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAui5_Okzm7y5DzPswcY2rx2K7fdnpKsCY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>44363599373</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.emilmirzoiev.WaterDelivery</string>
+	<key>PROJECT_ID</key>
+	<string>waterdelivery-6fadd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>waterdelivery-6fadd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:44363599373:ios:781e76bb87f13d2f318f44</string>
+	<key>DATABASE_URL</key>
+	<string>https://waterdelivery-6fadd-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>

@@ -30,7 +30,6 @@
 		202DE2E32992584700BB2718 /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 202DE2E12992584700BB2718 /* UserInfoTableViewCell.xib */; };
 		202DE2E72992B0CB00BB2718 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202DE2E52992B0CB00BB2718 /* ButtonTableViewCell.swift */; };
 		202DE2E82992B0CB00BB2718 /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 202DE2E62992B0CB00BB2718 /* ButtonTableViewCell.xib */; };
-		2033EAFA29A7E31D00791FEE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2033EAF929A7E31D00791FEE /* GoogleService-Info.plist */; };
 		203540382982C1D1005EE637 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203540372982C1D1005EE637 /* Double+Extension.swift */; };
 		2035403A2983DB24005EE637 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203540392983DB24005EE637 /* MapManager.swift */; };
 		20369DFE293615690050E8AD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20369DFD293615690050E8AD /* User.swift */; };
@@ -56,6 +55,7 @@
 		2089914D2998117A00314421 /* OrderSegmentedControlTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2089914B2998117A00314421 /* OrderSegmentedControlTableViewCell.xib */; };
 		208C100129536DD400BE7316 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C100029536DD400BE7316 /* BaseViewController.swift */; };
 		20AB51CC29707078009C1B57 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB51CB29707078009C1B57 /* GoogleMapsViewController.swift */; };
+		20AE8A1029ACC795000BA2E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20AE8A0F29ACC795000BA2E9 /* GoogleService-Info.plist */; };
 		20B3A98C296DB06A00C7C6D9 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A98B296DB06A00C7C6D9 /* StorageManager.swift */; };
 		20B3A98E296EF4D300C7C6D9 /* CreateUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A98D296EF4D300C7C6D9 /* CreateUserProfileViewController.swift */; };
 		20CB027F294A2C5F0005F2B5 /* Firestore+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB027E294A2C5E0005F2B5 /* Firestore+User.swift */; };
@@ -119,7 +119,6 @@
 		202DE2E12992584700BB2718 /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
 		202DE2E52992B0CB00BB2718 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		202DE2E62992B0CB00BB2718 /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
-		2033EAF929A7E31D00791FEE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		203540372982C1D1005EE637 /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		203540392983DB24005EE637 /* MapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		20369DFD293615690050E8AD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -145,6 +144,7 @@
 		2089914B2998117A00314421 /* OrderSegmentedControlTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderSegmentedControlTableViewCell.xib; sourceTree = "<group>"; };
 		208C100029536DD400BE7316 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		20AB51CB29707078009C1B57 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
+		20AE8A0F29ACC795000BA2E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		20B3A98B296DB06A00C7C6D9 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		20B3A98D296EF4D300C7C6D9 /* CreateUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserProfileViewController.swift; sourceTree = "<group>"; };
 		20CB027E294A2C5E0005F2B5 /* Firestore+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+User.swift"; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 				2009510029350D6C0081D290 /* Assets.xcassets */,
 				2009510229350D6C0081D290 /* LaunchScreen.storyboard */,
 				2009510529350D6C0081D290 /* Info.plist */,
-				2033EAF929A7E31D00791FEE /* GoogleService-Info.plist */,
+				20AE8A0F29ACC795000BA2E9 /* GoogleService-Info.plist */,
 			);
 			path = WaterDelivery;
 			sourceTree = "<group>";
@@ -557,7 +557,7 @@
 				2009510129350D6C0081D290 /* Assets.xcassets in Resources */,
 				2089913D2995834A00314421 /* OrderSwitcherTableViewCell.xib in Resources */,
 				200950FF29350D6A0081D290 /* Main.storyboard in Resources */,
-				2033EAFA29A7E31D00791FEE /* GoogleService-Info.plist in Resources */,
+				20AE8A1029ACC795000BA2E9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
