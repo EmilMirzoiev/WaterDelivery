@@ -132,9 +132,9 @@
 		20667CEC2951E8220001933B /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		20667CF62951FC240001933B /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		20667CF72951FC240001933B /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
-		2067A4BE29D9B54F00F1C79D /* ABeeZee-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ABeeZee-Regular.ttf"; path = "../../../../../Downloads/ABeeZee/ABeeZee-Regular.ttf"; sourceTree = "<group>"; };
-		2067A4BF29D9B65300F1C79D /* Arimo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arimo-Regular.ttf"; path = "../../../../../Downloads/Arimo (1)/static/Arimo-Regular.ttf"; sourceTree = "<group>"; };
-		2067A4C029D9B66000F1C79D /* Arimo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arimo-Bold.ttf"; path = "../../../../../Downloads/Arimo (1)/static/Arimo-Bold.ttf"; sourceTree = "<group>"; };
+		2067A4C429D9BAC800F1C79D /* Arimo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Regular.ttf"; sourceTree = "<group>"; };
+		2067A4C529D9BAC800F1C79D /* Arimo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Bold.ttf"; sourceTree = "<group>"; };
+		2067A4C629D9BAC800F1C79D /* ABeeZee-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ABeeZee-Regular.ttf"; sourceTree = "<group>"; };
 		20899124299516A300314421 /* UserImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageTableViewCell.swift; sourceTree = "<group>"; };
 		20899125299516A300314421 /* UserImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserImageTableViewCell.xib; sourceTree = "<group>"; };
 		2089912A29952DFA00314421 /* OrderCustomisationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCustomisationViewController.swift; sourceTree = "<group>"; };
@@ -357,9 +357,9 @@
 		2067A4BC29D9B52900F1C79D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				2067A4BE29D9B54F00F1C79D /* ABeeZee-Regular.ttf */,
-				2067A4BF29D9B65300F1C79D /* Arimo-Regular.ttf */,
-				2067A4C029D9B66000F1C79D /* Arimo-Bold.ttf */,
+				2067A4C629D9BAC800F1C79D /* ABeeZee-Regular.ttf */,
+				2067A4C529D9BAC800F1C79D /* Arimo-Bold.ttf */,
+				2067A4C429D9BAC800F1C79D /* Arimo-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
