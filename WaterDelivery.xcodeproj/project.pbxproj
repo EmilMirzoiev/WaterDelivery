@@ -132,6 +132,9 @@
 		20667CEC2951E8220001933B /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		20667CF62951FC240001933B /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		20667CF72951FC240001933B /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		2067A4BE29D9B54F00F1C79D /* ABeeZee-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ABeeZee-Regular.ttf"; path = "../../../../../Downloads/ABeeZee/ABeeZee-Regular.ttf"; sourceTree = "<group>"; };
+		2067A4BF29D9B65300F1C79D /* Arimo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arimo-Regular.ttf"; path = "../../../../../Downloads/Arimo (1)/static/Arimo-Regular.ttf"; sourceTree = "<group>"; };
+		2067A4C029D9B66000F1C79D /* Arimo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arimo-Bold.ttf"; path = "../../../../../Downloads/Arimo (1)/static/Arimo-Bold.ttf"; sourceTree = "<group>"; };
 		20899124299516A300314421 /* UserImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageTableViewCell.swift; sourceTree = "<group>"; };
 		20899125299516A300314421 /* UserImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserImageTableViewCell.xib; sourceTree = "<group>"; };
 		2089912A29952DFA00314421 /* OrderCustomisationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCustomisationViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 			children = (
 				200950F729350D6A0081D290 /* AppDelegate.swift */,
 				200950F929350D6A0081D290 /* SceneDelegate.swift */,
+				2067A4BD29D9B53100F1C79D /* Colors */,
+				2067A4BC29D9B52900F1C79D /* Fonts */,
 				20369DED29360C8E0050E8AD /* Models */,
 				203FC31A29491A9200C4C4A4 /* Managers */,
 				20667CEB2950FAD80001933B /* Views */,
@@ -347,6 +352,23 @@
 				20667CF72951FC240001933B /* ProductCollectionViewCell.xib */,
 			);
 			path = ProductCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		2067A4BC29D9B52900F1C79D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2067A4BE29D9B54F00F1C79D /* ABeeZee-Regular.ttf */,
+				2067A4BF29D9B65300F1C79D /* Arimo-Regular.ttf */,
+				2067A4C029D9B66000F1C79D /* Arimo-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2067A4BD29D9B53100F1C79D /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		2070DAD3299BC1180060FE52 /* UserProfile */ = {
