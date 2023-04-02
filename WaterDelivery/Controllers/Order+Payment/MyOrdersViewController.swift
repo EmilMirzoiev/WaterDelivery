@@ -38,9 +38,9 @@ class MyOrdersViewController: BaseViewController, UITableViewDelegate, UITableVi
     
     func prepareUI() {
         if orderManager.orders.isEmpty {
-            tableView.backgroundView = createEmptyOrdersListLabel()
-        } else {
             tableView.backgroundView = nil
+        } else {
+            tableView.backgroundView = createEmptyOrdersListLabel()
         }
     }
     
