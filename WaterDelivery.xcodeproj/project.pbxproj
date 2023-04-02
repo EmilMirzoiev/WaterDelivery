@@ -43,6 +43,10 @@
 		20667CED2951E8220001933B /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20667CEC2951E8220001933B /* ProductsViewController.swift */; };
 		20667CF82951FC240001933B /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20667CF62951FC240001933B /* ProductCollectionViewCell.swift */; };
 		20667CF92951FC240001933B /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20667CF72951FC240001933B /* ProductCollectionViewCell.xib */; };
+		2086161129D9C80100667613 /* ABeeZee-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086160E29D9C7FD00667613 /* ABeeZee-Regular.ttf */; };
+		2086161229D9C80400667613 /* Arimo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086161029D9C7FE00667613 /* Arimo-Bold.ttf */; };
+		2086161329D9C80700667613 /* Arimo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086160F29D9C7FE00667613 /* Arimo-Regular.ttf */; };
+		2086161429D9C82200667613 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2009510529350D6C0081D290 /* Info.plist */; };
 		20899126299516A300314421 /* UserImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20899124299516A300314421 /* UserImageTableViewCell.swift */; };
 		20899127299516A300314421 /* UserImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20899125299516A300314421 /* UserImageTableViewCell.xib */; };
 		2089912B29952DFA00314421 /* OrderCustomisationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2089912A29952DFA00314421 /* OrderCustomisationViewController.swift */; };
@@ -132,9 +136,9 @@
 		20667CEC2951E8220001933B /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		20667CF62951FC240001933B /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		20667CF72951FC240001933B /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
-		2067A4C429D9BAC800F1C79D /* Arimo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Regular.ttf"; sourceTree = "<group>"; };
-		2067A4C529D9BAC800F1C79D /* Arimo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Bold.ttf"; sourceTree = "<group>"; };
-		2067A4C629D9BAC800F1C79D /* ABeeZee-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ABeeZee-Regular.ttf"; sourceTree = "<group>"; };
+		2086160E29D9C7FD00667613 /* ABeeZee-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ABeeZee-Regular.ttf"; sourceTree = "<group>"; };
+		2086160F29D9C7FE00667613 /* Arimo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Regular.ttf"; sourceTree = "<group>"; };
+		2086161029D9C7FE00667613 /* Arimo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Bold.ttf"; sourceTree = "<group>"; };
 		20899124299516A300314421 /* UserImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserImageTableViewCell.swift; sourceTree = "<group>"; };
 		20899125299516A300314421 /* UserImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserImageTableViewCell.xib; sourceTree = "<group>"; };
 		2089912A29952DFA00314421 /* OrderCustomisationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCustomisationViewController.swift; sourceTree = "<group>"; };
@@ -357,9 +361,9 @@
 		2067A4BC29D9B52900F1C79D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				2067A4C629D9BAC800F1C79D /* ABeeZee-Regular.ttf */,
-				2067A4C529D9BAC800F1C79D /* Arimo-Bold.ttf */,
-				2067A4C429D9BAC800F1C79D /* Arimo-Regular.ttf */,
+				2086160E29D9C7FD00667613 /* ABeeZee-Regular.ttf */,
+				2086161029D9C7FE00667613 /* Arimo-Bold.ttf */,
+				2086160F29D9C7FE00667613 /* Arimo-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -566,11 +570,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2086161229D9C80400667613 /* Arimo-Bold.ttf in Resources */,
 				2089913929957C3600314421 /* OrderTextFieldTableViewCell.xib in Resources */,
+				2086161429D9C82200667613 /* Info.plist in Resources */,
 				202DE2E32992584700BB2718 /* UserInfoTableViewCell.xib in Resources */,
 				2009510429350D6C0081D290 /* LaunchScreen.storyboard in Resources */,
 				20DCFEE029780C9100D644D5 /* MyOrdersTableViewCell.xib in Resources */,
 				202DE2E82992B0CB00BB2718 /* ButtonTableViewCell.xib in Resources */,
+				2086161329D9C80700667613 /* Arimo-Regular.ttf in Resources */,
 				20004E7629A27BBC00BEBFE5 /* UserTextFieldTableViewCell.xib in Resources */,
 				2016C7BC2968B76F006143E3 /* BasketTableViewCell.xib in Resources */,
 				2089914D2998117A00314421 /* OrderSegmentedControlTableViewCell.xib in Resources */,
@@ -578,6 +585,7 @@
 				20667CF92951FC240001933B /* ProductCollectionViewCell.xib in Resources */,
 				2009510129350D6C0081D290 /* Assets.xcassets in Resources */,
 				2089913D2995834A00314421 /* OrderSwitcherTableViewCell.xib in Resources */,
+				2086161129D9C80100667613 /* ABeeZee-Regular.ttf in Resources */,
 				200950FF29350D6A0081D290 /* Main.storyboard in Resources */,
 				20AE8A1029ACC795000BA2E9 /* GoogleService-Info.plist in Resources */,
 			);
