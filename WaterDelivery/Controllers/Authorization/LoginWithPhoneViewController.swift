@@ -13,25 +13,28 @@ class LoginWithPhoneViewController: BaseViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var sendSmsButton: UIButton!
     @IBOutlet weak var checkBoxButton: UIButton!
-    
+    @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
-        checkBoxButton.setImage(UIImage(named: "checkboxActive"), for: .normal)
-        checkBoxButton.setImage(UIImage(named: "checkboxNotActive"), for: .selected)
+        hideKeyboardWhenTappedAround()
     }
     
     func prepareUI() {
-        phoneNumberTextField.text = "+380"
+        errorLabel.isHidden = true
+        phoneNumberTextField.text = "+380988897463"
         sendSmsButton.layer.cornerRadius = 8
         navigationItem.setHidesBackButton(true, animated: true)
+        checkBoxButton.setImage(UIImage(named: "checkboxNotActive"), for: .normal)
+        checkBoxButton.setImage(UIImage(named: "checkboxActive"), for: .selected)
     }
     
     //Create an IBAction function for the sendSmsButton, which gets the text from the phoneNumberTextField and checks if it's not empty.
     @IBAction func sendSmsButtonTapped(_ sender: Any) {
         guard let phoneNumber = phoneNumberTextField.text, phoneNumber != "" else {
-            showAlert(title: "Error", message: "Please write down a phone number") {}
+            errorLabel.isHidden = false
+//            showAlert(title: "Error", message: "Please enter correct number") {}
             return
         }
         

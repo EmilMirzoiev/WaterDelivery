@@ -227,13 +227,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21q-DE-clC">
-                                <rect key="frame" x="20" y="403.66666666666669" width="350" height="16.666666666666686"/>
+                                <rect key="frame" x="30" y="403.66666666666669" width="330" height="16.666666666666686"/>
                                 <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write down your phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xqG-T5-eYp">
-                                <rect key="frame" x="20" y="427.33333333333331" width="350" height="34"/>
+                                <rect key="frame" x="30" y="427.33333333333331" width="330" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                             </textField>
@@ -246,7 +246,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQ9-Np-o60">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="JQ9-Np-o60">
                                 <rect key="frame" x="30" y="491.33333333333331" width="330" height="35.999999999999943"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4M-rm-UxK">
@@ -258,13 +258,19 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have read and agree to the Terms of use of Water Delivery" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="RCf-11-V2t">
-                                        <rect key="frame" x="46" y="0.0" width="284" height="36"/>
+                                        <rect key="frame" x="58" y="0.0" width="272" height="36"/>
                                         <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter correct number." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOV-bp-Qe2">
+                                <rect key="frame" x="30" y="465.33333333333331" width="176" height="15.666666666666686"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="13"/>
+                                <color key="textColor" name="errorCustom"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D82-mo-V7m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -274,16 +280,18 @@
                             <constraint firstItem="21q-DE-clC" firstAttribute="top" secondItem="Eo9-hg-HhL" secondAttribute="bottom" constant="60" id="ATd-od-bgM"/>
                             <constraint firstItem="D82-mo-V7m" firstAttribute="trailing" secondItem="Oeo-0x-k1a" secondAttribute="trailing" constant="20" id="CHi-m0-qzB"/>
                             <constraint firstItem="XuX-jO-x6U" firstAttribute="leading" secondItem="D82-mo-V7m" secondAttribute="leading" constant="12" id="F9d-Wo-406"/>
-                            <constraint firstItem="21q-DE-clC" firstAttribute="leading" secondItem="D82-mo-V7m" secondAttribute="leading" constant="20" id="GnH-rr-T46"/>
+                            <constraint firstItem="21q-DE-clC" firstAttribute="leading" secondItem="D82-mo-V7m" secondAttribute="leading" constant="30" id="GnH-rr-T46"/>
                             <constraint firstItem="xqG-T5-eYp" firstAttribute="top" secondItem="21q-DE-clC" secondAttribute="bottom" constant="7" id="HVP-ur-y6T"/>
                             <constraint firstItem="Oeo-0x-k1a" firstAttribute="leading" secondItem="D82-mo-V7m" secondAttribute="leading" constant="20" id="P5l-2z-1QV"/>
                             <constraint firstItem="D82-mo-V7m" firstAttribute="trailing" secondItem="XuX-jO-x6U" secondAttribute="trailing" constant="12" id="Spv-LN-wKL"/>
                             <constraint firstItem="JQ9-Np-o60" firstAttribute="leading" secondItem="D82-mo-V7m" secondAttribute="leading" constant="30" id="dRg-f5-n7x"/>
                             <constraint firstItem="Eo9-hg-HhL" firstAttribute="centerX" secondItem="21q-DE-clC" secondAttribute="centerX" id="ggI-Kj-Bpd"/>
+                            <constraint firstItem="DOV-bp-Qe2" firstAttribute="leading" secondItem="D82-mo-V7m" secondAttribute="leading" constant="30" id="lR3-dO-9ei"/>
                             <constraint firstItem="D82-mo-V7m" firstAttribute="bottom" secondItem="Oeo-0x-k1a" secondAttribute="bottom" constant="12" id="mgc-Vb-oTk"/>
-                            <constraint firstItem="D82-mo-V7m" firstAttribute="trailing" secondItem="xqG-T5-eYp" secondAttribute="trailing" constant="20" id="qXX-EQ-kbS"/>
-                            <constraint firstItem="D82-mo-V7m" firstAttribute="trailing" secondItem="21q-DE-clC" secondAttribute="trailing" constant="20" id="rSb-la-zKv"/>
-                            <constraint firstItem="xqG-T5-eYp" firstAttribute="leading" secondItem="D82-mo-V7m" secondAttribute="leading" constant="20" id="sg0-vh-uYm"/>
+                            <constraint firstItem="DOV-bp-Qe2" firstAttribute="top" secondItem="xqG-T5-eYp" secondAttribute="bottom" constant="4" id="qAE-om-FBy"/>
+                            <constraint firstItem="D82-mo-V7m" firstAttribute="trailing" secondItem="xqG-T5-eYp" secondAttribute="trailing" constant="30" id="qXX-EQ-kbS"/>
+                            <constraint firstItem="D82-mo-V7m" firstAttribute="trailing" secondItem="21q-DE-clC" secondAttribute="trailing" constant="30" id="rSb-la-zKv"/>
+                            <constraint firstItem="xqG-T5-eYp" firstAttribute="leading" secondItem="D82-mo-V7m" secondAttribute="leading" constant="30" id="sg0-vh-uYm"/>
                             <constraint firstItem="Eo9-hg-HhL" firstAttribute="top" secondItem="XuX-jO-x6U" secondAttribute="bottom" constant="56" id="sto-jt-f5d"/>
                             <constraint firstItem="D82-mo-V7m" firstAttribute="trailing" secondItem="JQ9-Np-o60" secondAttribute="trailing" constant="30" id="xPA-rg-WNm"/>
                         </constraints>
@@ -291,6 +299,7 @@
                     <navigationItem key="navigationItem" id="nAU-yA-E0S"/>
                     <connections>
                         <outlet property="checkBoxButton" destination="O4M-rm-UxK" id="We3-dT-oYo"/>
+                        <outlet property="errorLabel" destination="DOV-bp-Qe2" id="WUn-ho-xh1"/>
                         <outlet property="phoneNumberTextField" destination="xqG-T5-eYp" id="5Gj-Zn-zAz"/>
                         <outlet property="sendSmsButton" destination="Oeo-0x-k1a" id="Qro-6U-DkQ"/>
                     </connections>
@@ -970,6 +979,9 @@
         <image name="photo" catalog="system" width="128" height="93"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="errorCustom">
+            <color red="1" green="0.35686274509803922" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryCustom">
             <color red="0.0" green="0.72941176470588232" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
