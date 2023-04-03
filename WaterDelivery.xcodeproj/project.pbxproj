@@ -46,7 +46,6 @@
 		2086161129D9C80100667613 /* ABeeZee-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086160E29D9C7FD00667613 /* ABeeZee-Regular.ttf */; };
 		2086161229D9C80400667613 /* Arimo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086161029D9C7FE00667613 /* Arimo-Bold.ttf */; };
 		2086161329D9C80700667613 /* Arimo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086160F29D9C7FE00667613 /* Arimo-Regular.ttf */; };
-		2086161429D9C82200667613 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2009510529350D6C0081D290 /* Info.plist */; };
 		20899126299516A300314421 /* UserImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20899124299516A300314421 /* UserImageTableViewCell.swift */; };
 		20899127299516A300314421 /* UserImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20899125299516A300314421 /* UserImageTableViewCell.xib */; };
 		2089912B29952DFA00314421 /* OrderCustomisationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2089912A29952DFA00314421 /* OrderCustomisationViewController.swift */; };
@@ -572,7 +571,6 @@
 			files = (
 				2086161229D9C80400667613 /* Arimo-Bold.ttf in Resources */,
 				2089913929957C3600314421 /* OrderTextFieldTableViewCell.xib in Resources */,
-				2086161429D9C82200667613 /* Info.plist in Resources */,
 				202DE2E32992584700BB2718 /* UserInfoTableViewCell.xib in Resources */,
 				2009510429350D6C0081D290 /* LaunchScreen.storyboard in Resources */,
 				20DCFEE029780C9100D644D5 /* MyOrdersTableViewCell.xib in Resources */,

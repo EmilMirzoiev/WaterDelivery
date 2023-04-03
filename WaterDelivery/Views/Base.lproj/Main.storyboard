@@ -249,10 +249,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQ9-Np-o60">
                                 <rect key="frame" x="30" y="491.33333333333331" width="330" height="35.999999999999943"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4M-rm-UxK">
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4M-rm-UxK">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="36"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="checkboxNotActive" title=""/>
+                                        <connections>
+                                            <action selector="checkBoxTapped:" destination="DUX-uk-KV0" eventType="touchUpInside" id="EFD-Id-x4N"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have read and agree to the Terms of use of Water Delivery" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="RCf-11-V2t">
                                         <rect key="frame" x="46" y="0.0" width="284" height="36"/>
@@ -287,6 +290,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nAU-yA-E0S"/>
                     <connections>
+                        <outlet property="checkBoxButton" destination="O4M-rm-UxK" id="We3-dT-oYo"/>
                         <outlet property="phoneNumberTextField" destination="xqG-T5-eYp" id="5Gj-Zn-zAz"/>
                         <outlet property="sendSmsButton" destination="Oeo-0x-k1a" id="Qro-6U-DkQ"/>
                     </connections>

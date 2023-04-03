@@ -12,11 +12,14 @@ class LoginWithPhoneViewController: BaseViewController {
     
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var sendSmsButton: UIButton!
+    @IBOutlet weak var checkBoxButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
+        checkBoxButton.setImage(UIImage(named: "checkboxActive"), for: .normal)
+        checkBoxButton.setImage(UIImage(named: "checkboxNotActive"), for: .selected)
     }
     
     func prepareUI() {
@@ -40,6 +43,19 @@ class LoginWithPhoneViewController: BaseViewController {
         }
     }
 
+    @IBAction func checkBoxTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            
+        }) { (success) in
+            UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+                sender.isSelected = !sender.isSelected
+                sender.transform = .identity
+            }, completion: nil)
+        }
+    }
+    
+    
     func presentPhoneSmsVC() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let phoneSms = storyBoard.instantiateViewController(withIdentifier: "PhoneSmsCodeViewController") as! PhoneSmsCodeViewController
