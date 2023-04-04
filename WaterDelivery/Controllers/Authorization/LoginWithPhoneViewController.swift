@@ -46,7 +46,13 @@ class LoginWithPhoneViewController: BaseViewController {
             errorLabel.isHidden = false
             return
         }
-
+        
+        guard checkBoxButton.isSelected else {
+            errorLabel.text = "Please agree to the terms and conditions."
+            errorLabel.isHidden = false
+            return
+        }
+        
         //If it's not empty, it calls the startAuth function on the AuthManager singleton, passing in the phone number and a completion block that presents the PhoneSmsCodeViewController if the startAuth function is successful.
         AuthManager.shared.startAuth(phoneNumber: phoneNumber) { [weak self] success in
             if success {
