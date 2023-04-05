@@ -89,7 +89,7 @@ class LoginWithPhoneViewController: BaseViewController {
         let phoneSms = storyBoard.instantiateViewController(withIdentifier: "VerificationViewController") as! VerificationViewController
         phoneSms.completion = { [weak self] success in
             if success {
-                let createUserProfileVC = storyBoard.instantiateViewController(withIdentifier: "CreateUserProfileViewController")
+                let createUserProfileVC = storyBoard.instantiateViewController(withIdentifier: "RegistrationViewController")
                 self?.navigationController?.pushViewController(createUserProfileVC, animated: true)
             }
         }

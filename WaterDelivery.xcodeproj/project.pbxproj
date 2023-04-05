@@ -61,7 +61,7 @@
 		20AB51CC29707078009C1B57 /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB51CB29707078009C1B57 /* GoogleMapsViewController.swift */; };
 		20AE8A1029ACC795000BA2E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20AE8A0F29ACC795000BA2E9 /* GoogleService-Info.plist */; };
 		20B3A98C296DB06A00C7C6D9 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A98B296DB06A00C7C6D9 /* StorageManager.swift */; };
-		20B3A98E296EF4D300C7C6D9 /* CreateUserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A98D296EF4D300C7C6D9 /* CreateUserProfileViewController.swift */; };
+		20B3A98E296EF4D300C7C6D9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A98D296EF4D300C7C6D9 /* RegistrationViewController.swift */; };
 		20CB027F294A2C5F0005F2B5 /* Firestore+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB027E294A2C5E0005F2B5 /* Firestore+User.swift */; };
 		20CB0281294BAC260005F2B5 /* Firestore+Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB0280294BAC260005F2B5 /* Firestore+Products.swift */; };
 		20CB0283294BAC380005F2B5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB0282294BAC380005F2B5 /* Product.swift */; };
@@ -154,7 +154,7 @@
 		20AB51CB29707078009C1B57 /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		20AE8A0F29ACC795000BA2E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		20B3A98B296DB06A00C7C6D9 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		20B3A98D296EF4D300C7C6D9 /* CreateUserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserProfileViewController.swift; sourceTree = "<group>"; };
+		20B3A98D296EF4D300C7C6D9 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		20CB027E294A2C5E0005F2B5 /* Firestore+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+User.swift"; sourceTree = "<group>"; };
 		20CB0280294BAC260005F2B5 /* Firestore+Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+Products.swift"; sourceTree = "<group>"; };
 		20CB0282294BAC380005F2B5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -266,7 +266,7 @@
 			children = (
 				202014B829606680003BD9F5 /* LoginWithPhoneViewController.swift */,
 				205F067B2961BCF9005401BC /* VerificationViewController.swift */,
-				20B3A98D296EF4D300C7C6D9 /* CreateUserProfileViewController.swift */,
+				20B3A98D296EF4D300C7C6D9 /* RegistrationViewController.swift */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -757,7 +757,7 @@
 				2089913C2995834A00314421 /* OrderSwitcherTableViewCell.swift in Sources */,
 				2016C79D2968166B006143E3 /* BasketManager.swift in Sources */,
 				203540382982C1D1005EE637 /* Double+Extension.swift in Sources */,
-				20B3A98E296EF4D300C7C6D9 /* CreateUserProfileViewController.swift in Sources */,
+				20B3A98E296EF4D300C7C6D9 /* RegistrationViewController.swift in Sources */,
 				202DE2DE299255C900BB2718 /* UserProfileTableViewController.swift in Sources */,
 				20507B7529755FD5009EBCC9 /* Firestore+SellPoints.swift in Sources */,
 				20667CED2951E8220001933B /* ProductsViewController.swift in Sources */,

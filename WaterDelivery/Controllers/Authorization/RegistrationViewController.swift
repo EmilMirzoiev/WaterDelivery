@@ -10,7 +10,7 @@ import FirebaseAuth
 import FirebaseStorage
 import Kingfisher
 
-class CreateUserProfileViewController: BaseViewController {
+class RegistrationViewController: BaseViewController {
     
     @IBOutlet weak var userPhoto: UIImageView!
     @IBOutlet weak var fullnameTextField: UITextField!
@@ -101,7 +101,7 @@ class CreateUserProfileViewController: BaseViewController {
     }
 }
 
-extension CreateUserProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension RegistrationViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func presentPhotoActionSheet() {
         let actionSheet = UIAlertController(title: "Profile Picture",

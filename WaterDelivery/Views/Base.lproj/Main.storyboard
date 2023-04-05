@@ -406,10 +406,10 @@
             </objects>
             <point key="canvasLocation" x="1824.6153846153845" y="-38.388625592417057"/>
         </scene>
-        <!--Create User Profile View Controller-->
+        <!--Registration View Controller-->
         <scene sceneID="8eX-Jr-VIJ">
             <objects>
-                <viewController storyboardIdentifier="CreateUserProfileViewController" id="vFU-Eh-nKs" customClass="CreateUserProfileViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationViewController" id="vFU-Eh-nKs" customClass="RegistrationViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7uk-aA-Bc2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

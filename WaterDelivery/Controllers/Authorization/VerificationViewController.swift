@@ -112,7 +112,7 @@ class VerificationViewController: BaseViewController {
     
     func showNextVC() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextScreen = storyBoard.instantiateViewController(withIdentifier: "CreateUserProfileViewController") as! CreateUserProfileViewController
+        let nextScreen = storyBoard.instantiateViewController(withIdentifier: "RegistrationViewController") as! RegistrationViewController
         self.navigationController?.pushViewController(nextScreen, animated: true)
     }
     
