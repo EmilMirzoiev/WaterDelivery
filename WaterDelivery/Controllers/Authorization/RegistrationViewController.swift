@@ -25,6 +25,7 @@ class RegistrationViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
+        hideKeyboardWhenTappedAround()
         
         if user != nil {
             fillUserInfo()
