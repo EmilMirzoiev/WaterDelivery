@@ -37,24 +37,19 @@ class LoginWithPhoneViewController: BaseViewController {
         phoneNumberTextField.layer.borderColor = AppColors.error.cgColor
     }
     
-    //Create an IBAction function for the sendSmsButton, which gets the text from the phoneNumberTextField and checks if it's not empty.
     @IBAction func sendSmsButtonTapped(_ sender: Any) {
         guard let phoneNumber = phoneNumberTextField.text, !phoneNumber.isEmpty else {
             showErrorMessage(with: "Please enter a phone number.")
-//            errorLabel.text = "Please enter a phone number."
-//            errorLabel.isHidden = false
-//            phoneNumberTextField.layer.borderColor = AppColors.error.cgColor
             return
         }
         
-        // Check if the phone number is in the correct format
         let phoneRegex = "^\\+?[0-9]{7,16}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
         if !phoneTest.evaluate(with: phoneNumber) {
             showErrorMessage(with: "Please enter a valid phone number.")
             return
         }
-        // Reset the error label and phone number text field border color
+        
         errorLabel.isHidden = true
         phoneNumberTextField.layer.borderColor = UIColor.clear.cgColor
         
@@ -64,7 +59,6 @@ class LoginWithPhoneViewController: BaseViewController {
             return
         }
     
-        // Disable the sendSmsButton until the completion block is called
         sendSmsButton.isEnabled = false
         sendSmsButton.backgroundColor = AppColors.inputs
         

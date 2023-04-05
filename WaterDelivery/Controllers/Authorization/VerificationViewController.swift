@@ -53,11 +53,16 @@ class VerificationViewController: BaseViewController {
                     userManager.checkIfUserExist(id: user.uid) { [weak self] isExist in
                         if isExist {
                             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "ProductsViewController") as! ProductsViewController
+                            let viewController = mainStoryboard.instantiateViewController(
+                                withIdentifier: "ProductsViewController") as! ProductsViewController
                             let navigationController = UINavigationController.init(rootViewController: viewController)
-                            UIApplication.shared.windows.first?.rootViewController = navigationController
-                            UIApplication.shared.windows.first?.makeKeyAndVisible()
                             
+                            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                               let sceneDelegate = windowScene.delegate as? SceneDelegate,
+                               let window = sceneDelegate.window {
+                                window.rootViewController = navigationController
+                                window.makeKeyAndVisible()
+                            }
                         } else {
                             userManager.saveUserFields(user: .init(uid: user.uid))
                             self?.showNextVC()
