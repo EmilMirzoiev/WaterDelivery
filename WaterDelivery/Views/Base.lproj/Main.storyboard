@@ -265,8 +265,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter correct number." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOV-bp-Qe2">
-                                <rect key="frame" x="30" y="465.33333333333331" width="176" height="15.666666666666686"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter correct number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOV-bp-Qe2">
+                                <rect key="frame" x="30" y="465.33333333333331" width="173.33333333333334" height="15.666666666666686"/>
                                 <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="13"/>
                                 <color key="textColor" name="errorCustom"/>
                                 <nil key="highlightedColor"/>
@@ -308,10 +308,10 @@
             </objects>
             <point key="canvasLocation" x="861.53846153846155" y="-39.810426540284361"/>
         </scene>
-        <!--Phone Sms Code View Controller-->
+        <!--Verification View Controller-->
         <scene sceneID="2xN-wE-TtJ">
             <objects>
-                <viewController storyboardIdentifier="PhoneSmsCodeViewController" id="nSY-Kl-FI4" customClass="PhoneSmsCodeViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VerificationViewController" id="nSY-Kl-FI4" customClass="VerificationViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MZy-OY-8kw">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,69 +329,77 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Login"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Next"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="nSY-Kl-FI4" eventType="touchUpInside" id="lOt-1u-3Uo"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4a2-qd-8Pp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bro" translatesAutoresizingMaskIntoConstraints="NO" id="4a2-qd-8Pp">
                                 <rect key="frame" x="107.66666666666669" y="124" width="175" height="173"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="OnK-s0-XQk"/>
                                     <constraint firstAttribute="height" constant="173" id="dRX-as-IGk"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nX-mx-Zag">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verification" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nX-mx-Zag">
                                 <rect key="frame" x="12" y="47" width="366" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter correct code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAp-s0-2JY">
-                                <rect key="frame" x="30" y="395" width="154.66666666666666" height="16"/>
+                                <rect key="frame" x="30" y="395" width="330" height="16"/>
                                 <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="13"/>
                                 <color key="textColor" name="errorCustom"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't you receive any code? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoT-eC-2Xo">
-                                <rect key="frame" x="30" y="435" width="191" height="17"/>
+                                <rect key="frame" x="30" y="435" width="330" height="17"/>
                                 <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resend the code in 00:59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ee3-bi-36K">
-                                <rect key="frame" x="30" y="454" width="167" height="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJr-KW-Lnc">
+                                <rect key="frame" x="30" y="454" width="330" height="29"/>
                                 <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="14"/>
-                                <color key="textColor" name="primaryCustom"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Resend Code"/>
+                                <connections>
+                                    <action selector="resendCodeButtonTapped:" destination="nSY-Kl-FI4" eventType="touchUpInside" id="3d8-4i-pJ5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kA5-t7-Hpc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="kA5-t7-Hpc" firstAttribute="trailing" secondItem="AAp-s0-2JY" secondAttribute="trailing" constant="30" id="1HO-Zo-l0H"/>
                             <constraint firstItem="5nX-mx-Zag" firstAttribute="top" secondItem="kA5-t7-Hpc" secondAttribute="top" id="3kI-Ru-h1E"/>
                             <constraint firstItem="gpI-yQ-b7i" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="12" id="CqB-AP-XAn"/>
                             <constraint firstItem="4a2-qd-8Pp" firstAttribute="centerX" secondItem="hSC-bt-sr2" secondAttribute="centerX" id="GhA-mB-0p2"/>
                             <constraint firstItem="kA5-t7-Hpc" firstAttribute="trailing" secondItem="5nX-mx-Zag" secondAttribute="trailing" constant="12" id="Ifw-Ms-w94"/>
-                            <constraint firstItem="Ee3-bi-36K" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="30" id="Jxz-L9-Sbb"/>
+                            <constraint firstItem="kA5-t7-Hpc" firstAttribute="trailing" secondItem="MJr-KW-Lnc" secondAttribute="trailing" constant="30" id="KQp-WR-wze"/>
                             <constraint firstItem="kA5-t7-Hpc" firstAttribute="bottom" secondItem="gpI-yQ-b7i" secondAttribute="bottom" constant="12" id="KZD-xX-5z7"/>
                             <constraint firstItem="4a2-qd-8Pp" firstAttribute="top" secondItem="5nX-mx-Zag" secondAttribute="bottom" constant="56" id="Mi1-DH-aUK"/>
                             <constraint firstItem="hSC-bt-sr2" firstAttribute="top" secondItem="4a2-qd-8Pp" secondAttribute="bottom" constant="60" id="Nc6-HB-Icl"/>
                             <constraint firstItem="kA5-t7-Hpc" firstAttribute="trailing" secondItem="gpI-yQ-b7i" secondAttribute="trailing" constant="12" id="TwQ-Ox-kdj"/>
                             <constraint firstItem="FoT-eC-2Xo" firstAttribute="top" secondItem="AAp-s0-2JY" secondAttribute="bottom" constant="24" id="UU6-UZ-EFJ"/>
+                            <constraint firstItem="MJr-KW-Lnc" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="30" id="bol-bO-zUt"/>
+                            <constraint firstItem="kA5-t7-Hpc" firstAttribute="trailing" secondItem="FoT-eC-2Xo" secondAttribute="trailing" constant="30" id="cCD-OR-tVw"/>
                             <constraint firstItem="FoT-eC-2Xo" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="30" id="kHR-po-g0F"/>
                             <constraint firstItem="AAp-s0-2JY" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="30" id="kTW-Mo-gfy"/>
-                            <constraint firstItem="Ee3-bi-36K" firstAttribute="top" secondItem="FoT-eC-2Xo" secondAttribute="bottom" constant="2" id="mo2-Ec-dpi"/>
                             <constraint firstItem="hSC-bt-sr2" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="30" id="mxk-6q-Hh0"/>
                             <constraint firstItem="AAp-s0-2JY" firstAttribute="top" secondItem="hSC-bt-sr2" secondAttribute="bottom" constant="4" id="rUO-oM-ubB"/>
                             <constraint firstItem="kA5-t7-Hpc" firstAttribute="trailing" secondItem="hSC-bt-sr2" secondAttribute="trailing" constant="30" id="s0R-Xx-Nuz"/>
+                            <constraint firstItem="MJr-KW-Lnc" firstAttribute="top" secondItem="FoT-eC-2Xo" secondAttribute="bottom" constant="2" id="sGD-9c-FeG"/>
                             <constraint firstItem="5nX-mx-Zag" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="12" id="zmY-lp-5gw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="He9-io-l0e"/>
                     <connections>
                         <outlet property="codeTextField" destination="hSC-bt-sr2" id="Dt0-9x-BlT"/>
+                        <outlet property="errorLabel" destination="AAp-s0-2JY" id="jme-lv-lOG"/>
                         <outlet property="loginButton" destination="gpI-yQ-b7i" id="4hH-xp-BeH"/>
+                        <outlet property="resendCodeButton" destination="MJr-KW-Lnc" id="Y43-9o-0Wx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYF-YK-yoq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -560,6 +568,7 @@
         <!--Navigation Controller-->
         <scene sceneID="RXl-ew-CYd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfa-Xy-K8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="initialNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="CSm-jm-E2l" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fl9-Rk-HTV">
@@ -571,7 +580,6 @@
                         <segue destination="mPP-8V-FU5" kind="relationship" relationship="rootViewController" id="P2m-vs-5pe"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zfa-Xy-K8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-966" y="-35"/>
         </scene>

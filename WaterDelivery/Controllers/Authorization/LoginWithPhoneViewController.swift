@@ -24,7 +24,7 @@ class LoginWithPhoneViewController: BaseViewController {
     func prepareUI() {
         errorLabel.isHidden = true
         phoneNumberTextField.text = "+380988897463"
-        sendSmsButton.layer.cornerRadius = 8
+        sendSmsButton.layer.cornerRadius = 30
         navigationItem.setHidesBackButton(true, animated: true)
         checkBoxButton.setImage(UIImage(named: "checkboxNotActive"), for: .normal)
         checkBoxButton.setImage(UIImage(named: "checkboxActive"), for: .selected)
@@ -53,7 +53,7 @@ class LoginWithPhoneViewController: BaseViewController {
             return
         }
         
-        //If it's not empty, it calls the startAuth function on the AuthManager singleton, passing in the phone number and a completion block that presents the PhoneSmsCodeViewController if the startAuth function is successful.
+        //If it's not empty, it calls the startAuth function on the AuthManager singleton, passing in the phone number and a completion block that presents the VerificationViewController if the startAuth function is successful.
         AuthManager.shared.startAuth(phoneNumber: phoneNumber) { [weak self] success in
             if success {
                 self?.presentPhoneSmsVC()
@@ -75,7 +75,7 @@ class LoginWithPhoneViewController: BaseViewController {
     
     func presentPhoneSmsVC() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let phoneSms = storyBoard.instantiateViewController(withIdentifier: "PhoneSmsCodeViewController") as! PhoneSmsCodeViewController
+        let phoneSms = storyBoard.instantiateViewController(withIdentifier: "VerificationViewController") as! VerificationViewController
         phoneSms.completion = { [weak self] success in
             if success {
                 let createUserProfileVC = storyBoard.instantiateViewController(withIdentifier: "CreateUserProfileViewController")

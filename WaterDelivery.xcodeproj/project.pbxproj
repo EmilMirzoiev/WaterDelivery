@@ -38,7 +38,8 @@
 		2040FB0B2970236800FD1D2E /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040FB0A2970236800FD1D2E /* PaymentViewController.swift */; };
 		20507B7329755D38009EBCC9 /* SellPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20507B7229755D38009EBCC9 /* SellPoint.swift */; };
 		20507B7529755FD5009EBCC9 /* Firestore+SellPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20507B7429755FD5009EBCC9 /* Firestore+SellPoints.swift */; };
-		205F067C2961BCF9005401BC /* PhoneSmsCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F067B2961BCF9005401BC /* PhoneSmsCodeViewController.swift */; };
+		2054FB0B29DD83B3005E6D0E /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054FB0A29DD83B3005E6D0E /* Extension+UIColor.swift */; };
+		205F067C2961BCF9005401BC /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F067B2961BCF9005401BC /* VerificationViewController.swift */; };
 		205F067E2961ECCF005401BC /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F067D2961ECCF005401BC /* AuthManager.swift */; };
 		20667CED2951E8220001933B /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20667CEC2951E8220001933B /* ProductsViewController.swift */; };
 		20667CF82951FC240001933B /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20667CF62951FC240001933B /* ProductCollectionViewCell.swift */; };
@@ -130,7 +131,8 @@
 		2040FB0A2970236800FD1D2E /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		20507B7229755D38009EBCC9 /* SellPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellPoint.swift; sourceTree = "<group>"; };
 		20507B7429755FD5009EBCC9 /* Firestore+SellPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+SellPoints.swift"; sourceTree = "<group>"; };
-		205F067B2961BCF9005401BC /* PhoneSmsCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneSmsCodeViewController.swift; sourceTree = "<group>"; };
+		2054FB0A29DD83B3005E6D0E /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
+		205F067B2961BCF9005401BC /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		205F067D2961ECCF005401BC /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		20667CEC2951E8220001933B /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		20667CF62951FC240001933B /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -263,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				202014B829606680003BD9F5 /* LoginWithPhoneViewController.swift */,
-				205F067B2961BCF9005401BC /* PhoneSmsCodeViewController.swift */,
+				205F067B2961BCF9005401BC /* VerificationViewController.swift */,
 				20B3A98D296EF4D300C7C6D9 /* CreateUserProfileViewController.swift */,
 			);
 			path = Authorization;
@@ -370,6 +372,7 @@
 		2067A4BD29D9B53100F1C79D /* Colors */ = {
 			isa = PBXGroup;
 			children = (
+				2054FB0A29DD83B3005E6D0E /* Extension+UIColor.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -780,7 +783,7 @@
 				20CB0281294BAC260005F2B5 /* Firestore+Products.swift in Sources */,
 				20DCFED72977160200D644D5 /* MyOrdersViewController.swift in Sources */,
 				20F17D45297E981F0071F59C /* OrderDetailsViewController.swift in Sources */,
-				205F067C2961BCF9005401BC /* PhoneSmsCodeViewController.swift in Sources */,
+				205F067C2961BCF9005401BC /* VerificationViewController.swift in Sources */,
 				202DE2E72992B0CB00BB2718 /* ButtonTableViewCell.swift in Sources */,
 				2040FB0B2970236800FD1D2E /* PaymentViewController.swift in Sources */,
 				20DCFEDB2978095700D644D5 /* OrderManager.swift in Sources */,
@@ -790,6 +793,7 @@
 				20004E7529A27BBC00BEBFE5 /* UserTextFieldTableViewCell.swift in Sources */,
 				20667CF82951FC240001933B /* ProductCollectionViewCell.swift in Sources */,
 				2089913829957C3600314421 /* OrderTextFieldTableViewCell.swift in Sources */,
+				2054FB0B29DD83B3005E6D0E /* Extension+UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
