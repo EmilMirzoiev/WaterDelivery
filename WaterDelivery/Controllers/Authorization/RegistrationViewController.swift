@@ -153,5 +153,4 @@ extension RegistrationViewController: UIImagePickerControllerDelegate, UINavigat
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true)
     }
-    
 }

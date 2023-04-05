@@ -34,6 +34,7 @@ class VerificationViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
+        hideKeyboardWhenTappedAround()
     }
     
     func prepareUI() {
@@ -131,5 +132,4 @@ class VerificationViewController: BaseViewController {
         let products = storyBoard.instantiateViewController(withIdentifier: "ProductsViewController") as! ProductsViewController
         self.navigationController?.pushViewController(products, animated: true)
     }
-    
 }

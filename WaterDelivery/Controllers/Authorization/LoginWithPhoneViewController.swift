@@ -45,12 +45,31 @@ class LoginWithPhoneViewController: BaseViewController {
             return
         }
         
-        let phoneRegex = "^\\+?[0-9]{7,16}$"
-        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
-        if !phoneTest.evaluate(with: phoneNumber) {
-            showErrorMessage(with: "Please enter a valid phone number.")
-            return
+        let phoneRegexArray = [
+            "^\\+?[0-9]{7,16}$",
+            "^\\+?[0-9]{2} \\([0-9]{3}\\) [0-9]{3} [0-9]{2} [0-9]{2}$",
+            "^\\+?[0-9]{2} [0-9]{3} [0-9]{2} [0-9]{3}$",
+            "^\\+[0-9]{2} [0-9]{2} [0-9]{3} [0-9]{2} [0-9]{2}$",
+            "^\\+?[0-9]{3} \\([0-9]{2}\\) [0-9]{3} [0-9]{2} [0-9]{2}$",
+        ]
+
+        func isValidPhoneNumber(_ phoneNumber: String) -> Bool {
+            for regex in phoneRegexArray {
+                let phoneTest = NSPredicate(format: "SELF MATCHES %@", regex)
+                if phoneTest.evaluate(with: phoneNumber) {
+                    return true
+                }
+            }
+            return false
         }
+
+        
+//        let phoneRegex = "^\\+?[0-9]{2,3}([\\s-]?\\(?[0-9]{3}\\)?[\\s-]?|[\\s-]?[0-9]{3}[\\s-]?)[0-9]{2}[\\s-]?[0-9]{2,3}$"
+//        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
+//        if !phoneTest.evaluate(with: phoneNumber) {
+//            showErrorMessage(with: "Please enter a valid phone number.")
+//            return
+//        }
         
         errorLabel.isHidden = true
         phoneNumberTextField.layer.borderColor = UIColor.clear.cgColor
@@ -97,10 +116,4 @@ class LoginWithPhoneViewController: BaseViewController {
         }
         self.navigationController?.pushViewController(phoneSms, animated: true)
     }
-    
-    
 }
-
-
-
-
