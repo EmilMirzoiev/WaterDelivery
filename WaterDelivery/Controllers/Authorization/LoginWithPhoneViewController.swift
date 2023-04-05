@@ -35,6 +35,7 @@ class LoginWithPhoneViewController: BaseViewController {
         errorLabel.isHidden = false
         phoneNumberTextField.layer.borderWidth = 1.0
         phoneNumberTextField.layer.borderColor = AppColors.error.cgColor
+        phoneNumberTextField.layer.cornerRadius = 8
     }
     
     @IBAction func sendSmsButtonTapped(_ sender: Any) {

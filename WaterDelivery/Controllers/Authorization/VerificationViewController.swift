@@ -10,7 +10,7 @@ import FirebaseAuth
 
 class VerificationViewController: BaseViewController {
     
-    @IBOutlet private weak var codeTextField: UITextField?
+    @IBOutlet private weak var codeTextField: UITextField!
     @IBOutlet public weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var resendCodeButton: UIButton!
@@ -45,6 +45,14 @@ class VerificationViewController: BaseViewController {
         loginButton.layer.cornerRadius = 30
     }
     
+    func showErrorMessage(with string: String) {
+        errorLabel.text = string
+        errorLabel.isHidden = false
+        codeTextField.layer.borderWidth = 1.0
+        codeTextField.layer.borderColor = AppColors.error.cgColor
+        codeTextField.layer.cornerRadius = 8
+    }
+    
     private func verifyCode(with code: String) {
         AuthManager.shared.verifyCode(smsCode: code) { [weak self] success in
             if success {
@@ -70,8 +78,7 @@ class VerificationViewController: BaseViewController {
                     }
                 }
             } else {
-                self?.errorLabel.text = "Please provide correct verification code"
-                self?.errorLabel.isHidden = false
+                self?.showErrorMessage(with: "Please provide correct verification code")
                 return
             }
         }
@@ -79,8 +86,7 @@ class VerificationViewController: BaseViewController {
     
     @IBAction public func loginButtonPressed(_ sender: Any) {
         guard let code = codeTextField?.text, code != "" else {
-            errorLabel.text = "Please enter correct code"
-            errorLabel.isHidden = false
+            showErrorMessage(with: "Please enter correct code")
             return
         }
         
@@ -100,7 +106,8 @@ class VerificationViewController: BaseViewController {
             return
         }
         
-        verifyCode(with: code)
+        AuthManager.shared.verifyCode(smsCode: code) {_ in }
+
     }
     
     
