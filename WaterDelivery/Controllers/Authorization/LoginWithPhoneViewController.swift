@@ -24,7 +24,8 @@ class LoginWithPhoneViewController: BaseViewController {
     func prepareUI() {
         errorLabel.isHidden = true
         phoneNumberTextField.text = "+380988897463"
-        sendSmsButton.layer.cornerRadius = 30
+        sendSmsButton.layer.cornerRadius = min(sendSmsButton.frame.size.width, sendSmsButton.frame.size.height) / 2.0
+        sendSmsButton.layer.masksToBounds = true
         navigationItem.setHidesBackButton(true, animated: true)
         checkBoxButton.setImage(UIImage(named: "checkboxNotActive"), for: .normal)
         checkBoxButton.setImage(UIImage(named: "checkboxActive"), for: .selected)
@@ -59,12 +60,12 @@ class LoginWithPhoneViewController: BaseViewController {
             errorLabel.isHidden = false
             return
         }
-    
+        
         sendSmsButton.isEnabled = false
         sendSmsButton.backgroundColor = AppColors.inputs
         
         AuthManager.shared.startAuth(phoneNumber: phoneNumber) { [weak self] success in
-             self?.sendSmsButton.isEnabled = true
+            self?.sendSmsButton.isEnabled = true
             self?.sendSmsButton.backgroundColor = AppColors.primary
             
             if success {
@@ -96,8 +97,8 @@ class LoginWithPhoneViewController: BaseViewController {
         }
         self.navigationController?.pushViewController(phoneSms, animated: true)
     }
-
-
+    
+    
 }
 
 

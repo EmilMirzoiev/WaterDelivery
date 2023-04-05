@@ -42,7 +42,8 @@ class VerificationViewController: BaseViewController {
         resendCodeButton.titleLabel?.font = UIFont(name: "ABeeZee-Regular", size: 14)
         resendCodeButton.titleLabel?.adjustsFontForContentSizeCategory = true
         errorLabel.isHidden = true
-        loginButton.layer.cornerRadius = 30
+        loginButton.layer.cornerRadius = min(loginButton.frame.size.width, loginButton.frame.size.height) / 2.0
+        loginButton.layer.masksToBounds = true
     }
     
     func showErrorMessage(with string: String) {
@@ -60,10 +61,12 @@ class VerificationViewController: BaseViewController {
                     let userManager = UserManager()
                     userManager.checkIfUserExist(id: user.uid) { [weak self] isExist in
                         if isExist {
-                            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                            let mainStoryboard: UIStoryboard = UIStoryboard(
+                                name: "Main", bundle: nil)
                             let viewController = mainStoryboard.instantiateViewController(
                                 withIdentifier: "ProductsViewController") as! ProductsViewController
-                            let navigationController = UINavigationController.init(rootViewController: viewController)
+                            let navigationController = UINavigationController.init(
+                                rootViewController: viewController)
                             
                             if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                                let sceneDelegate = windowScene.delegate as? SceneDelegate,
@@ -95,10 +98,11 @@ class VerificationViewController: BaseViewController {
     
     @IBAction func resendCodeButtonTapped(_ sender: Any) {
         remainingTime = 59
-        countdownTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] timer in
-            guard let self = self else { return }
-            self.remainingTime -= 1
-        }
+        countdownTimer = Timer.scheduledTimer(
+            withTimeInterval: 1, repeats: true) { [weak self] timer in
+                guard let self = self else { return }
+                self.remainingTime -= 1
+            }
         
         guard let code = codeTextField?.text, code != "" else {
             errorLabel.text = "Please enter correct code"
@@ -107,9 +111,8 @@ class VerificationViewController: BaseViewController {
         }
         
         AuthManager.shared.verifyCode(smsCode: code) {_ in }
-
+        
     }
-    
     
     func captchaCompleted() {
         self.dismiss(animated: true, completion: {

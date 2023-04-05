@@ -43,7 +43,8 @@ class RegistrationViewController: BaseViewController {
         userPhoto.layer.cornerRadius = 24
         userPhoto.layer.borderWidth = 2
         userPhoto.layer.borderColor = UIColor.lightGray.cgColor
-        submitButton.layer.cornerRadius = 30
+        submitButton.layer.cornerRadius = min(submitButton.frame.size.width, submitButton.frame.size.height) / 2.0
+        submitButton.layer.masksToBounds = true
     }
     
     func fillUserInfo() {
@@ -91,8 +92,8 @@ class RegistrationViewController: BaseViewController {
         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
            let sceneDelegate = windowScene.delegate as? SceneDelegate,
            let window = sceneDelegate.window {
-               window.rootViewController = navigationController
-               window.makeKeyAndVisible()
+            window.rootViewController = navigationController
+            window.makeKeyAndVisible()
         }
     }
     
@@ -148,7 +149,6 @@ extension RegistrationViewController: UIImagePickerControllerDelegate, UINavigat
             }
         }
     }
-    
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true)
