@@ -72,7 +72,6 @@ class VerificationViewController: BaseViewController {
         }
     }
     
-    
     @IBAction public func loginButtonPressed(_ sender: Any) {
         guard let code = codeTextField?.text, code != "" else {
             errorLabel.text = "Please enter correct code"

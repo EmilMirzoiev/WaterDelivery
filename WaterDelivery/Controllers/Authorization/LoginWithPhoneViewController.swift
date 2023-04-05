@@ -30,11 +30,20 @@ class LoginWithPhoneViewController: BaseViewController {
         checkBoxButton.setImage(UIImage(named: "checkboxActive"), for: .selected)
     }
     
+    func showErrorMessage(with string: String) {
+        errorLabel.text = string
+        errorLabel.isHidden = false
+        phoneNumberTextField.layer.borderWidth = 1.0
+        phoneNumberTextField.layer.borderColor = AppColors.error.cgColor
+    }
+    
     //Create an IBAction function for the sendSmsButton, which gets the text from the phoneNumberTextField and checks if it's not empty.
     @IBAction func sendSmsButtonTapped(_ sender: Any) {
         guard let phoneNumber = phoneNumberTextField.text, !phoneNumber.isEmpty else {
-            errorLabel.text = "Please enter a phone number."
-            errorLabel.isHidden = false
+            showErrorMessage(with: "Please enter a phone number.")
+//            errorLabel.text = "Please enter a phone number."
+//            errorLabel.isHidden = false
+//            phoneNumberTextField.layer.borderColor = AppColors.error.cgColor
             return
         }
         
@@ -42,19 +51,27 @@ class LoginWithPhoneViewController: BaseViewController {
         let phoneRegex = "^\\+?[0-9]{7,16}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
         if !phoneTest.evaluate(with: phoneNumber) {
-            errorLabel.text = "Please enter a valid phone number."
-            errorLabel.isHidden = false
+            showErrorMessage(with: "Please enter a valid phone number.")
             return
         }
+        // Reset the error label and phone number text field border color
+        errorLabel.isHidden = true
+        phoneNumberTextField.layer.borderColor = UIColor.clear.cgColor
         
         guard checkBoxButton.isSelected else {
             errorLabel.text = "Please agree to the terms and conditions."
             errorLabel.isHidden = false
             return
         }
+    
+        // Disable the sendSmsButton until the completion block is called
+        sendSmsButton.isEnabled = false
+        sendSmsButton.backgroundColor = AppColors.inputs
         
-        //If it's not empty, it calls the startAuth function on the AuthManager singleton, passing in the phone number and a completion block that presents the VerificationViewController if the startAuth function is successful.
         AuthManager.shared.startAuth(phoneNumber: phoneNumber) { [weak self] success in
+             self?.sendSmsButton.isEnabled = true
+            self?.sendSmsButton.backgroundColor = AppColors.primary
+            
             if success {
                 self?.presentPhoneSmsVC()
             }
