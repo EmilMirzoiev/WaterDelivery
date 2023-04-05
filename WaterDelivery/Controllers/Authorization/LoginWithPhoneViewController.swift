@@ -73,12 +73,19 @@ class LoginWithPhoneViewController: BaseViewController {
         }
     }
     
-    
     func presentPhoneSmsVC() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let phoneSms = storyBoard.instantiateViewController(withIdentifier: "PhoneSmsCodeViewController") as! PhoneSmsCodeViewController
+        phoneSms.completion = { [weak self] success in
+            if success {
+                let createUserProfileVC = storyBoard.instantiateViewController(withIdentifier: "CreateUserProfileViewController")
+                self?.navigationController?.pushViewController(createUserProfileVC, animated: true)
+            }
+        }
         self.navigationController?.pushViewController(phoneSms, animated: true)
     }
+
+
 }
 
 

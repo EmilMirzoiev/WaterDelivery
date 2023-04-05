@@ -12,6 +12,7 @@ class PhoneSmsCodeViewController: BaseViewController {
     
     @IBOutlet private weak var codeTextField: UITextField?
     @IBOutlet public weak var loginButton: UIButton!
+    var completion: ((Bool) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +56,15 @@ class PhoneSmsCodeViewController: BaseViewController {
         }
     }
     
+    func captchaCompleted() {
+            self.dismiss(animated: true, completion: {
+                self.completion?(true)
+            })
+        }
+    
     func showNextVC() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextScreen = storyBoard.instantiateViewController(withIdentifier: "FillUserDataViewController") as! CreateUserProfileViewController
+        let nextScreen = storyBoard.instantiateViewController(withIdentifier: "CreateUserProfileViewController") as! CreateUserProfileViewController
         self.navigationController?.pushViewController(nextScreen, animated: true)
     }
     

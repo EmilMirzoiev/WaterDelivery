@@ -316,19 +316,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please write down the code, which we have sent to you via SMS to the provided phone number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fso-5v-G80">
-                                <rect key="frame" x="12" y="87" width="366" height="61"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write down the code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hSC-bt-sr2">
-                                <rect key="frame" x="12" y="168" width="366" height="34"/>
+                                <rect key="frame" x="30" y="357" width="330" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpI-yQ-b7i">
-                                <rect key="frame" x="12" y="242" width="366" height="50"/>
+                                <rect key="frame" x="12" y="748" width="366" height="50"/>
                                 <color key="backgroundColor" name="primaryCustom"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="r4R-h8-DLL"/>
@@ -340,19 +334,58 @@
                                     <action selector="loginButtonPressed:" destination="nSY-Kl-FI4" eventType="touchUpInside" id="lOt-1u-3Uo"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4a2-qd-8Pp">
+                                <rect key="frame" x="107.66666666666669" y="124" width="175" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="OnK-s0-XQk"/>
+                                    <constraint firstAttribute="height" constant="173" id="dRX-as-IGk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nX-mx-Zag">
+                                <rect key="frame" x="12" y="47" width="366" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter correct code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAp-s0-2JY">
+                                <rect key="frame" x="30" y="395" width="154.66666666666666" height="16"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="13"/>
+                                <color key="textColor" name="errorCustom"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't you receive any code? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FoT-eC-2Xo">
+                                <rect key="frame" x="30" y="435" width="191" height="17"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resend the code in 00:59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ee3-bi-36K">
+                                <rect key="frame" x="30" y="454" width="167" height="17"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="14"/>
+                                <color key="textColor" name="primaryCustom"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kA5-t7-Hpc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="5nX-mx-Zag" firstAttribute="top" secondItem="kA5-t7-Hpc" secondAttribute="top" id="3kI-Ru-h1E"/>
                             <constraint firstItem="gpI-yQ-b7i" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="12" id="CqB-AP-XAn"/>
-                            <constraint firstItem="kA5-t7-Hpc" firstAttribute="trailing" secondItem="hSC-bt-sr2" secondAttribute="trailing" constant="12" id="Hu3-lc-4Nh"/>
+                            <constraint firstItem="4a2-qd-8Pp" firstAttribute="centerX" secondItem="hSC-bt-sr2" secondAttribute="centerX" id="GhA-mB-0p2"/>
+                            <constraint firstItem="kA5-t7-Hpc" firstAttribute="trailing" secondItem="5nX-mx-Zag" secondAttribute="trailing" constant="12" id="Ifw-Ms-w94"/>
+                            <constraint firstItem="Ee3-bi-36K" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="30" id="Jxz-L9-Sbb"/>
+                            <constraint firstItem="kA5-t7-Hpc" firstAttribute="bottom" secondItem="gpI-yQ-b7i" secondAttribute="bottom" constant="12" id="KZD-xX-5z7"/>
+                            <constraint firstItem="4a2-qd-8Pp" firstAttribute="top" secondItem="5nX-mx-Zag" secondAttribute="bottom" constant="56" id="Mi1-DH-aUK"/>
+                            <constraint firstItem="hSC-bt-sr2" firstAttribute="top" secondItem="4a2-qd-8Pp" secondAttribute="bottom" constant="60" id="Nc6-HB-Icl"/>
                             <constraint firstItem="kA5-t7-Hpc" firstAttribute="trailing" secondItem="gpI-yQ-b7i" secondAttribute="trailing" constant="12" id="TwQ-Ox-kdj"/>
-                            <constraint firstItem="hSC-bt-sr2" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="12" id="boE-ox-MWf"/>
-                            <constraint firstItem="hSC-bt-sr2" firstAttribute="top" secondItem="fso-5v-G80" secondAttribute="bottom" constant="20" id="co0-g4-n0g"/>
-                            <constraint firstItem="fso-5v-G80" firstAttribute="top" secondItem="kA5-t7-Hpc" secondAttribute="top" constant="40" id="jzc-It-seS"/>
-                            <constraint firstItem="gpI-yQ-b7i" firstAttribute="top" secondItem="hSC-bt-sr2" secondAttribute="bottom" constant="40" id="o6R-fI-vmA"/>
-                            <constraint firstItem="fso-5v-G80" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="12" id="sZf-Ce-ToX"/>
-                            <constraint firstItem="kA5-t7-Hpc" firstAttribute="trailing" secondItem="fso-5v-G80" secondAttribute="trailing" constant="12" id="vrI-c0-p4b"/>
+                            <constraint firstItem="FoT-eC-2Xo" firstAttribute="top" secondItem="AAp-s0-2JY" secondAttribute="bottom" constant="24" id="UU6-UZ-EFJ"/>
+                            <constraint firstItem="FoT-eC-2Xo" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="30" id="kHR-po-g0F"/>
+                            <constraint firstItem="AAp-s0-2JY" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="30" id="kTW-Mo-gfy"/>
+                            <constraint firstItem="Ee3-bi-36K" firstAttribute="top" secondItem="FoT-eC-2Xo" secondAttribute="bottom" constant="2" id="mo2-Ec-dpi"/>
+                            <constraint firstItem="hSC-bt-sr2" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="30" id="mxk-6q-Hh0"/>
+                            <constraint firstItem="AAp-s0-2JY" firstAttribute="top" secondItem="hSC-bt-sr2" secondAttribute="bottom" constant="4" id="rUO-oM-ubB"/>
+                            <constraint firstItem="kA5-t7-Hpc" firstAttribute="trailing" secondItem="hSC-bt-sr2" secondAttribute="trailing" constant="30" id="s0R-Xx-Nuz"/>
+                            <constraint firstItem="5nX-mx-Zag" firstAttribute="leading" secondItem="kA5-t7-Hpc" secondAttribute="leading" constant="12" id="zmY-lp-5gw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="He9-io-l0e"/>
@@ -363,12 +396,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dYF-YK-yoq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826" y="-38"/>
+            <point key="canvasLocation" x="1824.6153846153845" y="-38.388625592417057"/>
         </scene>
         <!--Create User Profile View Controller-->
         <scene sceneID="8eX-Jr-VIJ">
             <objects>
-                <viewController storyboardIdentifier="FillUserDataViewController" id="vFU-Eh-nKs" customClass="CreateUserProfileViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateUserProfileViewController" id="vFU-Eh-nKs" customClass="CreateUserProfileViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7uk-aA-Bc2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
