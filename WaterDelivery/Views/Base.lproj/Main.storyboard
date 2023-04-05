@@ -414,65 +414,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write down your fullname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQC-4o-zjM">
-                                <rect key="frame" x="12" y="213" width="366" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CQC-4o-zjM">
+                                <rect key="frame" x="30" y="189.33333333333334" width="330" height="34"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fullname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzE-XW-d6K">
-                                <rect key="frame" x="12" y="184" width="366" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="30" y="164.66666666666666" width="330" height="16.666666666666657"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="14"/>
+                                <color key="textColor" name="inputsCustom"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d47-pq-a2A">
+                                <rect key="frame" x="12" y="67" width="366" height="23.666666666666671"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d47-pq-a2A">
-                                <rect key="frame" x="12" y="67" width="366" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write down your surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hzf-Pz-oEE">
-                                <rect key="frame" x="12" y="288" width="366" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hzf-Pz-oEE">
+                                <rect key="frame" x="30" y="260" width="330" height="34"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXN-d8-8e6">
-                                <rect key="frame" x="12" y="259" width="366" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="30" y="235.33333333333334" width="330" height="16.666666666666657"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="14"/>
+                                <color key="textColor" name="inputsCustom"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write down your surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CRB-Vq-dZR">
-                                <rect key="frame" x="12" y="363" width="366" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CRB-Vq-dZR">
+                                <rect key="frame" x="30" y="330.66666666666669" width="330" height="34"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwe-Q5-7hv">
-                                <rect key="frame" x="12" y="334" width="366" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="30" y="306" width="330" height="16.666666666666686"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="14"/>
+                                <color key="textColor" name="inputsCustom"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write down your street, building, flat/office number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdv-V4-SF0">
-                                <rect key="frame" x="12" y="438" width="366" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdv-V4-SF0">
+                                <rect key="frame" x="30" y="401.66666666666669" width="330" height="34"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street, building, flat number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsK-F0-Pgw">
-                                <rect key="frame" x="12" y="409" width="366" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street, house and flat number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsK-F0-Pgw">
+                                <rect key="frame" x="30" y="376.66666666666669" width="330" height="17"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="14"/>
+                                <color key="textColor" name="inputsCustom"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write down your ZIP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7wy-9A-seV">
-                                <rect key="frame" x="12" y="513" width="366" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7wy-9A-seV">
+                                <rect key="frame" x="30" y="472.33333333333331" width="330" height="34"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZIP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cee-So-kFt">
-                                <rect key="frame" x="12" y="484" width="366" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="30" y="447.66666666666669" width="330" height="16.666666666666686"/>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="14"/>
+                                <color key="textColor" name="inputsCustom"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxE-dL-yic">
@@ -488,18 +488,18 @@
                                     <action selector="submitButtonTapped:" destination="vFU-Eh-nKs" eventType="touchUpInside" id="E1X-ou-xTo"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qqH-WQ-WBg">
-                                <rect key="frame" x="12" y="123.66666666666666" width="50" height="47"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="qqH-WQ-WBg">
+                                <rect key="frame" x="30" y="102.66666666666667" width="50" height="50.000000000000014"/>
                                 <color key="tintColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="IT1-N7-ZNv"/>
                                     <constraint firstAttribute="height" constant="50" id="dkg-eV-JFa"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eER-gW-fkN">
-                                <rect key="frame" x="74" y="129.66666666666666" width="304" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eER-gW-fkN">
+                                <rect key="frame" x="310" y="110.33333333333333" width="68" height="34.999999999999986"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Edit photo"/>
+                                <buttonConfiguration key="configuration" style="plain" image="edit"/>
                                 <connections>
                                     <action selector="editPhotoButtonTapped:" destination="vFU-Eh-nKs" eventType="touchUpInside" id="cLG-xW-ZdL"/>
                                 </connections>
@@ -510,45 +510,45 @@
                         <constraints>
                             <constraint firstItem="CRB-Vq-dZR" firstAttribute="top" secondItem="pwe-Q5-7hv" secondAttribute="bottom" constant="8" id="0WE-gi-ZAQ"/>
                             <constraint firstItem="7wy-9A-seV" firstAttribute="top" secondItem="Cee-So-kFt" secondAttribute="bottom" constant="8" id="1j8-Nq-Lb6"/>
-                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="RsK-F0-Pgw" secondAttribute="trailing" constant="12" id="2us-OE-QsZ"/>
-                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="CRB-Vq-dZR" secondAttribute="trailing" constant="12" id="9ap-Z4-L2L"/>
-                            <constraint firstItem="eER-gW-fkN" firstAttribute="leading" secondItem="qqH-WQ-WBg" secondAttribute="trailing" constant="12" id="Bw1-9Z-K4q"/>
+                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="RsK-F0-Pgw" secondAttribute="trailing" constant="30" id="2us-OE-QsZ"/>
+                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="CRB-Vq-dZR" secondAttribute="trailing" constant="30" id="9ap-Z4-L2L"/>
+                            <constraint firstItem="eER-gW-fkN" firstAttribute="leading" secondItem="qqH-WQ-WBg" secondAttribute="trailing" constant="230" id="Bw1-9Z-K4q"/>
                             <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="d47-pq-a2A" secondAttribute="trailing" constant="12" id="D8p-LW-uWK"/>
                             <constraint firstItem="pwe-Q5-7hv" firstAttribute="top" secondItem="hzf-Pz-oEE" secondAttribute="bottom" constant="12" id="DCI-cm-CDc"/>
                             <constraint firstItem="hzf-Pz-oEE" firstAttribute="top" secondItem="wXN-d8-8e6" secondAttribute="bottom" constant="8" id="DmZ-Vb-oyw"/>
-                            <constraint firstItem="GzE-XW-d6K" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="12" id="EbL-KB-pqk"/>
-                            <constraint firstItem="fdv-V4-SF0" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="12" id="FDx-3Y-PpB"/>
-                            <constraint firstItem="qqH-WQ-WBg" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="12" id="GWU-eS-rKl"/>
+                            <constraint firstItem="GzE-XW-d6K" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="30" id="EbL-KB-pqk"/>
+                            <constraint firstItem="fdv-V4-SF0" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="30" id="FDx-3Y-PpB"/>
+                            <constraint firstItem="qqH-WQ-WBg" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="30" id="GWU-eS-rKl"/>
                             <constraint firstItem="Cee-So-kFt" firstAttribute="top" secondItem="fdv-V4-SF0" secondAttribute="bottom" constant="12" id="Hpi-HD-v4x"/>
-                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="pwe-Q5-7hv" secondAttribute="trailing" constant="12" id="Kfq-uV-fWo"/>
-                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="CQC-4o-zjM" secondAttribute="trailing" constant="12" id="LJs-7g-TsC"/>
-                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="GzE-XW-d6K" secondAttribute="trailing" constant="12" id="M6Z-wk-4ch"/>
+                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="pwe-Q5-7hv" secondAttribute="trailing" constant="30" id="Kfq-uV-fWo"/>
+                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="CQC-4o-zjM" secondAttribute="trailing" constant="30" id="LJs-7g-TsC"/>
+                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="GzE-XW-d6K" secondAttribute="trailing" constant="30" id="M6Z-wk-4ch"/>
                             <constraint firstItem="JAE-bl-1ET" firstAttribute="bottom" secondItem="CxE-dL-yic" secondAttribute="bottom" constant="12" id="MXv-rF-nyz"/>
                             <constraint firstItem="wXN-d8-8e6" firstAttribute="top" secondItem="CQC-4o-zjM" secondAttribute="bottom" constant="12" id="Moh-Gl-fbA"/>
-                            <constraint firstItem="pwe-Q5-7hv" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="12" id="N7g-zw-H8y"/>
-                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="fdv-V4-SF0" secondAttribute="trailing" constant="12" id="O1G-Xm-g6V"/>
-                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="Cee-So-kFt" secondAttribute="trailing" constant="12" id="PNX-n7-h1C"/>
-                            <constraint firstItem="7wy-9A-seV" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="12" id="PTW-qy-fp9"/>
-                            <constraint firstItem="CRB-Vq-dZR" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="12" id="PnG-WI-hWC"/>
-                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="hzf-Pz-oEE" secondAttribute="trailing" constant="12" id="Qb0-dI-Sh8"/>
-                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="7wy-9A-seV" secondAttribute="trailing" constant="12" id="Srn-Bt-YQv"/>
+                            <constraint firstItem="pwe-Q5-7hv" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="30" id="N7g-zw-H8y"/>
+                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="fdv-V4-SF0" secondAttribute="trailing" constant="30" id="O1G-Xm-g6V"/>
+                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="Cee-So-kFt" secondAttribute="trailing" constant="30" id="PNX-n7-h1C"/>
+                            <constraint firstItem="7wy-9A-seV" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="30" id="PTW-qy-fp9"/>
+                            <constraint firstItem="CRB-Vq-dZR" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="30" id="PnG-WI-hWC"/>
+                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="hzf-Pz-oEE" secondAttribute="trailing" constant="30" id="Qb0-dI-Sh8"/>
+                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="7wy-9A-seV" secondAttribute="trailing" constant="30" id="Srn-Bt-YQv"/>
                             <constraint firstItem="d47-pq-a2A" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="12" id="V6p-X9-bps"/>
-                            <constraint firstItem="CQC-4o-zjM" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="12" id="VKi-Ak-YAC"/>
+                            <constraint firstItem="CQC-4o-zjM" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="30" id="VKi-Ak-YAC"/>
                             <constraint firstItem="d47-pq-a2A" firstAttribute="top" secondItem="JAE-bl-1ET" secondAttribute="top" constant="20" id="Wfc-d5-JBe"/>
                             <constraint firstItem="RsK-F0-Pgw" firstAttribute="top" secondItem="CRB-Vq-dZR" secondAttribute="bottom" constant="12" id="b8O-W4-Jp7"/>
                             <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="eER-gW-fkN" secondAttribute="trailing" constant="12" id="bwV-bs-LOU"/>
-                            <constraint firstItem="hzf-Pz-oEE" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="12" id="cy1-QS-frP"/>
+                            <constraint firstItem="hzf-Pz-oEE" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="30" id="cy1-QS-frP"/>
                             <constraint firstItem="qqH-WQ-WBg" firstAttribute="top" secondItem="d47-pq-a2A" secondAttribute="bottom" constant="12" id="eLC-cq-REl"/>
                             <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="CxE-dL-yic" secondAttribute="trailing" constant="12" id="eZb-na-6je"/>
                             <constraint firstItem="CQC-4o-zjM" firstAttribute="top" secondItem="GzE-XW-d6K" secondAttribute="bottom" constant="8" id="g8L-aE-fv1"/>
                             <constraint firstItem="fdv-V4-SF0" firstAttribute="top" secondItem="RsK-F0-Pgw" secondAttribute="bottom" constant="8" id="hpY-1A-4B3"/>
                             <constraint firstItem="GzE-XW-d6K" firstAttribute="top" secondItem="qqH-WQ-WBg" secondAttribute="bottom" constant="12" id="lg5-zm-4en"/>
                             <constraint firstItem="eER-gW-fkN" firstAttribute="centerY" secondItem="qqH-WQ-WBg" secondAttribute="centerY" id="ngO-zN-nC9"/>
-                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="wXN-d8-8e6" secondAttribute="trailing" constant="12" id="ozM-kg-iyM"/>
+                            <constraint firstItem="JAE-bl-1ET" firstAttribute="trailing" secondItem="wXN-d8-8e6" secondAttribute="trailing" constant="30" id="ozM-kg-iyM"/>
                             <constraint firstItem="CxE-dL-yic" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="12" id="svi-uM-7pE"/>
-                            <constraint firstItem="Cee-So-kFt" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="12" id="vsL-VE-FMh"/>
-                            <constraint firstItem="wXN-d8-8e6" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="12" id="wSw-aW-K6k"/>
-                            <constraint firstItem="RsK-F0-Pgw" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="12" id="xsa-LJ-wG5"/>
+                            <constraint firstItem="Cee-So-kFt" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="30" id="vsL-VE-FMh"/>
+                            <constraint firstItem="wXN-d8-8e6" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="30" id="wSw-aW-K6k"/>
+                            <constraint firstItem="RsK-F0-Pgw" firstAttribute="leading" secondItem="JAE-bl-1ET" secondAttribute="leading" constant="30" id="xsa-LJ-wG5"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1014,15 +1014,19 @@
         <segue reference="vvw-3W-N2A"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="addPhoto" width="75" height="75"/>
         <image name="bro" width="175" height="173"/>
         <image name="checkboxNotActive" width="22" height="22"/>
+        <image name="edit" width="21" height="21"/>
         <image name="launchScreen" width="313" height="313"/>
-        <image name="photo" catalog="system" width="128" height="93"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="errorCustom">
             <color red="1" green="0.35686274509803922" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="inputsCustom">
+            <color red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryCustom">
             <color red="0.0" green="0.72941176470588232" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
