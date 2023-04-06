@@ -36,19 +36,70 @@ class BasketViewController: BaseViewController , UITableViewDataSource, UITableV
         checkoutButton.setTitle(buttonTitle, for: .normal)
         if basketManager?.getCount() == 0 {
             checkoutButton.isHidden = true
-            tableView.backgroundView = createEmptyBasketLabel()
+            tableView.backgroundView = createEmptyBasketView()
         } else {
             checkoutButton.isHidden = false
             tableView.backgroundView = nil
         }
     }
     
-    func createEmptyBasketLabel() -> UILabel {
-        let label = UILabel()
-        label.text = "Basket is empty"
-        label.textAlignment = .center
-        return label
+    func createEmptyBasketView() -> UIView {
+        let containerView = UIView(frame: tableView.bounds)
+        
+        let cartLabel = UILabel()
+        cartLabel.text = "Cart"
+        cartLabel.font = UIFont(name: "ABeeZee-Regular", size: 24)
+        view.addSubview(cartLabel)
+
+        cartLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            cartLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            cartLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        let imageView = UIImageView(image: UIImage(named: "addToBasket"))
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(imageView)
+        
+        NSLayoutConstraint.activate([
+            imageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor, constant: -40)
+        ])
+        
+        let cartIsEmptyLabel = UILabel()
+        cartIsEmptyLabel.text = "Your cart is empty"
+        cartIsEmptyLabel.font = UIFont(name: "ABeeZee-Regular", size: 24)
+        cartIsEmptyLabel.textAlignment = .center
+        cartIsEmptyLabel.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(cartIsEmptyLabel)
+        
+        NSLayoutConstraint.activate([
+            cartIsEmptyLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 70),
+            cartIsEmptyLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+        ])
+        
+        let toShopButton = UIButton()
+        toShopButton.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
+        toShopButton.setTitle("To shop", for: .normal)
+        toShopButton.backgroundColor = AppColors.primary
+        toShopButton.layer.cornerRadius = 24
+        toShopButton.layer.masksToBounds = true
+        view.addSubview(toShopButton)
+
+        toShopButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            toShopButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            toShopButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            toShopButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
+            toShopButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+
+        
+        
+        return containerView
     }
+
     
     
     //Implement the UITableViewDataSource and UITableViewDelegate methods such as numberOfRowsInSection, cellForRowAt, commit editingStyle, and canEditRowAt. In these methods, use the basketManager variable to retrieve and display the products in the basket.
