@@ -599,7 +599,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kq-ql-QZo">
-                                <rect key="frame" x="12" y="782" width="366" height="50"/>
+                                <rect key="frame" x="30" y="782" width="330" height="50"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="n1B-AH-IM1"/>
@@ -616,8 +616,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="6kq-ql-QZo" secondAttribute="bottom" constant="12" id="0RS-gV-BMU"/>
-                            <constraint firstItem="fLE-zn-fQP" firstAttribute="trailing" secondItem="6kq-ql-QZo" secondAttribute="trailing" constant="12" id="Bxd-XN-PiC"/>
-                            <constraint firstItem="6kq-ql-QZo" firstAttribute="leading" secondItem="fLE-zn-fQP" secondAttribute="leading" constant="12" id="afS-9Q-LVk"/>
+                            <constraint firstItem="fLE-zn-fQP" firstAttribute="trailing" secondItem="6kq-ql-QZo" secondAttribute="trailing" constant="30" id="Bxd-XN-PiC"/>
+                            <constraint firstItem="6kq-ql-QZo" firstAttribute="leading" secondItem="fLE-zn-fQP" secondAttribute="leading" constant="30" id="afS-9Q-LVk"/>
                             <constraint firstItem="6kq-ql-QZo" firstAttribute="top" secondItem="d5v-B3-ZuU" secondAttribute="bottom" constant="12" id="l88-df-ERY"/>
                             <constraint firstItem="d5v-B3-ZuU" firstAttribute="leading" secondItem="fLE-zn-fQP" secondAttribute="leading" id="oeD-OV-9t8"/>
                             <constraint firstItem="fLE-zn-fQP" firstAttribute="trailing" secondItem="d5v-B3-ZuU" secondAttribute="trailing" id="vtA-ge-vsd"/>

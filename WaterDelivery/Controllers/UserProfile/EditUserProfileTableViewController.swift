@@ -52,7 +52,9 @@ class EditUserProfileTableViewController: BaseViewController {
     }
     
     func prepareUI() {
-        saveButton.layer.cornerRadius = 8
+        saveButton.layer.cornerRadius = min(saveButton.frame.size.width, saveButton.frame.size.height) / 2.0
+        saveButton.layer.masksToBounds = true
+        saveButton.backgroundColor = AppColors.primary
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         tapGesture.cancelsTouchesInView = false
         tableView.addGestureRecognizer(tapGesture)
@@ -104,8 +106,10 @@ class EditUserProfileTableViewController: BaseViewController {
         dataSource.append(.textField(userCityCellModel))
         dataSource.append(.textField(userStreetCellModel))
         dataSource.append(.textField(userZipCodeCellModel))
-        
-        tableView.reloadData()
+    
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func prepareTableView() {

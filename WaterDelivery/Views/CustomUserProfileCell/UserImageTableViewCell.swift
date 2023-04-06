@@ -35,10 +35,12 @@ class UserImageTableViewCell: UITableViewCell {
         prepareUserImage()
         selectionStyle = .none
     }
+  
     
     func prepareUserImage() {
+        userAccountImage.contentMode = .scaleAspectFill
         userAccountImage.layer.masksToBounds = true
-        userAccountImage.layer.cornerRadius = 24
+        userAccountImage.layer.cornerRadius = userAccountImage.frame.width / 2
         userAccountImage.layer.borderWidth = 2
         userAccountImage.layer.borderColor = UIColor.lightGray.cgColor
     }
