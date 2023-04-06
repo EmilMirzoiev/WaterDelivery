@@ -9,12 +9,17 @@ import UIKit
 import Kingfisher
 
 struct ImageViewModel {
-    var imageURL: String = ""
+    var image: UIImage?
+    var imageURL: String?
     var completion: (() -> ())?
     
     init(imageURL: String, completion: @escaping () -> Void) {
         self.imageURL = imageURL
         self.completion = completion
+    }
+    
+    init(image: UIImage) {
+        self.image = image
     }
 }
 
@@ -38,20 +43,24 @@ class UserImageTableViewCell: UITableViewCell {
     }
     
     func fill(with model: ImageViewModel) {
-        let source = model.imageURL
-        guard let sourceURL = URL.init(string: source) else { return }
-        userAccountImage.kf.setImage(with: sourceURL)
+        if let source = model.imageURL {
+            let sourceURL = URL.init(string: source)
+            userAccountImage.kf.setImage(with: sourceURL)
+        } else if let image = model.image {
+            userAccountImage.image = image
+        } else {
+            userAccountImage.image = UIImage(named: "appPhoto")
+        }
     }
-    
     
     func fill(with model: Any) {
         guard let model = model as? ImageViewModel else { return }
         self.completion = model.completion
-        let source = model.imageURL
-        guard let sourceURL = URL.init(string: source) else { return }
-        userAccountImage.kf.setImage(with: sourceURL)
+        if let source = model.imageURL {
+            let sourceURL = URL.init(string: source)
+            userAccountImage.kf.setImage(with: sourceURL)
+        }
     }
-    
     
     @IBAction func editPhotoButton(_ sender: Any) {
         completion?()

@@ -50,26 +50,18 @@ class UserProfileTableViewController: UIViewController {
         
         dataSource.removeAll()
         
-        //        guard let image = user?.imageURL else { return }
-        //        let imageViewModel = ImageViewModel (imageURL: image) {
-        //            print("imageURL: \(image)")
-        //        }
-        
-        if let image = user?.imageURL {
-            let imageViewModel = ImageViewModel (imageURL: image) {
-                print("imageURL: \(image)")
+        if let imageURL = user?.imageURL {
+                let imageViewModel = ImageViewModel(imageURL: imageURL) {
+                    print("imageURL: \(imageURL)")
+                }
+                let userImage = ProfileCells.image(imageViewModel)
+                dataSource.append(.images([userImage]))
+            } else {
+                guard let defaultImage = UIImage(named: "addPhoto") else { return }
+                let defaultImageViewModel = ImageViewModel(image: defaultImage)
+                let defaultUserImage = ProfileCells.image(defaultImageViewModel)
+                dataSource.append(.images([defaultUserImage]))
             }
-            let userImage = ProfileCells.image(imageViewModel)
-            dataSource.append(.images([userImage]))
-        } else {
-            // If the user's image URL is nil, add a default image view model.
-            let defaultImageURL = "https://firebasestorage.googleapis.com/v0/b/waterdelivery-6fadd.appspot.com/o/avatars%2FdefaultAvatar.jpg?alt=media&token=fe29b3a9-4464-4f48-b490-55b3362d98a8"
-            let defaultImageViewModel = ImageViewModel(imageURL: defaultImageURL) {
-            }
-            
-            let defaultUserImage = ProfileCells.image(defaultImageViewModel)
-            dataSource.append(.images([defaultUserImage]))
-        }
         
         let userNameTextFieldViewModel = LabelViewModel(titleLabel: "Full name", valueLabel: user?.name ?? "") { [weak self] fullName in
             guard let self = self else { return }
@@ -106,16 +98,11 @@ class UserProfileTableViewController: UIViewController {
         let cityCell = ProfileCells.label(cityTextFieldViewModel)
         let streetCell = ProfileCells.label(streetTextFieldViewModel)
         let zipCodeCell = ProfileCells.label(zipCodeTextFieldViewModel)
-        let separatorCell = ProfileCells.separator(100)
+        let separatorCell = ProfileCells.separator(200)
         
-        dataSource.append(.labels([separatorCell, userNameCell, countryCell, cityCell, streetCell, zipCodeCell, separatorCell]))
+        dataSource.append(.labels([userNameCell, countryCell, cityCell, streetCell, zipCodeCell, separatorCell]))
         
-        
-        let editProfileViewModel = ButtonViewModel(buttonName: "Edit Profile") {
-            self.performSegue(withIdentifier: "editProfile", sender: nil)
-        }
-        
-        let logoutButtonViewModel = ButtonViewModel(buttonName: "Sign Out") {
+        let logoutButtonViewModel = ButtonViewModel(buttonName: "Logout") {
             do {
                 try Auth.auth().signOut()
                 let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -126,13 +113,11 @@ class UserProfileTableViewController: UIViewController {
                 print("Error signing out: %@", signOutError)
             }
         }
-        
-        let editProfileCell = ProfileCells.button(editProfileViewModel)
+
         let logoutCell = ProfileCells.button(logoutButtonViewModel)
-        dataSource.append(.buttons([editProfileCell, logoutCell]))
+        dataSource.append(.buttons([logoutCell]))
         
         tableView.reloadData()
-        
     }
     
     func prepareUserProfileTableView() {
@@ -203,7 +188,7 @@ extension UserProfileTableViewController: UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60.0
+        return 70.0
     }
     
 }
