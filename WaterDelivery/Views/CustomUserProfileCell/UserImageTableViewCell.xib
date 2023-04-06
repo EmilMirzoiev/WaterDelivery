@@ -29,7 +29,7 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="edit"/>
                         <connections>
-                            <action selector="editPhotoButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TlR-29-dg7"/>
+                            <action selector="editButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TlR-29-dg7"/>
                         </connections>
                     </button>
                 </subviews>

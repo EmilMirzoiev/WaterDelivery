@@ -18,8 +18,9 @@ struct ImageViewModel {
         self.completion = completion
     }
     
-    init(image: UIImage) {
+    init(image: UIImage, completion: @escaping () -> Void ) {
         self.image = image
+        self.completion = completion
     }
 }
 
@@ -43,6 +44,24 @@ class UserImageTableViewCell: UITableViewCell {
     }
     
     func fill(with model: ImageViewModel) {
+        self.completion = model.completion
+        if let source = model.imageURL {
+            let sourceURL = URL.init(string: source)
+            userAccountImage.kf.setImage(with: sourceURL) { [weak self] _ in
+                self?.completion?()
+            }
+        } else if let image = model.image {
+            userAccountImage.image = image
+            completion?()
+        } else {
+            userAccountImage.image = UIImage(named: "appPhoto")
+            completion?()
+        }
+    }
+    
+    func fill(with model: Any) {
+        guard let model = model as? ImageViewModel else { return }
+        self.completion = model.completion
         if let source = model.imageURL {
             let sourceURL = URL.init(string: source)
             userAccountImage.kf.setImage(with: sourceURL)
@@ -53,17 +72,16 @@ class UserImageTableViewCell: UITableViewCell {
         }
     }
     
-    func fill(with model: Any) {
-        guard let model = model as? ImageViewModel else { return }
-        self.completion = model.completion
-        if let source = model.imageURL {
-            let sourceURL = URL.init(string: source)
-            userAccountImage.kf.setImage(with: sourceURL)
+    @IBAction func editButtonTapped(_ sender: Any) {
+        
+        var viewController = self.superview?.next
+        while viewController != nil && !(viewController is UIViewController) {
+            viewController = viewController?.next
         }
-    }
-    
-    @IBAction func editPhotoButton(_ sender: Any) {
+        if let viewController = viewController as? UserProfileTableViewController {
+            viewController.performSegue(withIdentifier: "editProfile", sender: nil)
+        }
+        
         completion?()
-        print("edit photo button tapped")
     }
 }

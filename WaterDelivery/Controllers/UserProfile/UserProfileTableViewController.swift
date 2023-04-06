@@ -58,7 +58,9 @@ class UserProfileTableViewController: UIViewController {
                 dataSource.append(.images([userImage]))
             } else {
                 guard let defaultImage = UIImage(named: "addPhoto") else { return }
-                let defaultImageViewModel = ImageViewModel(image: defaultImage)
+                let defaultImageViewModel = ImageViewModel(image: defaultImage) {
+                    
+                }
                 let defaultUserImage = ProfileCells.image(defaultImageViewModel)
                 dataSource.append(.images([defaultUserImage]))
             }
@@ -154,7 +156,7 @@ extension UserProfileTableViewController: UITableViewDelegate, UITableViewDataSo
             switch imageCell {
             case .image(let viewModel):
                 let cell = tableView.dequeueReusableCell(withIdentifier: "UserImageTableViewCell", for: indexPath) as! UserImageTableViewCell
-                cell.editPhoto.isHidden = true
+//                cell.editPhoto.isHidden = true
                 cell.fill(with: viewModel)
                 return cell
             default: return UITableViewCell()
