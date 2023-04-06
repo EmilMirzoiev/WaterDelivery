@@ -34,7 +34,6 @@ class BasketTableViewCell: UITableViewCell {
         guard let uid = model.product.uid else { return }
         storageManager.fetchProductImageURL(folderName: "products", uid: uid) { imageURL in
             if let imageURL = imageURL {
-                // If the image URL is not nil, use Kingfisher to load the image from the URL
                 self.productImageView.kf.setImage(with: imageURL)
             }
         }
