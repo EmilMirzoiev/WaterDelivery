@@ -22,18 +22,14 @@ class BasketTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //Call the makeImagesClickable() method to make the plus and minus product image buttons clickable.
         makeImagesClickable()
-        //Set the selectionStyle property to .none so that cells are not highlighted when tapped.
         selectionStyle = .none
     }
     
-//    Create a new function called fill(with model: BasketProduct) to fill the cell's UI elements with data from a BasketProduct model.
     func fill(with model: BasketProduct) {
         productName.text = "\(model.product.name ?? "")"
         productAmount.text = "\(model.count)"
 
-        // Fetch the product image URL from Firebase Storage
         let storageManager = StorageManager()
         guard let uid = model.product.uid else { return }
         storageManager.fetchProductImageURL(folderName: "products", uid: uid) { imageURL in
@@ -43,8 +39,7 @@ class BasketTableViewCell: UITableViewCell {
             }
         }
     }
-    
-    //Create a new function called makeImagesClickable() to add tap gesture recognizers to the plus and minus product buttons and make them clickable.
+
     func makeImagesClickable() {
         let plusTap = UITapGestureRecognizer(target: self, action: #selector(self.increaseProductAmount))
         plusProductButton.addGestureRecognizer(plusTap)
@@ -55,7 +50,6 @@ class BasketTableViewCell: UITableViewCell {
         minusProductButton.isUserInteractionEnabled = true
     }
     
-    //Create two action methods, increaseProductAmount and decreaseProductAmount which will be called when the corresponding button is clicked. In these methods, increaseCompletion and decreaseCompletion closures will be called. In the table view controller, register the BasketTableViewCell class for reuse and dequeue the cells in the tableView(_:cellForRowAt:) data source method. In the table view controller, set the increaseCompletion and decreaseCompletion closures in the cellForRowAtIndexPath method. These closures will be called when the corresponding button is clicked in the cell. In the table view controller, implement the increaseCompletion and decreaseCompletion closures to update the model and refresh the table view when the plus or minus buttons are clicked.
     @objc func increaseProductAmount(sender: UITapGestureRecognizer) {
         if sender.state == .ended {
             increaseCompletion?()
