@@ -11,7 +11,7 @@ import FirebaseAuth
 class ProductsViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-
+    
     var products = [Product]()
     var productManager = ProductManager()
     var basketManager = BasketManager(products: [])
@@ -26,7 +26,8 @@ class ProductsViewController: BaseViewController {
     func prepareCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(.init(nibName: "ProductCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionViewCell")
+        collectionView.register(.init(nibName: "ProductViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductViewCell")
+        
     }
     
     func hideBackButton() {
@@ -82,7 +83,7 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductViewCell", for: indexPath) as! ProductViewCell
         cell.fill(with: products[indexPath.row])
         cell.addButtonTapAction = { [weak self] in
             guard let self = self else { return }
@@ -92,9 +93,8 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
         return cell
     }
     
-
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        .init(width: collectionView.frame.width / 2 - 36, height: 250)
+        .init(width: 160, height: 160)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

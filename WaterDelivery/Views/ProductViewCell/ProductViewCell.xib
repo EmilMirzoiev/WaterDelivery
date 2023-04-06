@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ABeeZee-Regular.ttf">
+            <string>ABeeZee-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductViewCell" id="gTV-IL-0wX" customClass="ProductViewCell" customModule="WaterDelivery" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYN-C3-Bie">
+                        <rect key="frame" x="96" y="106" width="64" height="54"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="basketEnabled" buttonSize="mini"/>
+                        <connections>
+                            <action selector="buyAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="hVu-ON-3FI"/>
+                        </connections>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cPF-ct-86c">
+                        <rect key="frame" x="12" y="24" width="145" height="110"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cmC-W3-a59">
+                                <rect key="frame" x="0.0" y="0.0" width="35" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="2HQ-lu-NAh"/>
+                                    <constraint firstAttribute="height" constant="110" id="EIP-l6-k7x"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="dlg-8s-piz">
+                                <rect key="frame" x="45" y="0.0" width="100" height="65.666666666666671"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmv-Bh-87k">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="19"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="myD-yB-K9e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gs5-7X-qmR">
+                                        <rect key="frame" x="0.0" y="25.000000000000004" width="100" height="15.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="13"/>
+                                        <color key="textColor" name="inputsCustom"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZx-30-tGf">
+                                        <rect key="frame" x="0.0" y="46.666666666666671" width="100" height="19"/>
+                                        <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gYN-C3-Bie" secondAttribute="trailing" id="7o1-xa-Khj"/>
+                <constraint firstItem="cPF-ct-86c" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="24" id="PKB-ts-7AF"/>
+                <constraint firstItem="cPF-ct-86c" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="pH0-cC-yVX"/>
+                <constraint firstAttribute="bottom" secondItem="gYN-C3-Bie" secondAttribute="bottom" id="qAV-1d-tnd"/>
+            </constraints>
+            <size key="customSize" width="162" height="183"/>
+            <connections>
+                <outlet property="addToCartButton" destination="gYN-C3-Bie" id="pbz-GG-iqI"/>
+                <outlet property="productImageView" destination="cmC-W3-a59" id="zAH-2p-Ica"/>
+                <outlet property="productNameLabel" destination="Hmv-Bh-87k" id="Yyr-aZ-wW0"/>
+                <outlet property="productPriceLabel" destination="vZx-30-tGf" id="eJe-Qo-bYV"/>
+                <outlet property="productSizeLabel" destination="gs5-7X-qmR" id="nbs-bY-reA"/>
+            </connections>
+            <point key="canvasLocation" x="-181.67938931297709" y="-104.22535211267606"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="basketEnabled" width="44" height="44"/>
+        <namedColor name="inputsCustom">
+            <color red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

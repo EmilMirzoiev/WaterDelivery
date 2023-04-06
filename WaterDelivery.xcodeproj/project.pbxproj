@@ -39,11 +39,11 @@
 		20507B7329755D38009EBCC9 /* SellPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20507B7229755D38009EBCC9 /* SellPoint.swift */; };
 		20507B7529755FD5009EBCC9 /* Firestore+SellPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20507B7429755FD5009EBCC9 /* Firestore+SellPoints.swift */; };
 		2054FB0B29DD83B3005E6D0E /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054FB0A29DD83B3005E6D0E /* Extension+UIColor.swift */; };
+		2054FB1929DF1132005E6D0E /* ProductViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054FB1729DF1132005E6D0E /* ProductViewCell.swift */; };
+		2054FB1A29DF1132005E6D0E /* ProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2054FB1829DF1132005E6D0E /* ProductViewCell.xib */; };
 		205F067C2961BCF9005401BC /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F067B2961BCF9005401BC /* VerificationViewController.swift */; };
 		205F067E2961ECCF005401BC /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F067D2961ECCF005401BC /* AuthManager.swift */; };
 		20667CED2951E8220001933B /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20667CEC2951E8220001933B /* ProductsViewController.swift */; };
-		20667CF82951FC240001933B /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20667CF62951FC240001933B /* ProductCollectionViewCell.swift */; };
-		20667CF92951FC240001933B /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20667CF72951FC240001933B /* ProductCollectionViewCell.xib */; };
 		2086161129D9C80100667613 /* ABeeZee-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086160E29D9C7FD00667613 /* ABeeZee-Regular.ttf */; };
 		2086161229D9C80400667613 /* Arimo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086161029D9C7FE00667613 /* Arimo-Bold.ttf */; };
 		2086161329D9C80700667613 /* Arimo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086160F29D9C7FE00667613 /* Arimo-Regular.ttf */; };
@@ -132,11 +132,11 @@
 		20507B7229755D38009EBCC9 /* SellPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellPoint.swift; sourceTree = "<group>"; };
 		20507B7429755FD5009EBCC9 /* Firestore+SellPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+SellPoints.swift"; sourceTree = "<group>"; };
 		2054FB0A29DD83B3005E6D0E /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
+		2054FB1729DF1132005E6D0E /* ProductViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewCell.swift; sourceTree = "<group>"; };
+		2054FB1829DF1132005E6D0E /* ProductViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewCell.xib; sourceTree = "<group>"; };
 		205F067B2961BCF9005401BC /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		205F067D2961ECCF005401BC /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		20667CEC2951E8220001933B /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
-		20667CF62951FC240001933B /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
-		20667CF72951FC240001933B /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		2086160E29D9C7FD00667613 /* ABeeZee-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ABeeZee-Regular.ttf"; sourceTree = "<group>"; };
 		2086160F29D9C7FE00667613 /* Arimo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Regular.ttf"; sourceTree = "<group>"; };
 		2086161029D9C7FE00667613 /* Arimo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Bold.ttf"; sourceTree = "<group>"; };
@@ -324,6 +324,15 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		2054FB1629DF1119005E6D0E /* ProductViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2054FB1729DF1132005E6D0E /* ProductViewCell.swift */,
+				2054FB1829DF1132005E6D0E /* ProductViewCell.xib */,
+			);
+			path = ProductViewCell;
+			sourceTree = "<group>";
+		};
 		20667CEA2950F9D00001933B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,23 +349,14 @@
 		20667CEB2950FAD80001933B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2054FB1629DF1119005E6D0E /* ProductViewCell */,
 				200950FD29350D6A0081D290 /* Main.storyboard */,
 				2089913529957C1400314421 /* CustomOrderCells */,
 				2089913E29966B9900314421 /* CustomUserProfileCell */,
-				20667CF52951FBFF0001933B /* ProductCollectionViewCell */,
 				2016C7B72968B742006143E3 /* BasketTableViewCell */,
 				20DCFEDC29780C6700D644D5 /* MyOrdersTableViewCell */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		20667CF52951FBFF0001933B /* ProductCollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				20667CF62951FC240001933B /* ProductCollectionViewCell.swift */,
-				20667CF72951FC240001933B /* ProductCollectionViewCell.xib */,
-			);
-			path = ProductCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		2067A4BC29D9B52900F1C79D /* Fonts */ = {
@@ -580,10 +580,10 @@
 				202DE2E82992B0CB00BB2718 /* ButtonTableViewCell.xib in Resources */,
 				2086161329D9C80700667613 /* Arimo-Regular.ttf in Resources */,
 				20004E7629A27BBC00BEBFE5 /* UserTextFieldTableViewCell.xib in Resources */,
+				2054FB1A29DF1132005E6D0E /* ProductViewCell.xib in Resources */,
 				2016C7BC2968B76F006143E3 /* BasketTableViewCell.xib in Resources */,
 				2089914D2998117A00314421 /* OrderSegmentedControlTableViewCell.xib in Resources */,
 				20899127299516A300314421 /* UserImageTableViewCell.xib in Resources */,
-				20667CF92951FC240001933B /* ProductCollectionViewCell.xib in Resources */,
 				2009510129350D6C0081D290 /* Assets.xcassets in Resources */,
 				2089913D2995834A00314421 /* OrderSwitcherTableViewCell.xib in Resources */,
 				2086161129D9C80100667613 /* ABeeZee-Regular.ttf in Resources */,
@@ -788,10 +788,10 @@
 				2040FB0B2970236800FD1D2E /* PaymentViewController.swift in Sources */,
 				20DCFEDB2978095700D644D5 /* OrderManager.swift in Sources */,
 				2016C7BB2968B76F006143E3 /* BasketTableViewCell.swift in Sources */,
+				2054FB1929DF1132005E6D0E /* ProductViewCell.swift in Sources */,
 				20899126299516A300314421 /* UserImageTableViewCell.swift in Sources */,
 				20369DFE293615690050E8AD /* User.swift in Sources */,
 				20004E7529A27BBC00BEBFE5 /* UserTextFieldTableViewCell.swift in Sources */,
-				20667CF82951FC240001933B /* ProductCollectionViewCell.swift in Sources */,
 				2089913829957C3600314421 /* OrderTextFieldTableViewCell.swift in Sources */,
 				2054FB0B29DD83B3005E6D0E /* Extension+UIColor.swift in Sources */,
 			);

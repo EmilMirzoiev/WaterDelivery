@@ -11,12 +11,14 @@ import FirebaseFirestoreSwift
 struct Product: Codable {
 
     var name: String?
+    var size: Double?
     var price: Double?
     var imageURL: String?
     var uid: String?
     
     enum CodingKeys: String, CodingKey {
         case name
+        case size
         case price
         case imageURL
         case uid

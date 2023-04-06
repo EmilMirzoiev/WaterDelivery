@@ -85,6 +85,8 @@ class BasketViewController: BaseViewController , UITableViewDataSource, UITableV
         toShopButton.backgroundColor = AppColors.primary
         toShopButton.layer.cornerRadius = 24
         toShopButton.layer.masksToBounds = true
+        toShopButton.addTarget(self, action: #selector(toShopButtonTapped), for: .touchUpInside)
+        containerView.addSubview(toShopButton)
         view.addSubview(toShopButton)
 
         toShopButton.translatesAutoresizingMaskIntoConstraints = false
@@ -95,12 +97,12 @@ class BasketViewController: BaseViewController , UITableViewDataSource, UITableV
             toShopButton.heightAnchor.constraint(equalToConstant: 50)
         ])
 
-        
-        
         return containerView
     }
-
     
+    @objc func toShopButtonTapped() {
+        performSegue(withIdentifier: "toShopSegue", sender: self)
+    }
     
     //Implement the UITableViewDataSource and UITableViewDelegate methods such as numberOfRowsInSection, cellForRowAt, commit editingStyle, and canEditRowAt. In these methods, use the basketManager variable to retrieve and display the products in the basket.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
