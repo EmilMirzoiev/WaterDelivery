@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,9 +25,9 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZZ-5n-fgL">
-                        <rect key="frame" x="82" y="20" width="102" height="35"/>
+                        <rect key="frame" x="282" y="20" width="54" height="35"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="Edit photo"/>
+                        <buttonConfiguration key="configuration" style="plain" image="edit"/>
                         <connections>
                             <action selector="editPhotoButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TlR-29-dg7"/>
                         </connections>
@@ -34,7 +35,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="QCP-bg-ruD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="H47-SK-yfT"/>
-                    <constraint firstItem="bZZ-5n-fgL" firstAttribute="leading" secondItem="QCP-bg-ruD" secondAttribute="trailing" constant="20" id="Rer-kM-dFL"/>
+                    <constraint firstItem="bZZ-5n-fgL" firstAttribute="leading" secondItem="QCP-bg-ruD" secondAttribute="trailing" constant="220" id="Rer-kM-dFL"/>
+                    <constraint firstAttribute="trailing" secondItem="bZZ-5n-fgL" secondAttribute="trailing" constant="12" id="cxp-39-tHc"/>
                     <constraint firstItem="QCP-bg-ruD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="kop-rI-VFB"/>
                     <constraint firstItem="bZZ-5n-fgL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" symbolic="YES" id="xxA-Qt-DcU"/>
                 </constraints>
@@ -48,6 +50,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="edit" width="21" height="21"/>
         <image name="photo" catalog="system" width="128" height="93"/>
     </resources>
 </document>
