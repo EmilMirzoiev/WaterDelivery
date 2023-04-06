@@ -70,7 +70,7 @@ class ProductsViewController: BaseViewController {
     }
     
 }
-.
+
 extension ProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -80,7 +80,7 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         products.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCollectionViewCell", for: indexPath) as! ProductCollectionViewCell
         cell.fill(with: products[indexPath.row])
@@ -92,6 +92,7 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
         return cell
     }
     
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         .init(width: collectionView.frame.width / 2 - 36, height: 250)
     }
@@ -104,3 +105,4 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
         return UIEdgeInsets(top: 12, left: 12, bottom: 0, right: 12)
     }
 }
+
