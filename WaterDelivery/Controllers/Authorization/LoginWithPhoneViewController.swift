@@ -62,14 +62,6 @@ class LoginWithPhoneViewController: BaseViewController {
             }
             return false
         }
-
-        
-//        let phoneRegex = "^\\+?[0-9]{2,3}([\\s-]?\\(?[0-9]{3}\\)?[\\s-]?|[\\s-]?[0-9]{3}[\\s-]?)[0-9]{2}[\\s-]?[0-9]{2,3}$"
-//        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
-//        if !phoneTest.evaluate(with: phoneNumber) {
-//            showErrorMessage(with: "Please enter a valid phone number.")
-//            return
-//        }
         
         errorLabel.isHidden = true
         phoneNumberTextField.layer.borderColor = UIColor.clear.cgColor

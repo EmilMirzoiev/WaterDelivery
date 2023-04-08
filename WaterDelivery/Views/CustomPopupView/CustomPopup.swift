@@ -8,7 +8,7 @@
 import UIKit
 
 class CustomPopup: UIViewController {
-
+    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var cartImageView: UIImageView!
@@ -31,7 +31,7 @@ class CustomPopup: UIViewController {
     
     func configView() {
         self.view.backgroundColor = .clear
-        self.backView.backgroundColor = .black.withAlphaComponent(0.6)
+        self.backView.backgroundColor = .black.withAlphaComponent(0.2)
         self.backView.alpha = 0
         
         self.contentView.alpha = 0
@@ -42,7 +42,7 @@ class CustomPopup: UIViewController {
         viewButton.titleLabel?.font = UIFont(name: "ABeeZee-Regular", size: 16)
         viewButton.titleLabel?.adjustsFontForContentSizeCategory = true
     }
-
+    
     func appear(sender: UIViewController) {
         sender.present(self, animated: false) {
             self.show()
@@ -67,7 +67,7 @@ class CustomPopup: UIViewController {
     }
     
     func hideWithDelay() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             UIView.animate(withDuration: 1, delay: 0.0, options: .curveEaseOut) {
                 self.backView.alpha = 0
                 self.contentView.alpha = 0
@@ -79,6 +79,14 @@ class CustomPopup: UIViewController {
     }
     
     @IBAction func viewButtonTapped(_ sender: UIButton) {
-
+        // Get a reference to the existing navigation controller
+        guard let navController = self.navigationController else {
+            return
+        }
+        
+        // Instantiate and push the BasketViewController on the existing navigation stack
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let basket = storyBoard.instantiateViewController(withIdentifier: "BasketViewController") as! BasketViewController
+        navController.pushViewController(basket, animated: true)
     }
 }

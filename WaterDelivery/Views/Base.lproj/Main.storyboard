@@ -571,7 +571,6 @@
         <!--Navigation Controller-->
         <scene sceneID="RXl-ew-CYd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zfa-Xy-K8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="initialNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="CSm-jm-E2l" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fl9-Rk-HTV">
@@ -583,6 +582,7 @@
                         <segue destination="mPP-8V-FU5" kind="relationship" relationship="rootViewController" id="P2m-vs-5pe"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfa-Xy-K8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-966" y="-35"/>
         </scene>
@@ -670,7 +670,7 @@
         <!--Basket View Controller-->
         <scene sceneID="KPn-Fe-eVR">
             <objects>
-                <viewController storyboardIdentifier="BasketViewController" id="ztf-lJ-T48" customClass="BasketViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BasketViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ztf-lJ-T48" customClass="BasketViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nWN-lM-lwR">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

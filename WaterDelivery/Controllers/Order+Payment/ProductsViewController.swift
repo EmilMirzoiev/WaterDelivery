@@ -91,6 +91,7 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
 //            self.showAlertWithTimer(title: "Success", message: "You successfully added a product to cart")
             let popup = CustomPopup()
             popup.appear(sender: self)
+            
             popup.hideWithDelay()
         }
         return cell
