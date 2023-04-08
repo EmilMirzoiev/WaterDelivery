@@ -11,7 +11,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 //Conform a class to the UITableViewDataSource and UITableViewDelegate protocols.
-class BasketViewController: BaseViewController , UITableViewDataSource, UITableViewDelegate {
+class BasketViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var checkoutButton: UIButton!
