@@ -363,11 +363,11 @@
 			isa = PBXGroup;
 			children = (
 				200950FD29350D6A0081D290 /* Main.storyboard */,
-				205F12A729E19DAF003F5A1C /* CustomPopupView */,
 				2054FB1629DF1119005E6D0E /* ProductViewCell */,
+				205F12A729E19DAF003F5A1C /* CustomPopupView */,
+				2016C7B72968B742006143E3 /* BasketTableViewCell */,
 				2089913529957C1400314421 /* CustomOrderCells */,
 				2089913E29966B9900314421 /* CustomUserProfileCell */,
-				2016C7B72968B742006143E3 /* BasketTableViewCell */,
 				20DCFEDC29780C6700D644D5 /* MyOrdersTableViewCell */,
 			);
 			path = Views;

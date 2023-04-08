@@ -59,8 +59,8 @@ class OrderDetailsViewController: BaseViewController, UITableViewDelegate, UITab
         if let order = order {
             cell.fill(with: order.products[indexPath.row])
         }
-        cell.plusProductButton.isHidden = true
-        cell.minusProductButton.isHidden = true
+        cell.plusButton.isHidden = true
+        cell.minusButton.isHidden = true
         return cell
     }
     

@@ -163,8 +163,8 @@ extension OrderCustomTableViewController: UITableViewDelegate, UITableViewDataSo
         case .product(let model):
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BasketTableViewCell.self), for: indexPath) as! BasketTableViewCell
             cell.fill(with: model)
-            cell.plusProductButton.isHidden = true
-            cell.minusProductButton.isHidden = true
+            cell.plusButton.isHidden = true
+            cell.minusButton.isHidden = true
             return cell
         case .separator(_):
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: SeparatorTableViewCell.self), for: indexPath) as! SeparatorTableViewCell

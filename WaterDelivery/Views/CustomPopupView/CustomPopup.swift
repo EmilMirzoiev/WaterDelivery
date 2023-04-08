@@ -79,14 +79,7 @@ class CustomPopup: UIViewController {
     }
     
     @IBAction func viewButtonTapped(_ sender: UIButton) {
-        // Get a reference to the existing navigation controller
-        guard let navController = self.navigationController else {
-            return
-        }
         
-        // Instantiate and push the BasketViewController on the existing navigation stack
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let basket = storyBoard.instantiateViewController(withIdentifier: "BasketViewController") as! BasketViewController
-        navController.pushViewController(basket, animated: true)
     }
+    
 }
