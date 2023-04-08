@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ABeeZee-Regular.ttf">
+            <string>ABeeZee-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomPopup" customModule="WaterDelivery" customModuleProvider="target">
+            <connections>
+                <outlet property="backView" destination="gsU-qO-GmH" id="LLw-Ly-Uhe"/>
+                <outlet property="cartImageView" destination="lLf-Vv-vmS" id="GF7-ST-DvJ"/>
+                <outlet property="contentView" destination="IRG-IQ-oc2" id="ZDN-Sb-zSy"/>
+                <outlet property="itemAddedToCart" destination="KaT-d0-ouz" id="ADd-4W-sPS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewButton" destination="JDN-2I-pZT" id="xrd-9E-rWM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRG-IQ-oc2" userLabel="contentView">
+                    <rect key="frame" x="0.0" y="782" width="393" height="70"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0Cd-TK-bj3">
+                            <rect key="frame" x="35" y="25" width="323" height="23"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="7w6-Ip-iso">
+                                    <rect key="frame" x="0.0" y="0.0" width="323" height="23"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cartDisabled" translatesAutoresizingMaskIntoConstraints="NO" id="lLf-Vv-vmS">
+                                            <rect key="frame" x="0.0" y="0.0" width="23" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="23" id="4oe-X9-ZBZ"/>
+                                                <constraint firstAttribute="height" constant="23" id="RvT-JU-8VN"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item added to cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaT-d0-ouz">
+                                            <rect key="frame" x="52.999999999999986" y="0.0" width="150.66666666666663" height="23"/>
+                                            <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="17"/>
+                                            <color key="textColor" name="backgroundCustom"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDN-2I-pZT">
+                                            <rect key="frame" x="233.66666666666671" y="0.0" width="89.333333333333343" height="23"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="View">
+                                                <color key="baseForegroundColor" name="backgroundCustom"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="viewButtonTapped:" destination="-1" eventType="touchUpInside" id="dEi-fQ-LsZ"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1387592852" green="0.48596370220000001" blue="0.59080594779999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="0Cd-TK-bj3" firstAttribute="centerX" secondItem="IRG-IQ-oc2" secondAttribute="centerX" id="AHp-VT-gbX"/>
+                        <constraint firstAttribute="height" constant="70" id="UAd-0i-jYY"/>
+                        <constraint firstItem="0Cd-TK-bj3" firstAttribute="top" secondItem="IRG-IQ-oc2" secondAttribute="top" constant="25" id="Yf0-EB-UXK"/>
+                        <constraint firstItem="0Cd-TK-bj3" firstAttribute="leading" secondItem="IRG-IQ-oc2" secondAttribute="leading" constant="35" id="fgi-JP-N9z"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsU-qO-GmH" userLabel="backView">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="errorCustom"/>
+            <constraints>
+                <constraint firstItem="IRG-IQ-oc2" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="8Xs-eu-8vF"/>
+                <constraint firstItem="gsU-qO-GmH" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="JLy-f6-3TY"/>
+                <constraint firstItem="gsU-qO-GmH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="O0w-hN-9ON"/>
+                <constraint firstItem="gsU-qO-GmH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Qvo-bl-vvT"/>
+                <constraint firstAttribute="bottom" secondItem="IRG-IQ-oc2" secondAttribute="bottom" id="VUd-Gl-2fo"/>
+                <constraint firstItem="IRG-IQ-oc2" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Xwb-DQ-bQV"/>
+                <constraint firstItem="IRG-IQ-oc2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZMc-z0-ggP"/>
+                <constraint firstAttribute="bottom" secondItem="gsU-qO-GmH" secondAttribute="bottom" id="qfy-qP-Elr"/>
+            </constraints>
+            <point key="canvasLocation" x="-45.038167938931295" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cartDisabled" width="24" height="23"/>
+        <namedColor name="backgroundCustom">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="errorCustom">
+            <color red="1" green="0.35686274509803922" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

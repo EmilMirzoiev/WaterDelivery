@@ -43,6 +43,8 @@
 		2054FB1A29DF1132005E6D0E /* ProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2054FB1829DF1132005E6D0E /* ProductViewCell.xib */; };
 		205F067C2961BCF9005401BC /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F067B2961BCF9005401BC /* VerificationViewController.swift */; };
 		205F067E2961ECCF005401BC /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F067D2961ECCF005401BC /* AuthManager.swift */; };
+		205F12AA29E19DEE003F5A1C /* CustomPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F12A829E19DEE003F5A1C /* CustomPopup.swift */; };
+		205F12AB29E19DEE003F5A1C /* CustomPopup.xib in Resources */ = {isa = PBXBuildFile; fileRef = 205F12A929E19DEE003F5A1C /* CustomPopup.xib */; };
 		20667CED2951E8220001933B /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20667CEC2951E8220001933B /* ProductsViewController.swift */; };
 		2086161129D9C80100667613 /* ABeeZee-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086160E29D9C7FD00667613 /* ABeeZee-Regular.ttf */; };
 		2086161229D9C80400667613 /* Arimo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086161029D9C7FE00667613 /* Arimo-Bold.ttf */; };
@@ -136,6 +138,8 @@
 		2054FB1829DF1132005E6D0E /* ProductViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewCell.xib; sourceTree = "<group>"; };
 		205F067B2961BCF9005401BC /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		205F067D2961ECCF005401BC /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		205F12A829E19DEE003F5A1C /* CustomPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopup.swift; sourceTree = "<group>"; };
+		205F12A929E19DEE003F5A1C /* CustomPopup.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomPopup.xib; sourceTree = "<group>"; };
 		20667CEC2951E8220001933B /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		2086160E29D9C7FD00667613 /* ABeeZee-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ABeeZee-Regular.ttf"; sourceTree = "<group>"; };
 		2086160F29D9C7FE00667613 /* Arimo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Regular.ttf"; sourceTree = "<group>"; };
@@ -333,6 +337,15 @@
 			path = ProductViewCell;
 			sourceTree = "<group>";
 		};
+		205F12A729E19DAF003F5A1C /* CustomPopupView */ = {
+			isa = PBXGroup;
+			children = (
+				205F12A829E19DEE003F5A1C /* CustomPopup.swift */,
+				205F12A929E19DEE003F5A1C /* CustomPopup.xib */,
+			);
+			path = CustomPopupView;
+			sourceTree = "<group>";
+		};
 		20667CEA2950F9D00001933B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -349,8 +362,9 @@
 		20667CEB2950FAD80001933B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2054FB1629DF1119005E6D0E /* ProductViewCell */,
 				200950FD29350D6A0081D290 /* Main.storyboard */,
+				205F12A729E19DAF003F5A1C /* CustomPopupView */,
+				2054FB1629DF1119005E6D0E /* ProductViewCell */,
 				2089913529957C1400314421 /* CustomOrderCells */,
 				2089913E29966B9900314421 /* CustomUserProfileCell */,
 				2016C7B72968B742006143E3 /* BasketTableViewCell */,
@@ -577,6 +591,7 @@
 				202DE2E32992584700BB2718 /* UserInfoTableViewCell.xib in Resources */,
 				2009510429350D6C0081D290 /* LaunchScreen.storyboard in Resources */,
 				20DCFEE029780C9100D644D5 /* MyOrdersTableViewCell.xib in Resources */,
+				205F12AB29E19DEE003F5A1C /* CustomPopup.xib in Resources */,
 				202DE2E82992B0CB00BB2718 /* ButtonTableViewCell.xib in Resources */,
 				2086161329D9C80700667613 /* Arimo-Regular.ttf in Resources */,
 				20004E7629A27BBC00BEBFE5 /* UserTextFieldTableViewCell.xib in Resources */,
@@ -782,6 +797,7 @@
 				200950FA29350D6A0081D290 /* SceneDelegate.swift in Sources */,
 				20CB0281294BAC260005F2B5 /* Firestore+Products.swift in Sources */,
 				20DCFED72977160200D644D5 /* MyOrdersViewController.swift in Sources */,
+				205F12AA29E19DEE003F5A1C /* CustomPopup.swift in Sources */,
 				20F17D45297E981F0071F59C /* OrderDetailsViewController.swift in Sources */,
 				205F067C2961BCF9005401BC /* VerificationViewController.swift in Sources */,
 				202DE2E72992B0CB00BB2718 /* ButtonTableViewCell.swift in Sources */,

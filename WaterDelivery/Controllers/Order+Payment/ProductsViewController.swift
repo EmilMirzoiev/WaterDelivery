@@ -88,7 +88,10 @@ extension ProductsViewController: UICollectionViewDelegate, UICollectionViewData
         cell.addButtonTapAction = { [weak self] in
             guard let self = self else { return }
             self.basketManager.add(product: self.products[indexPath.row])
-            self.showAlertWithTimer(title: "Success", message: "You successfully added a product to cart")
+//            self.showAlertWithTimer(title: "Success", message: "You successfully added a product to cart")
+            let popup = CustomPopup()
+            popup.appear(sender: self)
+            popup.hideWithDelay()
         }
         return cell
     }
