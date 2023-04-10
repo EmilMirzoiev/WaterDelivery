@@ -11,10 +11,10 @@ import FirebaseAuth
 
 class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFieldDelegate  {
     
-    @IBOutlet weak var priceTextField: UITextField!
-    @IBOutlet weak var currencyTextField: UITextField!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var cardInputLayout: PSCardInputLayout!
-    
+    @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var cardNumberTextField: PSCardNumberTextField!
     @IBOutlet weak var cardMonthTextField: PSExpMonthTextField!
     @IBOutlet weak var cardYearTextField: PSExpYearTextField!
@@ -37,10 +37,9 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
     }
     
     func prepareUI() {
-        priceTextField.delegate = self
-        currencyTextField.delegate = self
         self.navigationItem.setHidesBackButton(true, animated: true)
         self.hideKeyboardWhenTappedAround()
+        errorLabel.isHidden = true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -51,17 +50,11 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
     //Add a method to retrieve the order price and display it in the price text field.
     func getOrderPrice() {
         let totalPrice = order.totalAmount
-        priceTextField.text = "\(totalPrice)"
-        priceTextField.isEnabled = false
-        currencyTextField.isEnabled = false
+        priceLabel.text = "\(totalPrice)"
     }
     
     //Add a method to clear the information in the text fields.
     func clearFieldsInfo() {
-        priceTextField.isEnabled = true
-        currencyTextField.isEnabled = true
-        priceTextField.text = ""
-        currencyTextField.text = ""
         cardNumberTextField.text = ""
         cardMonthTextField.text = ""
         cardYearTextField.text = ""
@@ -73,12 +66,13 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
         let cloudipspApi = PSCloudipspApi(merchant: 1397120, andCloudipspView: self.cloudipspWebView)
         let card = self.cardInputLayout.confirm()
         if (card == nil) {
+            showErrorMessage(with: "Please provide card number")
             debugPrint("No card")
         } else {
-            let amount = Double(priceTextField.text!)
+            let amount = Double(priceLabel.text!)
             guard var amount = amount else { return }
             amount = amount * 100
-                let order = PSOrder(order: Int(amount), aStringCurrency: currencyTextField.text!, aIdentifier: generatedOrderId, aAbout: generatedOrderId)
+                let order = PSOrder(order: Int(amount), aStringCurrency: currencyLabel.text!, aIdentifier: generatedOrderId, aAbout: generatedOrderId)
                 cloudipspApi?.pay(card, with: order, andDelegate: self)
         }
     }
@@ -96,9 +90,17 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
             updateOrdersList()
             clearFieldsInfo()
         } else {
-            print("Change card info")
-            showAlert(title: "Error", message: "Payment was not successful. Please try again", completion: {})
+            print("Card is not valid")
+            showErrorMessage(with: "Card is not valid")
         }
+    }
+    
+    func showErrorMessage(with string: String) {
+        errorLabel.text = string
+        errorLabel.isHidden = false
+        cardNumberTextField.layer.borderWidth = 1.0
+        cardNumberTextField.layer.borderColor = AppColors.error.cgColor
+        cardNumberTextField.layer.cornerRadius = 8
     }
     
     func updateOrdersList() {
