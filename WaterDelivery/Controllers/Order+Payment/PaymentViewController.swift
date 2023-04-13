@@ -10,7 +10,7 @@ import Cloudipsp
 import FirebaseAuth
 
 class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFieldDelegate  {
-    
+
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var cardInputLayout: PSCardInputLayout!
