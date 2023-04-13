@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CSm-jm-E2l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uXE-cC-BKN">
-                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -56,7 +56,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzw-Hw-2TH">
-                                <rect key="frame" x="0.0" y="511" width="390" height="250"/>
+                                <rect key="frame" x="0.0" y="560" width="390" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0dv-Fw-ry7">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
@@ -170,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51S-aT-BkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="823"/>
+            <point key="canvasLocation" x="1825" y="727"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="0W1-MX-zJH">
@@ -571,6 +571,7 @@
         <!--Navigation Controller-->
         <scene sceneID="RXl-ew-CYd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfa-Xy-K8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="initialNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="CSm-jm-E2l" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fl9-Rk-HTV">
@@ -582,7 +583,6 @@
                         <segue destination="mPP-8V-FU5" kind="relationship" relationship="rootViewController" id="P2m-vs-5pe"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zfa-Xy-K8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-966" y="-35"/>
         </scene>
@@ -595,7 +595,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d5v-B3-ZuU">
-                                <rect key="frame" x="0.0" y="47" width="390" height="695"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="651"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kq-ql-QZo">
@@ -632,7 +632,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hD7-PB-f2z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="824"/>
+            <point key="canvasLocation" x="3652" y="729"/>
         </scene>
         <!--User Profile Table View Controller-->
         <scene sceneID="n5D-QQ-JnD">
@@ -643,7 +643,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zv6-ED-kqG">
-                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -665,7 +665,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDz-sM-j4h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="824"/>
+            <point key="canvasLocation" x="2689" y="729"/>
         </scene>
         <!--Basket View Controller-->
         <scene sceneID="KPn-Fe-eVR">
@@ -676,11 +676,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0i3-jE-ESk">
-                                <rect key="frame" x="0.0" y="47" width="390" height="640"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="645"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfo-4X-ROr">
-                                <rect key="frame" x="12" y="699" width="366" height="50"/>
+                                <rect key="frame" x="12" y="748" width="366" height="50"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="S0U-wp-AcN"/>
@@ -726,7 +726,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wpo-rz-twg">
-                                <rect key="frame" x="0.0" y="47" width="390" height="698"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="654"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj6-yM-yEZ">
@@ -764,7 +764,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kcw-9w-rI1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="1746"/>
+            <point key="canvasLocation" x="0.0" y="2532"/>
         </scene>
         <!--Payment View Controller-->
         <scene sceneID="6zA-hx-uV3">
@@ -786,7 +786,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeD-4z-2uY">
-                                <rect key="frame" x="263" y="58" width="97" height="34.333333333333343"/>
+                                <rect key="frame" x="263" y="102" width="97" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Test Card"/>
                                 <connections>
@@ -798,7 +798,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tjv-Fh-2Ne" customClass="PSCardInputLayout">
-                                <rect key="frame" x="30" y="100.33333333333333" width="330" height="149.66666666666669"/>
+                                <rect key="frame" x="30" y="144.33333333333334" width="330" height="105.66666666666666"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="udF-IB-RBb" customClass="PSCardNumberTextField">
                                         <rect key="frame" x="0.0" y="8" width="330" height="34"/>
@@ -806,22 +806,22 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Mp-na-Ekb" customClass="PSExpMonthTextField">
-                                        <rect key="frame" x="0.0" y="72.000000000000014" width="161" height="34"/>
+                                        <rect key="frame" x="0.0" y="72" width="161" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Rg-4T-TnW" customClass="PSExpYearTextField">
-                                        <rect key="frame" x="169" y="72.000000000000014" width="161" height="34"/>
+                                        <rect key="frame" x="169" y="72" width="161" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFB-OX-BmJ" customClass="PSCVVTextField">
-                                        <rect key="frame" x="0.0" y="114" width="330" height="34"/>
+                                        <rect key="frame" x="0.0" y="113.99999999999997" width="330" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug1-rY-dGw">
-                                        <rect key="frame" x="8" y="43.000000000000014" width="68.333333333333329" height="15.666666666666664"/>
+                                        <rect key="frame" x="8" y="43" width="68.333333333333329" height="15.666666666666664"/>
                                         <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="13"/>
                                         <color key="textColor" name="errorCustom"/>
                                         <nil key="highlightedColor"/>
@@ -920,7 +920,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="siE-sj-MCj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="1746"/>
+            <point key="canvasLocation" x="862" y="2532"/>
         </scene>
         <!--Order Details View Controller-->
         <scene sceneID="M67-af-J36">
@@ -931,11 +931,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pxc-ba-MLX">
-                                <rect key="frame" x="0.0" y="47" width="390" height="574"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="579"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUD-Ys-Vag">
-                                <rect key="frame" x="0.0" y="621" width="390" height="140"/>
+                                <rect key="frame" x="0.0" y="670" width="390" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yby-Qt-KBE">
                                         <rect key="frame" x="339" y="45" width="39" height="21"/>
@@ -1022,7 +1022,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="fQf-90-7PN"/>
-        <segue reference="Rel-ev-v5R"/>
+        <segue reference="vvw-3W-N2A"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="addPhoto" width="75" height="75"/>
