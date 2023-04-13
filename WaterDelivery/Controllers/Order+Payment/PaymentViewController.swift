@@ -110,9 +110,10 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
     }
     
     func goToHomegape() {
-        showAlert(title: "Success", message: "Payment was successful. Please wait for delivery") {
-            self.navigationController?.popToRootViewController(animated: true)
-        }
+//        showAlert(title: "Success", message: "Payment was successful. Please wait for delivery") {
+//            self.navigationController?.popToRootViewController(animated: true)
+//        }
+        self.navigationController?.popToViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
     }
 
     func onPaidFailure(_ error: Error!) {
