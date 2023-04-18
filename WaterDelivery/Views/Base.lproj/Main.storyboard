@@ -23,11 +23,11 @@
             <objects>
                 <viewController storyboardIdentifier="MyOrdersTableViewCell" id="bRH-LG-cI2" customClass="MyOrdersViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EHR-p4-RnY">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uXE-cC-BKN">
-                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -55,11 +55,11 @@
             <objects>
                 <viewController id="t6t-J7-B3c" customClass="GoogleMapsViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g5b-Yd-0VF">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzw-Hw-2TH">
-                                <rect key="frame" x="0.0" y="511" width="390" height="250"/>
+                                <rect key="frame" x="0.0" y="584" width="390" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0dv-Fw-ry7">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
@@ -594,20 +594,20 @@
             <objects>
                 <viewController id="ykR-zO-maA" customClass="EditUserProfileTableViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UgX-CQ-Tk8">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d5v-B3-ZuU">
-                                <rect key="frame" x="0.0" y="47" width="390" height="695"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="732"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kq-ql-QZo">
-                                <rect key="frame" x="30" y="754" width="330" height="50"/>
-                                <color key="backgroundColor" name="AccentColor"/>
+                                <rect key="frame" x="30" y="744" width="330" height="50"/>
+                                <color key="backgroundColor" name="primaryCustom"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="n1B-AH-IM1"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" name="backgroundCustom"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                 <connections>
@@ -642,11 +642,11 @@
             <objects>
                 <viewController id="FaM-ln-R4n" customClass="UserProfileTableViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w6s-Ia-WJ1">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zv6-ED-kqG">
-                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -675,21 +675,22 @@
             <objects>
                 <viewController storyboardIdentifier="BasketViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ztf-lJ-T48" customClass="BasketViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nWN-lM-lwR">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0i3-jE-ESk">
-                                <rect key="frame" x="0.0" y="47" width="390" height="640"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="760"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfo-4X-ROr">
-                                <rect key="frame" x="12" y="699" width="366" height="50"/>
-                                <color key="backgroundColor" name="AccentColor"/>
+                                <rect key="frame" x="12" y="772" width="366" height="50"/>
+                                <color key="backgroundColor" name="primaryCustom"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="S0U-wp-AcN"/>
                                 </constraints>
+                                <color key="tintColor" name="backgroundCustom"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="CONTINUE">
+                                <buttonConfiguration key="configuration" style="plain" title="Continue">
                                     <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -725,22 +726,22 @@
             <objects>
                 <viewController id="MvJ-0P-X1X" customClass="OrderCustomTableViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WOs-ap-kZ7">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wpo-rz-twg">
-                                <rect key="frame" x="0.0" y="47" width="390" height="698"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="735"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj6-yM-yEZ">
-                                <rect key="frame" x="12" y="782" width="366" height="50"/>
-                                <color key="backgroundColor" name="AccentColor"/>
+                                <rect key="frame" x="12" y="772" width="366" height="50"/>
+                                <color key="backgroundColor" name="primaryCustom"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="yDi-CV-cUQ"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="CHECKOUT"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Checkout"/>
                                 <connections>
                                     <action selector="checkoutButtonTapped:" destination="MvJ-0P-X1X" eventType="touchUpInside" id="Cxa-wi-WIQ"/>
                                 </connections>
@@ -772,9 +773,9 @@
         <!--Payment View Controller-->
         <scene sceneID="6zA-hx-uV3">
             <objects>
-                <viewController id="zwQ-Ed-o2e" customClass="PaymentViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaymentViewController" id="zwQ-Ed-o2e" customClass="PaymentViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9qE-x0-r8Z">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yab-B0-fjh">
@@ -782,6 +783,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pao-JS-JO9"/>
                                 </constraints>
+                                <color key="tintColor" name="primaryCustom"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Pay"/>
                                 <connections>
@@ -789,7 +791,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeD-4z-2uY">
-                                <rect key="frame" x="263" y="58" width="97" height="34.333333333333343"/>
+                                <rect key="frame" x="263" y="11" width="97" height="34.333333333333336"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Test Card"/>
                                 <connections>
@@ -797,11 +799,11 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkw-v4-ehI">
-                                <rect key="frame" x="0.0" y="414" width="390" height="347"/>
+                                <rect key="frame" x="0.0" y="414" width="390" height="371"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tjv-Fh-2Ne" customClass="PSCardInputLayout">
-                                <rect key="frame" x="30" y="100.33333333333333" width="330" height="149.66666666666669"/>
+                                <rect key="frame" x="30" y="53.333333333333329" width="330" height="196.66666666666669"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="udF-IB-RBb" customClass="PSCardNumberTextField">
                                         <rect key="frame" x="0.0" y="8" width="330" height="34"/>
@@ -809,12 +811,12 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Mp-na-Ekb" customClass="PSExpMonthTextField">
-                                        <rect key="frame" x="0.0" y="72.000000000000014" width="161" height="34"/>
+                                        <rect key="frame" x="0.0" y="72" width="161" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Rg-4T-TnW" customClass="PSExpYearTextField">
-                                        <rect key="frame" x="169" y="72.000000000000014" width="161" height="34"/>
+                                        <rect key="frame" x="169" y="72" width="161" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                     </textField>
@@ -824,7 +826,7 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug1-rY-dGw">
-                                        <rect key="frame" x="8" y="43.000000000000014" width="68.333333333333329" height="15.666666666666664"/>
+                                        <rect key="frame" x="8" y="42.999999999999993" width="68.333333333333329" height="15.666666666666664"/>
                                         <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="13"/>
                                         <color key="textColor" name="errorCustom"/>
                                         <nil key="highlightedColor"/>
@@ -1034,15 +1036,15 @@ to be delivered to your home.</string>
             <objects>
                 <viewController id="fIr-jZ-GEn" customClass="OrderDetailsViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wu7-MV-mN5">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pxc-ba-MLX">
-                                <rect key="frame" x="0.0" y="47" width="390" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="694"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUD-Ys-Vag">
-                                <rect key="frame" x="0.0" y="621" width="390" height="140"/>
+                                <rect key="frame" x="0.0" y="694" width="390" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yby-Qt-KBE">
                                         <rect key="frame" x="339" y="45" width="39" height="21"/>
@@ -1052,7 +1054,7 @@ to be delivered to your home.</string>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gL9-6t-R5G">
                                         <rect key="frame" x="12" y="78" width="366" height="50"/>
-                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="backgroundColor" name="primaryCustom"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="v4s-aZ-jDs"/>
                                         </constraints>
@@ -1240,17 +1242,21 @@ we can not repeat order</string>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXV-bY-uIA">
                                 <rect key="frame" x="30" y="686" width="330" height="50"/>
+                                <color key="backgroundColor" name="primaryCustom"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="HcF-UP-NLw"/>
                                 </constraints>
+                                <color key="tintColor" name="backgroundCustom"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Ok"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9h-Go-X4X">
                                 <rect key="frame" x="30" y="748" width="330" height="50"/>
+                                <color key="backgroundColor" name="primaryCustom"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Qec-qo-cgM"/>
                                 </constraints>
+                                <color key="tintColor" name="backgroundCustom"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Try Again"/>
                             </button>
@@ -1281,8 +1287,8 @@ we can not repeat order</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fQf-90-7PN"/>
-        <segue reference="Rel-ev-v5R"/>
+        <segue reference="rPG-fd-IrL"/>
+        <segue reference="7Gi-bI-M4Z"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="addPhoto" width="75" height="75"/>
@@ -1292,9 +1298,6 @@ we can not repeat order</string>
         <image name="edit" width="21" height="21"/>
         <image name="launchScreen" width="313" height="313"/>
         <image name="sadDrop" width="120" height="148"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="backgroundCustom">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -24,6 +24,9 @@ class SuccessViewController: UIViewController {
     }
 
     @IBAction func okTapped(_ sender: Any) {
+        if let navigationController = self.navigationController {
+            navigationController.popToRootViewController(animated: true)
+        }
     }
     
 }

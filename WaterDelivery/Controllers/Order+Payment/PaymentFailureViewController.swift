@@ -26,9 +26,14 @@ class PaymentFailureViewController: UIViewController {
     }
     
     @IBAction func okTapped(_ sender: Any) {
+        if let navigationController = self.navigationController {
+            navigationController.popToRootViewController(animated: true)
+        }
     }
     
     @IBAction func tryAgainTapped(_ sender: Any) {
+        if let navigationController = self.navigationController {
+            navigationController.popViewController(animated: true)
+        }
     }
-    
 }

@@ -90,7 +90,6 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
             updateOrdersList()
             clearFieldsInfo()
         } else {
-            print("Card is not valid")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let failureVC = storyboard.instantiateViewController(withIdentifier: "FailureViewController") as! PaymentFailureViewController
                 self.navigationController?.pushViewController(failureVC, animated: true)
