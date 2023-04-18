@@ -925,10 +925,10 @@
             </objects>
             <point key="canvasLocation" x="862" y="2532"/>
         </scene>
-        <!--View Controller-->
+        <!--Success View Controller-->
         <scene sceneID="8wf-i4-XSA">
             <objects>
-                <viewController id="7Pn-Br-MNy" sceneMemberID="viewController">
+                <viewController id="7Pn-Br-MNy" customClass="SuccessViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sBa-4r-wbS">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -971,6 +971,9 @@ to be delivered to your home.</string>
                                 <color key="tintColor" name="backgroundCustom"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Ok"/>
+                                <connections>
+                                    <action selector="okTapped:" destination="7Pn-Br-MNy" eventType="touchUpInside" id="d5H-90-b5u"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order number is #3224570" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j2-O2-jbU">
                                 <rect key="frame" x="30" y="454.66666666666669" width="330" height="15.666666666666686"/>
@@ -1103,10 +1106,10 @@ to be delivered to your home.</string>
             </objects>
             <point key="canvasLocation" x="-999" y="2532"/>
         </scene>
-        <!--View Controller-->
+        <!--Payment Failure View Controller-->
         <scene sceneID="lJY-kl-Rvv">
             <objects>
-                <viewController id="oc0-UA-qg2" sceneMemberID="viewController">
+                <viewController id="oc0-UA-qg2" customClass="PaymentFailureViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fQY-Xy-tRt">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1139,6 +1142,9 @@ to be delivered to your home.</string>
                                 <color key="tintColor" name="backgroundCustom"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Ok"/>
+                                <connections>
+                                    <action selector="okTapped:" destination="oc0-UA-qg2" eventType="touchUpInside" id="60W-1l-EnH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTO-Zh-HHh">
                                 <rect key="frame" x="30" y="748" width="330" height="50"/>
@@ -1149,6 +1155,9 @@ to be delivered to your home.</string>
                                 <color key="tintColor" name="backgroundCustom"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Try Again"/>
+                                <connections>
+                                    <action selector="tryAgainTapped:" destination="oc0-UA-qg2" eventType="touchUpInside" id="ZX4-p4-6pm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zfp-Cb-iNG"/>

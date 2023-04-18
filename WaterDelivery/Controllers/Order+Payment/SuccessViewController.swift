@@ -12,8 +12,9 @@ class SuccessViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+
+    @IBAction func okTapped(_ sender: Any) {
     }
     
-
 }

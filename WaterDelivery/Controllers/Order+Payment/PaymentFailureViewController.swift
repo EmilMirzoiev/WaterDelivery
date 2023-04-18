@@ -12,7 +12,12 @@ class PaymentFailureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func okTapped(_ sender: Any) {
+    }
+    
+    @IBAction func tryAgainTapped(_ sender: Any) {
     }
     
 }
