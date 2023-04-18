@@ -23,11 +23,11 @@
             <objects>
                 <viewController storyboardIdentifier="MyOrdersTableViewCell" id="bRH-LG-cI2" customClass="MyOrdersViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EHR-p4-RnY">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uXE-cC-BKN">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -55,11 +55,11 @@
             <objects>
                 <viewController id="t6t-J7-B3c" customClass="GoogleMapsViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g5b-Yd-0VF">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzw-Hw-2TH">
-                                <rect key="frame" x="0.0" y="584" width="390" height="250"/>
+                                <rect key="frame" x="0.0" y="560" width="390" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0dv-Fw-ry7">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
@@ -142,11 +142,6 @@
                                             <segue destination="FaM-ln-R4n" kind="show" id="01A-cH-SZR"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="My orders" id="pdP-I3-CL4">
-                                        <connections>
-                                            <segue destination="bRH-LG-cI2" kind="show" id="EJT-74-wnj"/>
-                                        </connections>
-                                    </barButtonItem>
                                     <barButtonItem title="Our sales points" id="H2S-89-Jvo" userLabel="See our sales point">
                                         <connections>
                                             <segue destination="t6t-J7-B3c" kind="show" id="S72-nK-uJG"/>
@@ -160,13 +155,21 @@
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
-                        <barButtonItem key="rightBarButtonItem" title="Go to cart" id="0hR-Ev-uw2">
-                            <connections>
-                                <action selector="basketButtonTapped:" destination="QhQ-eo-QQt" id="aQq-1b-fHR"/>
-                                <segue destination="ztf-lJ-T48" kind="show" identifier="goToCustomBasket" id="fQf-90-7PN"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Go to cart" id="0hR-Ev-uw2">
+                                <connections>
+                                    <action selector="basketButtonTapped:" destination="QhQ-eo-QQt" id="aQq-1b-fHR"/>
+                                    <segue destination="ztf-lJ-T48" kind="show" identifier="goToCustomBasket" id="fQf-90-7PN"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="My orders" id="pdP-I3-CL4">
+                                <connections>
+                                    <segue destination="bRH-LG-cI2" kind="show" id="EJT-74-wnj"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="e2b-b3-zDw" id="CpW-G4-H8b"/>
                     </connections>
@@ -594,15 +597,15 @@
             <objects>
                 <viewController id="ykR-zO-maA" customClass="EditUserProfileTableViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UgX-CQ-Tk8">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d5v-B3-ZuU">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="732"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="651"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kq-ql-QZo">
-                                <rect key="frame" x="30" y="744" width="330" height="50"/>
+                                <rect key="frame" x="30" y="754" width="330" height="50"/>
                                 <color key="backgroundColor" name="primaryCustom"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="n1B-AH-IM1"/>
@@ -642,11 +645,11 @@
             <objects>
                 <viewController id="FaM-ln-R4n" customClass="UserProfileTableViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w6s-Ia-WJ1">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zv6-ED-kqG">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -675,15 +678,15 @@
             <objects>
                 <viewController storyboardIdentifier="BasketViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ztf-lJ-T48" customClass="BasketViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nWN-lM-lwR">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0i3-jE-ESk">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="760"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="645"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfo-4X-ROr">
-                                <rect key="frame" x="12" y="772" width="366" height="50"/>
+                                <rect key="frame" x="12" y="748" width="366" height="50"/>
                                 <color key="backgroundColor" name="primaryCustom"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="S0U-wp-AcN"/>
@@ -726,15 +729,15 @@
             <objects>
                 <viewController id="MvJ-0P-X1X" customClass="OrderCustomTableViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WOs-ap-kZ7">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wpo-rz-twg">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="735"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="654"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yj6-yM-yEZ">
-                                <rect key="frame" x="12" y="772" width="366" height="50"/>
+                                <rect key="frame" x="12" y="782" width="366" height="50"/>
                                 <color key="backgroundColor" name="primaryCustom"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="yDi-CV-cUQ"/>
@@ -775,23 +778,26 @@
             <objects>
                 <viewController storyboardIdentifier="PaymentViewController" id="zwQ-Ed-o2e" customClass="PaymentViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9qE-x0-r8Z">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yab-B0-fjh">
                                 <rect key="frame" x="30" y="364" width="330" height="50"/>
+                                <color key="backgroundColor" name="primaryCustom"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="pao-JS-JO9"/>
                                 </constraints>
                                 <color key="tintColor" name="primaryCustom"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Pay"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Pay">
+                                    <color key="baseBackgroundColor" name="primaryCustom"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="onPayPressed:" destination="zwQ-Ed-o2e" eventType="touchUpInside" id="frt-n5-KNH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeD-4z-2uY">
-                                <rect key="frame" x="263" y="11" width="97" height="34.333333333333336"/>
+                                <rect key="frame" x="263" y="102" width="97" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Test Card"/>
                                 <connections>
@@ -799,11 +805,11 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkw-v4-ehI">
-                                <rect key="frame" x="0.0" y="414" width="390" height="371"/>
+                                <rect key="frame" x="0.0" y="414" width="390" height="347"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tjv-Fh-2Ne" customClass="PSCardInputLayout">
-                                <rect key="frame" x="30" y="53.333333333333329" width="330" height="196.66666666666669"/>
+                                <rect key="frame" x="30" y="144.33333333333334" width="330" height="105.66666666666666"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="udF-IB-RBb" customClass="PSCardNumberTextField">
                                         <rect key="frame" x="0.0" y="8" width="330" height="34"/>
@@ -821,12 +827,12 @@
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hFB-OX-BmJ" customClass="PSCVVTextField">
-                                        <rect key="frame" x="0.0" y="114" width="330" height="34"/>
+                                        <rect key="frame" x="0.0" y="113.99999999999997" width="330" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug1-rY-dGw">
-                                        <rect key="frame" x="8" y="42.999999999999993" width="68.333333333333329" height="15.666666666666664"/>
+                                        <rect key="frame" x="8" y="43" width="68.333333333333329" height="15.666666666666664"/>
                                         <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="13"/>
                                         <color key="textColor" name="errorCustom"/>
                                         <nil key="highlightedColor"/>
@@ -920,6 +926,7 @@
                         <outlet property="cardYearTextField" destination="7Rg-4T-TnW" id="XlI-QX-HsU"/>
                         <outlet property="currencyLabel" destination="Tei-p9-o3x" id="sC9-ga-6BL"/>
                         <outlet property="errorLabel" destination="Ug1-rY-dGw" id="qPd-s5-DrT"/>
+                        <outlet property="payButton" destination="Yab-B0-fjh" id="KQ8-39-bWc"/>
                         <outlet property="priceLabel" destination="7f3-hM-z0V" id="CAV-oi-Bnr"/>
                     </connections>
                 </viewController>
@@ -1036,15 +1043,15 @@ to be delivered to your home.</string>
             <objects>
                 <viewController id="fIr-jZ-GEn" customClass="OrderDetailsViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wu7-MV-mN5">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pxc-ba-MLX">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="694"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="579"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUD-Ys-Vag">
-                                <rect key="frame" x="0.0" y="694" width="390" height="140"/>
+                                <rect key="frame" x="0.0" y="670" width="390" height="140"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yby-Qt-KBE">
                                         <rect key="frame" x="339" y="45" width="39" height="21"/>
@@ -1287,7 +1294,7 @@ we can not repeat order</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="rPG-fd-IrL"/>
+        <segue reference="fQf-90-7PN"/>
         <segue reference="7Gi-bI-M4Z"/>
     </inferredMetricsTieBreakers>
     <resources>

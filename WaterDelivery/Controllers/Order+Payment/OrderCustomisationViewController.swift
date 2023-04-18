@@ -28,13 +28,13 @@ class OrderCustomTableViewController: BaseViewController {
         prepareTableView()
         prepareDataSource()
         updateButton()
-        checkoutButton.layer.cornerRadius = 8
+        checkoutButton.layer.cornerRadius = min(checkoutButton.frame.size.width, checkoutButton.frame.size.height) / 2.0
+        checkoutButton.layer.masksToBounds = true
         
         order?.deliveryAddress = user?.address?.street ?? ""
         order?.doNotCallMe = false
         order?.withoutContact = false
         order?.paymentMethod = .cash
-        
         
         let userManager = UserManager()
         guard let user = Auth.auth().currentUser else { return }

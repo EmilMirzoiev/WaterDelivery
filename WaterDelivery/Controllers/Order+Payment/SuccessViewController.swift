@@ -20,6 +20,8 @@ class SuccessViewController: UIViewController {
     }
     
     func prepareUI() {
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        
         okButton.layer.cornerRadius = min(okButton.frame.size.width, okButton.frame.size.height) / 2.0
         okButton.layer.masksToBounds = true
         
@@ -48,5 +50,4 @@ class SuccessViewController: UIViewController {
             navigationController.popToRootViewController(animated: true)
         }
     }
-    
 }

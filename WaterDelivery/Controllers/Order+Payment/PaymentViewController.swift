@@ -18,6 +18,7 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
     @IBOutlet weak var cardNumberTextField: PSCardNumberTextField!
     @IBOutlet weak var cardMonthTextField: PSExpMonthTextField!
     @IBOutlet weak var cardYearTextField: PSExpYearTextField!
+    @IBOutlet weak var payButton: UIButton!
     @IBOutlet weak var cardCodeTextField: PSCVVTextField!
     
     //Create a variable to store a reference to the PSCloudipspWKWebView, which is the web view used by the Cloudipsp API.
@@ -40,6 +41,8 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
         self.navigationItem.setHidesBackButton(true, animated: true)
         self.hideKeyboardWhenTappedAround()
         errorLabel.isHidden = true
+        payButton.layer.cornerRadius = min(payButton.frame.size.width, payButton.frame.size.height) / 2.0
+        payButton.layer.masksToBounds = true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -72,8 +75,9 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
             let amount = Double(priceLabel.text!)
             guard var amount = amount else { return }
             amount = amount * 100
-                let order = PSOrder(order: Int(amount), aStringCurrency: currencyLabel.text!, aIdentifier: generatedOrderId, aAbout: generatedOrderId)
-                cloudipspApi?.pay(card, with: order, andDelegate: self)
+            let order = PSOrder(order: Int(amount), aStringCurrency: currencyLabel.text!,
+                                aIdentifier: generatedOrderId, aAbout: generatedOrderId)
+            cloudipspApi?.pay(card, with: order, andDelegate: self)
         }
     }
     

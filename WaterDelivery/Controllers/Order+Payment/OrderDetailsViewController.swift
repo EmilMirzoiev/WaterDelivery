@@ -36,7 +36,8 @@ class OrderDetailsViewController: BaseViewController, UITableViewDelegate, UITab
         guard let order = order else { return }
         dateLabel.text = dateFormat(from: order.createdDate ?? Date())
         priceLabel.text = "\(order.orderPrice ?? 0.0)"
-        repeatOrderButton.layer.cornerRadius = 8
+        repeatOrderButton.layer.cornerRadius = min(repeatOrderButton.frame.size.width, repeatOrderButton.frame.size.height) / 2.0
+        repeatOrderButton.layer.masksToBounds = true
     }
     
     //Implement the dateFormat(from:) method to format the date into a desired format.

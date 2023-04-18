@@ -26,7 +26,8 @@ class BasketViewController: BaseViewController, UITableViewDataSource, UITableVi
         tableView.delegate = self
         tableView.register(.init(nibName: "BasketTableViewCell", bundle: nil), forCellReuseIdentifier: "BasketTableViewCell")
         updateButton()
-        checkoutButton.layer.cornerRadius = 8 
+        checkoutButton.layer.cornerRadius = min(checkoutButton.frame.size.width, checkoutButton.frame.size.height) / 2.0
+        checkoutButton.layer.masksToBounds = true
     }
     
     //Create a function called updateButton() that updates the title of the checkout button based on the total amount in the basket.
