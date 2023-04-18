@@ -91,7 +91,9 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
             clearFieldsInfo()
         } else {
             print("Card is not valid")
-            showErrorMessage(with: "Card is not valid")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let failureVC = storyboard.instantiateViewController(withIdentifier: "FailureViewController") as! PaymentFailureViewController
+                self.navigationController?.pushViewController(failureVC, animated: true)
         }
     }
     
@@ -110,10 +112,9 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
     }
     
     func goToHomegape() {
-//        showAlert(title: "Success", message: "Payment was successful. Please wait for delivery") {
-//            self.navigationController?.popToRootViewController(animated: true)
-//        }
-        self.navigationController?.popToViewController(<#T##viewController: UIViewController##UIViewController#>, animated: <#T##Bool#>)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let successVC = storyboard.instantiateViewController(withIdentifier: "SuccessViewController") as! SuccessViewController
+            self.navigationController?.pushViewController(successVC, animated: true)
     }
 
     func onPaidFailure(_ error: Error!) {

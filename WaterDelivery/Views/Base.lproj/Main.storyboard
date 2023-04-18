@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CSm-jm-E2l">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -928,7 +928,7 @@
         <!--Success View Controller-->
         <scene sceneID="8wf-i4-XSA">
             <objects>
-                <viewController id="7Pn-Br-MNy" customClass="SuccessViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SuccessViewController" id="7Pn-Br-MNy" customClass="SuccessViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sBa-4r-wbS">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1018,6 +1018,7 @@ to be delivered to your home.</string>
                             <constraint firstItem="uJP-YU-21r" firstAttribute="trailing" secondItem="8va-c2-Vq3" secondAttribute="trailing" constant="30" id="xsc-e5-VPx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="eqk-rk-Ych"/>
                     <connections>
                         <outlet property="dateOfDeliveryLabel" destination="334-PC-EhI" id="R5Q-EL-B00"/>
                         <outlet property="okButton" destination="GJ0-Ch-Igr" id="91X-8i-FJ8"/>
@@ -1128,7 +1129,7 @@ to be delivered to your home.</string>
         <!--Payment Failure View Controller-->
         <scene sceneID="lJY-kl-Rvv">
             <objects>
-                <viewController id="oc0-UA-qg2" customClass="PaymentFailureViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FailureViewController" id="oc0-UA-qg2" customClass="PaymentFailureViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fQY-Xy-tRt">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1198,6 +1199,7 @@ to be delivered to your home.</string>
                             <constraint firstItem="zfp-Cb-iNG" firstAttribute="trailing" secondItem="JkD-3e-n4w" secondAttribute="trailing" constant="30" id="nYG-dK-snF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="goU-ec-4Hp"/>
                     <connections>
                         <outlet property="okButton" destination="fv3-7I-XF9" id="se0-RP-RyE"/>
                         <outlet property="tryAgainButton" destination="LTO-Zh-HHh" id="Q1k-gF-df1"/>
