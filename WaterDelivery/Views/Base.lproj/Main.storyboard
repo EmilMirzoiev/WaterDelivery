@@ -975,35 +975,54 @@ to be delivered to your home.</string>
                                     <action selector="okTapped:" destination="7Pn-Br-MNy" eventType="touchUpInside" id="d5H-90-b5u"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order number is #3224570" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j2-O2-jbU">
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wcc-7N-VkL">
                                 <rect key="frame" x="30" y="454.66666666666669" width="330" height="15.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Arimo-Regular" family="Arimo" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order number is" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j2-O2-jbU">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="15.666666666666666"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="OEJ-cN-yOq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Arimo-Regular" family="Arimo" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#3224570" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSV-Iv-eGL">
+                                        <rect key="frame" x="204" y="0.0" width="126" height="15.666666666666666"/>
+                                        <fontDescription key="fontDescription" name="Arimo-Regular" family="Arimo" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uJP-YU-21r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Go1-oa-uRr" firstAttribute="centerX" secondItem="uJP-YU-21r" secondAttribute="centerX" id="26j-fj-wC0"/>
-                            <constraint firstItem="5j2-O2-jbU" firstAttribute="top" secondItem="8va-c2-Vq3" secondAttribute="bottom" constant="12" id="7Sq-8n-fo7"/>
                             <constraint firstItem="334-PC-EhI" firstAttribute="leading" secondItem="uJP-YU-21r" secondAttribute="leading" constant="30" id="7te-Yg-EaK"/>
                             <constraint firstItem="uJP-YU-21r" firstAttribute="trailing" secondItem="geK-L0-DIo" secondAttribute="trailing" constant="30" id="B3T-na-eqC"/>
                             <constraint firstItem="8va-c2-Vq3" firstAttribute="top" secondItem="Go1-oa-uRr" secondAttribute="bottom" constant="45" id="C7x-3I-rxg"/>
-                            <constraint firstItem="uJP-YU-21r" firstAttribute="trailing" secondItem="5j2-O2-jbU" secondAttribute="trailing" constant="30" id="IOD-gi-ymS"/>
+                            <constraint firstItem="wcc-7N-VkL" firstAttribute="top" secondItem="8va-c2-Vq3" secondAttribute="bottom" constant="12" id="Emt-FS-JgZ"/>
                             <constraint firstItem="8va-c2-Vq3" firstAttribute="leading" secondItem="uJP-YU-21r" secondAttribute="leading" constant="30" id="JQE-cn-teM"/>
-                            <constraint firstItem="334-PC-EhI" firstAttribute="top" secondItem="5j2-O2-jbU" secondAttribute="bottom" constant="30" id="LQh-Y9-9JX"/>
                             <constraint firstItem="geK-L0-DIo" firstAttribute="top" secondItem="uJP-YU-21r" secondAttribute="top" constant="12" id="Oje-ju-abJ"/>
                             <constraint firstItem="uJP-YU-21r" firstAttribute="bottom" secondItem="GJ0-Ch-Igr" secondAttribute="bottom" constant="12" id="Oxg-Dk-XoX"/>
-                            <constraint firstItem="5j2-O2-jbU" firstAttribute="leading" secondItem="uJP-YU-21r" secondAttribute="leading" constant="30" id="QhH-8o-YTt"/>
                             <constraint firstItem="geK-L0-DIo" firstAttribute="leading" secondItem="uJP-YU-21r" secondAttribute="leading" constant="30" id="QrH-a1-eEf"/>
                             <constraint firstItem="uJP-YU-21r" firstAttribute="trailing" secondItem="334-PC-EhI" secondAttribute="trailing" constant="30" id="WZ6-Rr-fI6"/>
                             <constraint firstItem="Go1-oa-uRr" firstAttribute="top" secondItem="geK-L0-DIo" secondAttribute="bottom" constant="30" id="dIc-0u-HVL"/>
+                            <constraint firstItem="uJP-YU-21r" firstAttribute="trailing" secondItem="wcc-7N-VkL" secondAttribute="trailing" constant="30" id="ju1-we-G32"/>
+                            <constraint firstItem="wcc-7N-VkL" firstAttribute="leading" secondItem="uJP-YU-21r" secondAttribute="leading" constant="30" id="oDO-cm-qH6"/>
                             <constraint firstItem="uJP-YU-21r" firstAttribute="trailing" secondItem="GJ0-Ch-Igr" secondAttribute="trailing" constant="30" id="pYE-0t-yca"/>
                             <constraint firstItem="GJ0-Ch-Igr" firstAttribute="leading" secondItem="uJP-YU-21r" secondAttribute="leading" constant="30" id="pwe-D0-mKn"/>
+                            <constraint firstItem="334-PC-EhI" firstAttribute="top" secondItem="wcc-7N-VkL" secondAttribute="bottom" constant="30" id="q3c-Jv-CYb"/>
                             <constraint firstItem="uJP-YU-21r" firstAttribute="trailing" secondItem="8va-c2-Vq3" secondAttribute="trailing" constant="30" id="xsc-e5-VPx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateOfDeliveryLabel" destination="334-PC-EhI" id="R5Q-EL-B00"/>
+                        <outlet property="okButton" destination="GJ0-Ch-Igr" id="91X-8i-FJ8"/>
+                        <outlet property="orderNumber" destination="zSV-Iv-eGL" id="Kox-nS-r46"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gd-A1-RJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1179,6 +1198,10 @@ to be delivered to your home.</string>
                             <constraint firstItem="zfp-Cb-iNG" firstAttribute="trailing" secondItem="JkD-3e-n4w" secondAttribute="trailing" constant="30" id="nYG-dK-snF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="okButton" destination="fv3-7I-XF9" id="se0-RP-RyE"/>
+                        <outlet property="tryAgainButton" destination="LTO-Zh-HHh" id="Q1k-gF-df1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tjW-3W-BMr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
