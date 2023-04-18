@@ -124,12 +124,4 @@ class PaymentViewController: BaseViewController, PSPayCallbackDelegate, UITextFi
     func onWaitConfirm() {
         debugPrint("onWaitConfirm")
     }
-    
-    private func showMessage(with text: String) {
-        let alertController = UIAlertController(title: nil, message: text, preferredStyle: .alert)
-        present(alertController, animated: true, completion: nil)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
-            alertController.dismiss(animated: true, completion: nil)
-        }
-    }
 }

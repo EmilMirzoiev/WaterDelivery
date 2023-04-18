@@ -14,7 +14,15 @@ class PaymentFailureViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        prepareUI()
+    }
+    
+    func prepareUI() {
+        okButton.layer.cornerRadius = min(okButton.frame.size.width, okButton.frame.size.height) / 2.0
+        okButton.layer.masksToBounds = true
+        
+        tryAgainButton.layer.cornerRadius = min(tryAgainButton.frame.size.width, tryAgainButton.frame.size.height) / 2.0
+        tryAgainButton.layer.masksToBounds = true
     }
     
     @IBAction func okTapped(_ sender: Any) {
