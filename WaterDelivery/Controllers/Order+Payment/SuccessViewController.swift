@@ -26,6 +26,7 @@ class SuccessViewController: UIViewController {
         let currentDate = Date()
         let deliveryDate = Calendar.current.date(byAdding: .day, value: 2, to: currentDate)!
         let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US")
         dateFormatter.dateFormat = "d MMMM"
         let formattedDeliveryDate = dateFormatter.string(from: deliveryDate)
                 
