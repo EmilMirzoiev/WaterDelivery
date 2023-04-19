@@ -17,7 +17,6 @@ class OrderDetailsViewController: BaseViewController,
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var dateOfOrderLabel: UILabel!
-    @IBOutlet weak var dateOfPriceLabel: UILabel!
     @IBOutlet weak var repeatOrderButton: UIButton!
     
     var order: Order?

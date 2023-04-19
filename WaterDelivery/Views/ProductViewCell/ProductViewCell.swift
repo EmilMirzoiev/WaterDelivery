@@ -64,7 +64,9 @@ class ProductViewCell: UICollectionViewCell {
     }
         
     @IBAction func buyAction(_ sender: Any) {
-        addButtonTapAction?()
+        DispatchQueue.main.async {
+            self.addButtonTapAction?()
+        }
     }
 }
 
