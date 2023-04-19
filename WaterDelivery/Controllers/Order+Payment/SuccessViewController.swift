@@ -22,11 +22,14 @@ class SuccessViewController: UIViewController {
     func prepareUI() {
         self.navigationItem.setHidesBackButton(true, animated: true)
         
-        okButton.layer.cornerRadius = min(okButton.frame.size.width, okButton.frame.size.height) / 2.0
+        okButton.layer.cornerRadius = min(okButton.frame.size.width,
+                                          okButton.frame.size.height) / 2.0
         okButton.layer.masksToBounds = true
         
         let currentDate = Date()
-        let deliveryDate = Calendar.current.date(byAdding: .day, value: 2, to: currentDate)!
+        let deliveryDate = Calendar.current.date(byAdding: .day,
+                                                 value: 2,
+                                                 to: currentDate)!
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US")
         dateFormatter.dateFormat = "d MMMM"

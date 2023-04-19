@@ -84,8 +84,8 @@ class MyOrdersViewController: BaseViewController,
     
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
-        //        UITableView.automaticDimension
-        150
+                UITableView.automaticDimension
+//        150
     }
     
     func tableView(_ tableView: UITableView,
