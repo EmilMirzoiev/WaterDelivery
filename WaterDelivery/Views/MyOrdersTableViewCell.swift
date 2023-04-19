@@ -27,12 +27,19 @@ class MyOrdersTableViewCell: UITableViewCell {
     }
     
     func fill(with model: Order) {
-        orderDate.text = dateFormat(from: model.createdDate ?? Date())
-        orderPrice.text = "€ \(String(describing: model.orderPrice ?? 0.0))"
+        guard let date = model.createdDate,
+              let price = model.orderPrice
+        else { return }
+        
+        orderDate.text = dateFormat(from: date)
+        orderPrice.text = "€ \(price)"
         
         var productsText = ""
         for product in model.products {
-            productsText += "\(product.product.name ?? "") - (\(product.product.size ?? 0.0) L) x\(product.count)\n"
+            if let name = product.product.name,
+               let size = product.product.size {
+                productsText += "\(name) - (\(size) L) x\(product.count)\n"
+            }
         }
         
         productName.text = productsText
@@ -48,9 +55,6 @@ class MyOrdersTableViewCell: UITableViewCell {
         productName.attributedText = attributedString
     }
 
-    
-    //The cell class also has a "dateFormat(from:)" function that takes a Date object as a parameter,
-    //formats it using a DateFormatter, and returns a string representation of the formatted date.
     func dateFormat(from model: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "MM-dd-yyyy HH:mm"

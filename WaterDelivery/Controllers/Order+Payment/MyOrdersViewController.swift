@@ -12,36 +12,41 @@ import Kingfisher
 class MyOrdersViewController: BaseViewController,
                               UITableViewDelegate,
                               UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     let orderManager = OrderManager()
-
+    var emptyOrdersLabel: UILabel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(.init(nibName: "MyOrdersTableViewCell", bundle: nil),                                forCellReuseIdentifier: "MyOrdersTableViewCell")
         getData()
-        prepareUI()
     }
-
+    
     func getData() {
         if let userId = Auth.auth().currentUser?.uid {
             orderManager.loadAllData(by: userId) { [weak self] in
                 self?.tableView.reloadData()
+                self?.updateEmptyOrdersLabel()
             }
         }
     }
-
-    func prepareUI() {
+    
+    func updateEmptyOrdersLabel() {
         if orderManager.orders.isEmpty {
-            let emptyOrdersLabel = createEmptyOrdersListLabel()
-            view.addSubview(emptyOrdersLabel)
+            if emptyOrdersLabel == nil {
+                emptyOrdersLabel = createEmptyOrdersListLabel()
+            }
+            view.addSubview(emptyOrdersLabel!)
             NSLayoutConstraint.activate([
-                emptyOrdersLabel.centerXAnchor.constraint(
+                emptyOrdersLabel!.centerXAnchor.constraint(
                     equalTo: view.centerXAnchor)
             ])
+        } else {
+            emptyOrdersLabel?.removeFromSuperview()
         }
     }
     
@@ -60,7 +65,7 @@ class MyOrdersViewController: BaseViewController,
         ])
         return label
     }
-
+    
     
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
@@ -76,10 +81,10 @@ class MyOrdersViewController: BaseViewController,
         return cell
     }
     
-
+    
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        UITableView.automaticDimension
+        //        UITableView.automaticDimension
         150
     }
     
@@ -88,7 +93,7 @@ class MyOrdersViewController: BaseViewController,
         performSegue(withIdentifier: "goToOrderDetails",
                      sender: indexPath.row)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue,
                           sender: Any?) {
         if let index = sender as? Int,
