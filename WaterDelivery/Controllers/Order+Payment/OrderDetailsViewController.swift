@@ -64,7 +64,14 @@ class OrderDetailsViewController: BaseViewController,
         
         if let order = order {
             cell.fill(with: order.products[indexPath.row])
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let failureVC = storyboard.instantiateViewController(
+                withIdentifier: "FailureViewController")
+            as! PaymentFailureViewController
+            self.navigationController?.pushViewController(failureVC, animated: true)
         }
+        
         cell.plusButton.isHidden = true
         cell.minusButton.isHidden = true
         return cell

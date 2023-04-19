@@ -48,6 +48,7 @@
 		20667CED2951E8220001933B /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20667CEC2951E8220001933B /* ProductsViewController.swift */; };
 		206F17EA29EED95F006C497F /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F17E929EED95F006C497F /* SuccessViewController.swift */; };
 		206F17EC29EED971006C497F /* PaymentFailureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F17EB29EED971006C497F /* PaymentFailureViewController.swift */; };
+		206F17EE29F054BD006C497F /* RepeatOrderFailureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F17ED29F054BD006C497F /* RepeatOrderFailureViewController.swift */; };
 		2086161129D9C80100667613 /* ABeeZee-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086160E29D9C7FD00667613 /* ABeeZee-Regular.ttf */; };
 		2086161229D9C80400667613 /* Arimo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086161029D9C7FE00667613 /* Arimo-Bold.ttf */; };
 		2086161329D9C80700667613 /* Arimo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2086160F29D9C7FE00667613 /* Arimo-Regular.ttf */; };
@@ -145,6 +146,7 @@
 		20667CEC2951E8220001933B /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		206F17E929EED95F006C497F /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		206F17EB29EED971006C497F /* PaymentFailureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentFailureViewController.swift; sourceTree = "<group>"; };
+		206F17ED29F054BD006C497F /* RepeatOrderFailureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatOrderFailureViewController.swift; sourceTree = "<group>"; };
 		2086160E29D9C7FD00667613 /* ABeeZee-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ABeeZee-Regular.ttf"; sourceTree = "<group>"; };
 		2086160F29D9C7FE00667613 /* Arimo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Regular.ttf"; sourceTree = "<group>"; };
 		2086161029D9C7FE00667613 /* Arimo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Bold.ttf"; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 				20F17D44297E981F0071F59C /* OrderDetailsViewController.swift */,
 				206F17E929EED95F006C497F /* SuccessViewController.swift */,
 				206F17EB29EED971006C497F /* PaymentFailureViewController.swift */,
+				206F17ED29F054BD006C497F /* RepeatOrderFailureViewController.swift */,
 			);
 			path = "Order+Payment";
 			sourceTree = "<group>";
@@ -792,6 +795,7 @@
 				208C100129536DD400BE7316 /* BaseViewController.swift in Sources */,
 				20DCFED92977280500D644D5 /* Order.swift in Sources */,
 				20DCFEDF29780C9100D644D5 /* MyOrdersTableViewCell.swift in Sources */,
+				206F17EE29F054BD006C497F /* RepeatOrderFailureViewController.swift in Sources */,
 				2089914C2998117A00314421 /* OrderSegmentedControlTableViewCell.swift in Sources */,
 				20369E00293615820050E8AD /* Address.swift in Sources */,
 				206F17EC29EED971006C497F /* PaymentFailureViewController.swift in Sources */,

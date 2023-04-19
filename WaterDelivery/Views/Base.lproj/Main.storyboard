@@ -1041,7 +1041,7 @@ to be delivered to your home.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gd-A1-RJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1824.6153846153845" y="2250.7109004739336"/>
+            <point key="canvasLocation" x="-3" y="3483"/>
         </scene>
         <!--Order Details View Controller-->
         <scene sceneID="M67-af-J36">
@@ -1295,12 +1295,12 @@ to be delivered to your home.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tjW-3W-BMr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="2977"/>
+            <point key="canvasLocation" x="862" y="3483"/>
         </scene>
-        <!--View Controller-->
+        <!--Repeat Order Failure View Controller-->
         <scene sceneID="Reb-OM-i4n">
             <objects>
-                <viewController id="OjY-bR-g60" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RepeatOrderFailureViewController" id="OjY-bR-g60" customClass="RepeatOrderFailureViewController" customModule="WaterDelivery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QQk-h4-bPL">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1335,6 +1335,9 @@ we can not repeat order</string>
                                 <color key="tintColor" name="backgroundCustom"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Ok"/>
+                                <connections>
+                                    <action selector="okTapped:" destination="OjY-bR-g60" eventType="touchUpInside" id="8RZ-f6-Epp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9h-Go-X4X">
                                 <rect key="frame" x="30" y="748" width="330" height="50"/>
@@ -1345,6 +1348,9 @@ we can not repeat order</string>
                                 <color key="tintColor" name="backgroundCustom"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Try Again"/>
+                                <connections>
+                                    <action selector="tryAgainTapped:" destination="OjY-bR-g60" eventType="touchUpInside" id="YRw-Vk-wcZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sy8-f3-Mbv"/>
@@ -1369,7 +1375,7 @@ we can not repeat order</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VRu-un-4bF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1849" y="2532"/>
+            <point key="canvasLocation" x="-998" y="3483"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
