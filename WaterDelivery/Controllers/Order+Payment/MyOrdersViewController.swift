@@ -33,22 +33,35 @@ class MyOrdersViewController: BaseViewController,
             }
         }
     }
-    
+
     func prepareUI() {
         if orderManager.orders.isEmpty {
-            tableView.backgroundView = nil
-        } else {
-            tableView.backgroundView = createEmptyOrdersListLabel()
+            let emptyOrdersLabel = createEmptyOrdersListLabel()
+            view.addSubview(emptyOrdersLabel)
+            NSLayoutConstraint.activate([
+                emptyOrdersLabel.centerXAnchor.constraint(
+                    equalTo: view.centerXAnchor)
+            ])
         }
     }
     
     func createEmptyOrdersListLabel() -> UILabel {
         let label = UILabel()
-        label.text = "You did not order anyting for now"
+        label.text = "No orders yet"
         label.textAlignment = .center
+        label.font = UIFont(name: "ABeeZee", size: 24)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(label)
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(
+                equalTo: view.centerXAnchor),
+            label.topAnchor.constraint(
+                equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16)
+        ])
         return label
     }
 
+    
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         orderManager.orders.count

@@ -15,12 +15,15 @@ class MyOrdersTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        prepareUI()
+    }
+
+    func prepareUI() {
         layer.borderWidth = 1
         layer.borderColor = AppColors.primary.cgColor
         layer.cornerRadius = 24
         contentView.clipsToBounds = true
         contentView.setContentCompressionResistancePriority(.required, for: .vertical)
-
     }
     
     func fill(with model: Order) {

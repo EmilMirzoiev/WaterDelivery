@@ -147,11 +147,6 @@
                                             <segue destination="t6t-J7-B3c" kind="show" id="S72-nK-uJG"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Sign out" id="6Dy-zM-JOE">
-                                        <connections>
-                                            <action selector="signOutButtonTapped:" destination="QhQ-eo-QQt" id="RdX-tg-obX"/>
-                                        </connections>
-                                    </barButtonItem>
                                 </barButtonItems>
                             </barButtonItemGroup>
                         </centerItemGroups>
@@ -165,6 +160,11 @@
                             <barButtonItem title="My orders" id="pdP-I3-CL4">
                                 <connections>
                                     <segue destination="bRH-LG-cI2" kind="show" id="EJT-74-wnj"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Sign out" id="6Dy-zM-JOE">
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="QhQ-eo-QQt" id="RdX-tg-obX"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
