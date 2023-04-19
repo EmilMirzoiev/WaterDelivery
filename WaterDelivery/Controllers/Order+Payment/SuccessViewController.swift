@@ -8,19 +8,25 @@
 import UIKit
 
 class SuccessViewController: UIViewController {
-
+    
     @IBOutlet weak var okButton: UIButton!
     @IBOutlet weak var orderNumber: UILabel!
     @IBOutlet weak var dateOfDeliveryLabel: UILabel!
     
+    var order: Order?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
-        createOrderNumber()
+        //        createOrderNumber()
     }
     
     func prepareUI() {
         self.navigationItem.setHidesBackButton(true, animated: true)
+        
+        if let order = order {
+            orderNumber.text = String(order.orderId)
+        }
         
         okButton.layer.cornerRadius = min(okButton.frame.size.width,
                                           okButton.frame.size.height) / 2.0
@@ -34,7 +40,7 @@ class SuccessViewController: UIViewController {
         dateFormatter.locale = Locale(identifier: "en_US")
         dateFormatter.dateFormat = "d MMMM"
         let formattedDeliveryDate = dateFormatter.string(from: deliveryDate)
-                
+        
         dateOfDeliveryLabel.text = """
                 We’re preparing your order,
                 it will be delivered \(formattedDeliveryDate).
@@ -42,12 +48,13 @@ class SuccessViewController: UIViewController {
                 to be delivered to your home.
                 """
     }
+    //
+    //    func createOrderNumber() {
+    //        let randomNumber = Int.random(in: 1...999999)
+    //        orderNumber.text = String(format: "%04d", randomNumber)
+    //
+    //    }
     
-    func createOrderNumber() {
-        let randomNumber = Int.random(in: 1...999999)
-        orderNumber.text = String(format: "%04d", randomNumber)
-    }
-
     @IBAction func okTapped(_ sender: Any) {
         if let navigationController = self.navigationController {
             navigationController.popToRootViewController(animated: true)

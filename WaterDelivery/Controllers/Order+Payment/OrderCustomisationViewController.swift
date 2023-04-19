@@ -77,17 +77,18 @@ class OrderCustomTableViewController: BaseViewController {
             let userOrderManager = OrderManager()
             guard let order = order else { return }
             userOrderManager.save(order: order) { [weak self] in
-                self?.goToHomegape()
+                self?.performSegue(withIdentifier: "goToSuccessVC", sender: self)
+//                self?.goToHomegape()
             }
         }
     }
     
-    func goToHomegape() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let successVC = storyboard.instantiateViewController(
-                withIdentifier: "SuccessViewController") as! SuccessViewController
-            self.navigationController?.pushViewController(successVC, animated: true)
-    }
+//    func goToHomegape() {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let successVC = storyboard.instantiateViewController(
+//                withIdentifier: "SuccessViewController") as! SuccessViewController
+//            self.navigationController?.pushViewController(successVC, animated: true)
+//    }
     
     func prepareDataSource() {
         dataSource.removeAll()
@@ -177,8 +178,12 @@ class OrderCustomTableViewController: BaseViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? PaymentViewController {
-            destination.order = order
+        if let paymentVC = segue.destination as? PaymentViewController {
+            paymentVC.order = order
+        }
+        
+        if let successVC = segue.destination as? SuccessViewController {
+            successVC.order = order
         }
     }
 }

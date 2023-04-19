@@ -12,7 +12,7 @@ import FirebaseAuth
 class PaymentViewController: BaseViewController,
                              PSPayCallbackDelegate,
                              UITextFieldDelegate  {
-
+    
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var cardInputLayout: PSCardInputLayout!
@@ -26,7 +26,8 @@ class PaymentViewController: BaseViewController,
     var cloudipspWebView: PSCloudipspWKWebView!
     private var result: String?
     let userOrderManager = OrderManager()
-    var order: Order!
+    var order: Order?
+    var generatedOrderId: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +57,7 @@ class PaymentViewController: BaseViewController,
     }
     
     func getOrderPrice() {
+        guard let order = order else { return }
         let totalPrice = order.totalAmount
         priceLabel.text = "\(totalPrice)"
     }
@@ -67,7 +69,7 @@ class PaymentViewController: BaseViewController,
     }
     
     @IBAction func onPayPressed(_ sender: Any) {
-        let generatedOrderId = String(format: "Swift_%d", arc4random())
+        generatedOrderId = String(format: "Swift_%d", arc4random())
         let cloudipspApi = PSCloudipspApi(merchant: 1397120,
                                           andCloudipspView: self.cloudipspWebView)
         let card = self.cardInputLayout.confirm()
@@ -92,18 +94,29 @@ class PaymentViewController: BaseViewController,
     }
     
     func onPaidProcess(_ receipt: PSReceipt!) {
+
         debugPrint("onPaidProcess: %@", receipt.status)
+        
+        guard let order = order else { return }
         
         if receipt.status.rawValue == 4 {
             print("Success")
-            updateOrdersList()
+            userOrderManager.save(order: order) { [weak self] in
+                self?.performSegue(withIdentifier: "SuccessViewController", sender: nil)
+            }
             clearFieldsInfo()
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let failureVC = storyboard.instantiateViewController(
-                    withIdentifier: "FailureViewController")
-                    as! PaymentFailureViewController
-                self.navigationController?.pushViewController(failureVC, animated: true)
+            let failureVC = storyboard.instantiateViewController(
+                withIdentifier: "FailureViewController")
+            as! PaymentFailureViewController
+            self.navigationController?.pushViewController(failureVC, animated: true)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let successVC = segue.destination as? SuccessViewController {
+            successVC.order = order
         }
     }
     
@@ -115,19 +128,6 @@ class PaymentViewController: BaseViewController,
         cardNumberTextField.layer.cornerRadius = 8
     }
     
-    func updateOrdersList() {
-        userOrderManager.save(order: order) { [weak self] in
-            self?.goToHomegape()
-        }
-    }
-    
-    func goToHomegape() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let successVC = storyboard.instantiateViewController(
-                withIdentifier: "SuccessViewController") as! SuccessViewController
-            self.navigationController?.pushViewController(successVC, animated: true)
-    }
-
     func onPaidFailure(_ error: Error!) {
         debugPrint("onPaidFailure: %@", error.localizedDescription)
     }

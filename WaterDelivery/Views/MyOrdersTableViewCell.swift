@@ -40,7 +40,7 @@ class MyOrdersTableViewCell: UITableViewCell {
                let size = product.product.size {
                 productsText += "\(name) - (\(size) L) x\(product.count)\n"
                 if index == 2 {
-                    productsText += "Tap to see more..."
+                    productsText += "Tap to see more products..."
                     break
                 }
             }
