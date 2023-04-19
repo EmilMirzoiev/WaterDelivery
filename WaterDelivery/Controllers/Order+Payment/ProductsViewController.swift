@@ -26,7 +26,8 @@ class ProductsViewController: BaseViewController {
     func prepareCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(.init(nibName: "ProductViewCell", bundle: nil), forCellWithReuseIdentifier: "ProductViewCell")
+        collectionView.register(.init(nibName: "ProductViewCell", bundle: nil),
+                                forCellWithReuseIdentifier: "ProductViewCell")
         
     }
     
@@ -47,7 +48,11 @@ class ProductsViewController: BaseViewController {
         }
         if let destination = segue.destination as? OrderCustomTableViewController {
             guard let currentUser = Auth.auth().currentUser else { return }
-            let order = Order(products: basketManager.getAllProducts(), condition: .processing, orderPrice: basketManager.getTotalAmount(), userId: currentUser.uid, createdDate: Date(), orderId: Int.random(in: 0..<1000000))
+            let order = Order(products: basketManager.getAllProducts(),
+                              condition: .processing,
+                              orderPrice: basketManager.getTotalAmount(),
+                              userId: currentUser.uid, createdDate: Date(),
+                              orderId: Int.random(in: 0..<1000000))
             destination.order = order
         }
     }
@@ -62,7 +67,8 @@ class ProductsViewController: BaseViewController {
         do {
             try Auth.auth().signOut()
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = mainStoryboard.instantiateViewController(withIdentifier: "initialNavigationController") as! UINavigationController
+            let viewController = mainStoryboard.instantiateViewController(
+                withIdentifier: "initialNavigationController") as! UINavigationController
             self.view.window?.rootViewController = viewController
             self.view.window?.makeKeyAndVisible()
         } catch let signOutError as NSError {
@@ -72,40 +78,49 @@ class ProductsViewController: BaseViewController {
     
 }
 
-extension ProductsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ProductsViewController: UICollectionViewDelegate,
+                                  UICollectionViewDataSource,
+                                  UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         1
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
         products.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductViewCell", for: indexPath) as! ProductViewCell
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "ProductViewCell", for: indexPath) as! ProductViewCell
         cell.fill(with: products[indexPath.row])
         cell.addButtonTapAction = { [weak self] in
             guard let self = self else { return }
             self.basketManager.add(product: self.products[indexPath.row])
-//            self.showAlertWithTimer(title: "Success", message: "You successfully added a product to cart")
             let popup = CustomPopup()
             popup.appear(sender: self)
-            
             popup.hideWithDelay()
         }
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
         .init(width: 160, height: 160)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 12
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 12, left: 12, bottom: 0, right: 12)
     }
 }
