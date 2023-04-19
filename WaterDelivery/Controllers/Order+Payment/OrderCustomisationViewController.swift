@@ -77,14 +77,16 @@ class OrderCustomTableViewController: BaseViewController {
             let userOrderManager = OrderManager()
             guard let order = order else { return }
             userOrderManager.save(order: order) { [weak self] in
-                self?.navigationController?.popToRootViewController(animated: true)
-                DispatchQueue.main.async {
-                    self?.showAlert(title: "Success",
-                                    message: "Order was places successfully. Please wait for delivery",
-                                    completion: {})
-                }
+                self?.goToHomegape()
             }
         }
+    }
+    
+    func goToHomegape() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let successVC = storyboard.instantiateViewController(
+                withIdentifier: "SuccessViewController") as! SuccessViewController
+            self.navigationController?.pushViewController(successVC, animated: true)
     }
     
     func prepareDataSource() {

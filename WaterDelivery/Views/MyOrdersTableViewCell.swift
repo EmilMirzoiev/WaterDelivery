@@ -35,10 +35,14 @@ class MyOrdersTableViewCell: UITableViewCell {
         orderPrice.text = "€ \(price)"
         
         var productsText = ""
-        for product in model.products {
+        for (index, product) in model.products.enumerated() {
             if let name = product.product.name,
                let size = product.product.size {
                 productsText += "\(name) - (\(size) L) x\(product.count)\n"
+                if index == 2 {
+                    productsText += "Tap to see more..."
+                    break
+                }
             }
         }
         
