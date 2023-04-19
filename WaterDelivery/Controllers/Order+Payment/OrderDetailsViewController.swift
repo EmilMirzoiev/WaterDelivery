@@ -32,9 +32,12 @@ class OrderDetailsViewController: BaseViewController,
     }
     
     func updateUI() {
-        guard let order = order else { return }
-        dateLabel.text = dateFormat(from: order.createdDate ?? Date())
-        priceLabel.text = "\(order.orderPrice ?? 0.0)"
+        guard let date = order?.createdDate,
+              let price = order?.orderPrice else { return }
+        
+        dateLabel.text = dateFormat(from: date)
+        priceLabel.text = "€\(price)"
+        
         repeatOrderButton.layer.cornerRadius =
         min(repeatOrderButton.frame.size.width,
             repeatOrderButton.frame.size.height) / 2.0
