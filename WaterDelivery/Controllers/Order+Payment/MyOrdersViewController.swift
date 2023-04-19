@@ -9,7 +9,9 @@ import UIKit
 import FirebaseAuth
 import Kingfisher
 
-class MyOrdersViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
+class MyOrdersViewController: BaseViewController,
+                              UITableViewDelegate,
+                              UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,7 +21,7 @@ class MyOrdersViewController: BaseViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(.init(nibName: "MyOrdersTableViewCell", bundle: nil), forCellReuseIdentifier: "MyOrdersTableViewCell")
+        tableView.register(.init(nibName: "MyOrdersTableViewCell", bundle: nil),                                forCellReuseIdentifier: "MyOrdersTableViewCell")
         getData()
         prepareUI()
     }
@@ -47,28 +49,38 @@ class MyOrdersViewController: BaseViewController, UITableViewDelegate, UITableVi
         return label
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
         orderManager.orders.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyOrdersTableViewCell", for: indexPath) as! MyOrdersTableViewCell
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "MyOrdersTableViewCell",
+            for: indexPath) as! MyOrdersTableViewCell
         cell.fill(with: orderManager.orders[indexPath.row])
         return cell
     }
     
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView,
+                   heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        UITableView.automaticDimension
         150
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goToOrderDetails", sender: indexPath.row)
+    
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToOrderDetails",
+                     sender: indexPath.row)
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue,
+                          sender: Any?) {
         if let index = sender as? Int,
-           let destination = segue.destination as? OrderDetailsViewController {
+           let destination = segue.destination
+            as? OrderDetailsViewController {
             destination.order = orderManager.orders[index]
         }
     }
