@@ -10,27 +10,27 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-//Conform a class to the UITableViewDataSource and UITableViewDelegate protocols.
-class BasketViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate {
+class BasketViewController: BaseViewController,
+                            UITableViewDataSource,
+                            UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var checkoutButton: UIButton!
-    
-    //Create a variable for the BasketManager class, which will handle the logic for managing the basket.
+
     var basketManager: BasketManager?
     
-    //In the viewDidLoad() function, set the dataSource and delegate of the table view to self, and register the BasketTableViewCell class as the reusable cell for the table view.
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(.init(nibName: "BasketTableViewCell", bundle: nil), forCellReuseIdentifier: "BasketTableViewCell")
+        tableView.register(.init(nibName: "BasketTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "BasketTableViewCell")
         updateButton()
-        checkoutButton.layer.cornerRadius = min(checkoutButton.frame.size.width, checkoutButton.frame.size.height) / 2.0
+        checkoutButton.layer.cornerRadius = min(checkoutButton.frame.size.width,
+                                                checkoutButton.frame.size.height) / 2.0
         checkoutButton.layer.masksToBounds = true
     }
     
-    //Create a function called updateButton() that updates the title of the checkout button based on the total amount in the basket.
     func updateButton() {
         let totalAmount = basketManager?.getTotalAmount()
         let buttonTitle = "Checkout for  \(NSString(format:"%.2f", totalAmount ?? 0.0)) €"
@@ -54,7 +54,8 @@ class BasketViewController: BaseViewController, UITableViewDataSource, UITableVi
 
         cartLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            cartLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            cartLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,
+                                           constant: 16),
             cartLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
@@ -65,7 +66,8 @@ class BasketViewController: BaseViewController, UITableViewDataSource, UITableVi
         
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
-            imageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor, constant: -40)
+            imageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor,
+                                               constant: -40)
         ])
         
         let cartIsEmptyLabel = UILabel()
@@ -76,7 +78,8 @@ class BasketViewController: BaseViewController, UITableViewDataSource, UITableVi
         containerView.addSubview(cartIsEmptyLabel)
         
         NSLayoutConstraint.activate([
-            cartIsEmptyLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 70),
+            cartIsEmptyLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor,
+                                                  constant: 70),
             cartIsEmptyLabel.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
         ])
         
@@ -86,15 +89,19 @@ class BasketViewController: BaseViewController, UITableViewDataSource, UITableVi
         toShopButton.backgroundColor = AppColors.primary
         toShopButton.layer.cornerRadius = 24
         toShopButton.layer.masksToBounds = true
-        toShopButton.addTarget(self, action: #selector(toShopButtonTapped), for: .touchUpInside)
+        toShopButton.addTarget(self, action: #selector(toShopButtonTapped),
+                                        for: .touchUpInside)
         containerView.addSubview(toShopButton)
         view.addSubview(toShopButton)
 
         toShopButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            toShopButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            toShopButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            toShopButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
+            toShopButton.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                                  constant: 30),
+            toShopButton.trailingAnchor.constraint(equalTo: view.trailingAnchor,
+                                                   constant: -30),
+            toShopButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor,
+                                                 constant: -40),
             toShopButton.heightAnchor.constraint(equalToConstant: 50)
         ])
 
@@ -105,17 +112,19 @@ class BasketViewController: BaseViewController, UITableViewDataSource, UITableVi
         performSegue(withIdentifier: "toShopSegue", sender: self)
     }
     
-    //Implement the UITableViewDataSource and UITableViewDelegate methods such as numberOfRowsInSection, cellForRowAt, commit editingStyle, and canEditRowAt. In these methods, use the basketManager variable to retrieve and display the products in the basket.
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
         return basketManager?.getCount() ?? 0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BasketTableViewCell", for: indexPath) as! BasketTableViewCell
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "BasketTableViewCell", for: indexPath)
+        as! BasketTableViewCell
         if let product = basketManager?.getProduct(by: indexPath.row) {
             cell.fill(with: product)
-            
-            //Create two closures for the increase and decrease buttons in the BasketTableViewCell, that updates the basket and the table view when called.
+
             cell.increaseCompletion =  { [weak self] in
                 self?.basketManager?.plus(product: product.product)
                 tableView.reloadData()
@@ -130,9 +139,12 @@ class BasketViewController: BaseViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView,
+                   commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            guard let product = basketManager?.getProduct(by: indexPath.row) else { return }
+            guard let product = basketManager?.getProduct(by: indexPath.row)
+            else { return }
             tableView.beginUpdates()
             basketManager?.remove(product: product.product)
             updateButton()
@@ -141,24 +153,31 @@ class BasketViewController: BaseViewController, UITableViewDataSource, UITableVi
         }
     }
     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    func tableView(_ tableView: UITableView,
+                   canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView,
+                   heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
     }
     
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+    func tableView(_ tableView: UITableView,
+                   editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         .delete
     }
     
-    //Create a prepare for segue function that passes the order data to the OrderCustomTableViewController when the checkout button is tapped.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? OrderCustomTableViewController {
             guard let currentUser = Auth.auth().currentUser,
                   let basketManager = basketManager else { return }
-            let order = Order(products: basketManager.getAllProducts(), condition: .processing, orderPrice: basketManager.getTotalAmount(), userId: currentUser.uid, createdDate: Date(), orderId: Int.random(in: 0..<1000000))
+            let order = Order(products: basketManager.getAllProducts(),
+                              condition: .processing,
+                              orderPrice: basketManager.getTotalAmount(),
+                              userId: currentUser.uid,
+                              createdDate: Date(),
+                              orderId: Int.random(in: 0..<1000000))
             destination.order = order
         }
     }
