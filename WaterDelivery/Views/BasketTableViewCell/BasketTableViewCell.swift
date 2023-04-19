@@ -37,10 +37,14 @@ class BasketTableViewCell: UITableViewCell {
     }
     
     func fill(with model: BasketProduct) {
-        productName.text = "\(model.product.name ?? "")"
+        guard let name = model.product.name,
+              let size = model.product.size,
+              let price = model.product.price else { return }
+        
+        productName.text = "\(name)"
         productAmount.text = "\(model.count)"
-        productSize.text = "\(model.product.size ?? 0.0)"
-        productPrice.text = "\(model.product.price ?? 0.0) €"
+        productSize.text = "\(size)"
+        productPrice.text = "€\(price)"
         
         let storageManager = StorageManager()
         guard let uid = model.product.uid else { return }
