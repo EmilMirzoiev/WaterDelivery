@@ -57,11 +57,11 @@ class MyOrdersViewController: BaseViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        UITableView.automaticDimension
         150
     }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToOrderDetails", sender: indexPath.row)
     }

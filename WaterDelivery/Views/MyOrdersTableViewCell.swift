@@ -15,12 +15,12 @@ class MyOrdersTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         layer.borderWidth = 1
         layer.borderColor = AppColors.primary.cgColor
         layer.cornerRadius = 24
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8))
         contentView.clipsToBounds = true
+        contentView.setContentCompressionResistancePriority(.required, for: .vertical)
+
     }
     
     func fill(with model: Order) {
@@ -43,12 +43,8 @@ class MyOrdersTableViewCell: UITableViewCell {
                                       value: paragraphStyle,
                                       range: NSMakeRange(0, attributedString.length))
         productName.attributedText = attributedString
-        
-        // calculate the required height of the label based on its content
-        let size = productName.sizeThatFits(CGSize(width: productName.frame.size.width,
-                                                   height: CGFloat.greatestFiniteMagnitude))
-        productName.frame.size.height = size.height
     }
+
     
     //The cell class also has a "dateFormat(from:)" function that takes a Date object as a parameter,
     //formats it using a DateFormatter, and returns a string representation of the formatted date.
