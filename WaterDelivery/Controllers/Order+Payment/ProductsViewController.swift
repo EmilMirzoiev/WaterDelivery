@@ -9,7 +9,6 @@ import UIKit
 import FirebaseAuth
 
 class ProductsViewController: BaseViewController {
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var products = [Product]()

@@ -30,7 +30,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uXE-cC-BKN">
-                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -62,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzw-Hw-2TH">
-                                <rect key="frame" x="0.0" y="511" width="390" height="250"/>
+                                <rect key="frame" x="0.0" y="560" width="390" height="250"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0dv-Fw-ry7">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
@@ -641,7 +641,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hD7-PB-f2z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3652" y="729"/>
+            <point key="canvasLocation" x="3586" y="729"/>
         </scene>
         <!--User Profile Table View Controller-->
         <scene sceneID="n5D-QQ-JnD">
@@ -652,7 +652,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zv6-ED-kqG">
-                                <rect key="frame" x="0.0" y="91" width="390" height="670"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -685,11 +685,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0i3-jE-ESk">
-                                <rect key="frame" x="0.0" y="91" width="390" height="596"/>
+                                <rect key="frame" x="0.0" y="91" width="390" height="645"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfo-4X-ROr">
-                                <rect key="frame" x="30" y="699" width="330" height="50"/>
+                                <rect key="frame" x="30" y="748" width="330" height="50"/>
                                 <color key="backgroundColor" name="primaryCustom"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="S0U-wp-AcN"/>
@@ -798,7 +798,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onPayPressed:" destination="zwQ-Ed-o2e" eventType="touchUpInside" id="frt-n5-KNH"/>
-                                    <segue destination="7Pn-Br-MNy" kind="show" identifier="SuccessViewController" id="WcQ-LA-NAx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeD-4z-2uY">
@@ -917,11 +916,6 @@
                             <barButtonItemGroup customizationDisposition="fixed" id="U37-vr-o0w"/>
                             <barButtonItemGroup customizationDisposition="fixed" id="ZlS-C3-GqC"/>
                         </centerItemGroups>
-                        <barButtonItem key="rightBarButtonItem" title="Homepage" id="xtx-Ih-t4x">
-                            <connections>
-                                <segue destination="QhQ-eo-QQt" kind="show" id="Rel-ev-v5R"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -933,6 +927,7 @@
                         <outlet property="errorLabel" destination="Ug1-rY-dGw" id="qPd-s5-DrT"/>
                         <outlet property="payButton" destination="Yab-B0-fjh" id="KQ8-39-bWc"/>
                         <outlet property="priceLabel" destination="7f3-hM-z0V" id="CAV-oi-Bnr"/>
+                        <segue destination="7Pn-Br-MNy" kind="show" identifier="SuccessViewController" id="B2C-Ve-nFr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="siE-sj-MCj" sceneMemberID="firstResponder"/>
@@ -1041,7 +1036,7 @@ to be delivered to your home.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gd-A1-RJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3" y="3483"/>
+            <point key="canvasLocation" x="455" y="3483"/>
         </scene>
         <!--Order Details View Controller-->
         <scene sceneID="M67-af-J36">
@@ -1094,11 +1089,11 @@ to be delivered to your home.</string>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pxc-ba-MLX">
-                                <rect key="frame" x="0.0" y="241" width="390" height="400"/>
+                                <rect key="frame" x="0.0" y="241" width="390" height="449"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUD-Ys-Vag">
-                                <rect key="frame" x="0.0" y="641" width="390" height="120"/>
+                                <rect key="frame" x="0.0" y="690" width="390" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gL9-6t-R5G">
                                         <rect key="frame" x="30" y="58" width="330" height="50"/>
@@ -1295,7 +1290,7 @@ to be delivered to your home.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tjW-3W-BMr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="3483"/>
+            <point key="canvasLocation" x="-272" y="3483"/>
         </scene>
         <!--Repeat Order Failure View Controller-->
         <scene sceneID="Reb-OM-i4n">
@@ -1379,9 +1374,9 @@ we can not repeat order</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0LY-6d-bGB"/>
-        <segue reference="rPG-fd-IrL"/>
-        <segue reference="Rel-ev-v5R"/>
+        <segue reference="B2C-Ve-nFr"/>
+        <segue reference="fQf-90-7PN"/>
+        <segue reference="vvw-3W-N2A"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="addPhoto" width="75" height="75"/>
