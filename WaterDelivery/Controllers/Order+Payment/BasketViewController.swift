@@ -179,6 +179,7 @@ class BasketViewController: BaseViewController,
                               createdDate: Date(),
                               orderId: Int.random(in: 0..<1000000))
             destination.order = order
+            basketManager.clearBasket()
         }
     }
 }

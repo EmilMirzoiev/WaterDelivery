@@ -78,18 +78,11 @@ class OrderCustomTableViewController: BaseViewController {
             guard let order = order else { return }
             userOrderManager.save(order: order) { [weak self] in
                 self?.performSegue(withIdentifier: "goToSuccessVC", sender: self)
-//                self?.goToHomegape()
             }
         }
+
     }
-    
-//    func goToHomegape() {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let successVC = storyboard.instantiateViewController(
-//                withIdentifier: "SuccessViewController") as! SuccessViewController
-//            self.navigationController?.pushViewController(successVC, animated: true)
-//    }
-    
+
     func prepareDataSource() {
         dataSource.removeAll()
         
