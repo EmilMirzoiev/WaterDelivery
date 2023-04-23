@@ -67,6 +67,7 @@
 		20AE8A1029ACC795000BA2E9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20AE8A0F29ACC795000BA2E9 /* GoogleService-Info.plist */; };
 		20B3A98C296DB06A00C7C6D9 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A98B296DB06A00C7C6D9 /* StorageManager.swift */; };
 		20B3A98E296EF4D300C7C6D9 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B3A98D296EF4D300C7C6D9 /* RegistrationViewController.swift */; };
+		20C6895929F28BFD002F175A /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6895829F28BFD002F175A /* CustomTabBarController.swift */; };
 		20CB027F294A2C5F0005F2B5 /* Firestore+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB027E294A2C5E0005F2B5 /* Firestore+User.swift */; };
 		20CB0281294BAC260005F2B5 /* Firestore+Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB0280294BAC260005F2B5 /* Firestore+Products.swift */; };
 		20CB0283294BAC380005F2B5 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB0282294BAC380005F2B5 /* Product.swift */; };
@@ -165,6 +166,7 @@
 		20AE8A0F29ACC795000BA2E9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		20B3A98B296DB06A00C7C6D9 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		20B3A98D296EF4D300C7C6D9 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		20C6895829F28BFD002F175A /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		20CB027E294A2C5E0005F2B5 /* Firestore+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+User.swift"; sourceTree = "<group>"; };
 		20CB0280294BAC260005F2B5 /* Firestore+Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+Products.swift"; sourceTree = "<group>"; };
 		20CB0282294BAC380005F2B5 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 				203FC3112949033A00C4C4A4 /* SplashViewController.swift */,
 				208C100029536DD400BE7316 /* BaseViewController.swift */,
 				20AB51CB29707078009C1B57 /* GoogleMapsViewController.swift */,
+				20C6895829F28BFD002F175A /* CustomTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -796,6 +799,7 @@
 				20DCFED92977280500D644D5 /* Order.swift in Sources */,
 				20DCFEDF29780C9100D644D5 /* MyOrdersTableViewCell.swift in Sources */,
 				206F17EE29F054BD006C497F /* RepeatOrderFailureViewController.swift in Sources */,
+				20C6895929F28BFD002F175A /* CustomTabBarController.swift in Sources */,
 				2089914C2998117A00314421 /* OrderSegmentedControlTableViewCell.swift in Sources */,
 				20369E00293615820050E8AD /* Address.swift in Sources */,
 				206F17EC29EED971006C497F /* PaymentFailureViewController.swift in Sources */,

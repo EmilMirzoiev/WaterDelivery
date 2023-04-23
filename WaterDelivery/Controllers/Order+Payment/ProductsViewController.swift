@@ -123,4 +123,3 @@ extension ProductsViewController: UICollectionViewDelegate,
         return UIEdgeInsets(top: 12, left: 12, bottom: 0, right: 12)
     }
 }
-

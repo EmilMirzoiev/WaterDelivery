@@ -79,7 +79,10 @@ class CustomPopup: UIViewController {
     }
     
     @IBAction func viewButtonTapped(_ sender: UIButton) {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let basketVC = storyboard.instantiateViewController(withIdentifier: "BasketViewController") as! BasketViewController
+        if let presentingVC = presentingViewController {
+            presentingVC.navigationController?.pushViewController(basketVC, animated: true)
+        }
     }
-    
 }

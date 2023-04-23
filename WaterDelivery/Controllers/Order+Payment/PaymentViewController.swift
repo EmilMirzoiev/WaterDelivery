@@ -108,7 +108,7 @@ class PaymentViewController: BaseViewController,
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let failureVC = storyboard.instantiateViewController(
-                withIdentifier: "FailureViewController")
+                withIdentifier: "PaymentFailureViewController")
             as! PaymentFailureViewController
             self.navigationController?.pushViewController(failureVC, animated: true)
         }

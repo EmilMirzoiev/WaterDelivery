@@ -31,20 +31,25 @@ class GoogleMapsViewController: BaseViewController, CLLocationManagerDelegate, G
         manager.delegate = self
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
+        
+        infoView.layer.cornerRadius = 30
+        infoView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     //Create a custom method loadData that fetches the sell points using the sellPointsManager object and creates markers for each of them.
     func loadData() {
-        sellPointsManager.getSellPoints {
-            self.sellPointsManager.models.forEach { sellPoint in
-                self.createMarker(model: sellPoint)
+        sellPointsManager.getSellPoints { [weak self] in
+            self?.mapView?.clear()
+            
+            self?.sellPointsManager.models.forEach { [weak self] sellPoint in
+                self?.createMarker(model: sellPoint)
             }
         }
     }
     
     //Implement locationManager(_:didUpdateLocations:) method. Set the camera position on a Google Maps view with a specified latitude, longitude, and zoom level. Set the delegate for the Google Maps view to self. Add the Google Maps view as a subview to the current view. Bring the infoView to the front of the view hierarchy. Call the loadData() method.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let camera = GMSCameraPosition.camera(withLatitude: 47.385494 , longitude: 8.493396, zoom: 8.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 48.277637 , longitude: 17.966284, zoom: 4.0)
         mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         mapView?.delegate = self
         guard let mapView = mapView else { return }
@@ -63,7 +68,7 @@ class GoogleMapsViewController: BaseViewController, CLLocationManagerDelegate, G
     //Implement the mapView(_:didTap:) method to show the info view when a marker is tapped.
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         showInfoViewWith(marker: marker)
-        return false
+        return true
     }
     
     //  Create a custom method showInfoViewWith(marker:) that takes a GMSMarker and sets its image, name, and address to the info view's image, name, and address labels respectively. Use the Kingfisher library to set the image in the info view using the URL of the image in the sell point model. Use the MapManager class to get the address from the latitude and longitude of the sell point, and set it to the address label in the info view. Show the info view.
@@ -72,9 +77,9 @@ class GoogleMapsViewController: BaseViewController, CLLocationManagerDelegate, G
         guard let source = URL.init(string: sellPoint.imageURL) else { return}
         infoViewImage.kf.setImage(with: source)
         infoViewNameLabel.text = sellPoint.addressName
-        MapManager.getAddressFromLatLon(pdblLatitude: "\(sellPoint.geopoint.latitude)", withLongitude: "\(sellPoint.geopoint.longitude)") { address in
-            self.infoViewAddressLabel.text = address
-            self.infoView.isHidden = false
+        MapManager.getAddressFromLatLon(pdblLatitude: "\(sellPoint.geopoint.latitude)", withLongitude: "\(sellPoint.geopoint.longitude)") { [weak self] address in
+            self?.infoViewAddressLabel.text = address
+            self?.infoView.isHidden = false
         }
     }
     

@@ -18,7 +18,7 @@ class ProductViewCell: UICollectionViewCell {
     @IBOutlet weak var addToCartButton: UIButton!
 
     var addButtonTapAction: (() -> Void)?
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         prepareUI()
@@ -69,4 +69,3 @@ class ProductViewCell: UICollectionViewCell {
         }
     }
 }
-
