@@ -29,6 +29,10 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsU-qO-GmH" userLabel="backView">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRG-IQ-oc2" userLabel="contentView">
                     <rect key="frame" x="0.0" y="782" width="393" height="70"/>
                     <subviews>
@@ -73,10 +77,6 @@
                         <constraint firstItem="0Cd-TK-bj3" firstAttribute="top" secondItem="IRG-IQ-oc2" secondAttribute="top" constant="25" id="Yf0-EB-UXK"/>
                         <constraint firstItem="0Cd-TK-bj3" firstAttribute="leading" secondItem="IRG-IQ-oc2" secondAttribute="leading" constant="35" id="fgi-JP-N9z"/>
                     </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsU-qO-GmH" userLabel="backView">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -16,23 +16,37 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyOrdersTableViewCell" rowHeight="108" id="KGk-i7-Jjw" customClass="MyOrdersTableViewCell" customModule="WaterDelivery" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="563" height="108"/>
+            <rect key="frame" x="0.0" y="0.0" width="514" height="108"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="563" height="108"/>
+                <rect key="frame" x="0.0" y="0.0" width="514" height="108"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Order date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0k1-Ge-98U">
-                        <rect key="frame" x="20" y="15" width="250" height="19"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="250" id="Sfb-fa-voE"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="16"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vhd-xl-Ovf">
+                        <rect key="frame" x="12" y="12" width="200" height="84"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Order date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0k1-Ge-98U">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Sfb-fa-voE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOd-Ze-Gu7">
+                                <rect key="frame" x="0.0" y="68.333333333333329" width="200" height="15.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="VkE-XJ-OdW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="TotalPrice" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbf-53-QJB">
-                        <rect key="frame" x="414" y="35.666666666666664" width="80" height="36.999999999999993"/>
+                        <rect key="frame" x="365" y="35.666666666666664" width="80" height="36.999999999999993"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="37" id="6U5-Ue-ZKK"/>
                             <constraint firstAttribute="width" constant="80" id="WLX-n9-KcQ"/>
@@ -42,29 +56,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgE-TE-gDD">
-                        <rect key="frame" x="506" y="36.666666666666664" width="37" height="34.999999999999993"/>
+                        <rect key="frame" x="457" y="36.666666666666664" width="37" height="34.999999999999993"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="arrow"/>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOd-Ze-Gu7">
-                        <rect key="frame" x="20" y="46" width="250" height="15.666666666666664"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="250" id="VkE-XJ-OdW"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="ABeeZee-Regular" family="ABeeZee" pointSize="13"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="0k1-Ge-98U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="98D-Q4-lCd"/>
+                    <constraint firstItem="pbf-53-QJB" firstAttribute="centerY" secondItem="Vhd-xl-Ovf" secondAttribute="centerY" id="0Mx-f0-8ZG"/>
+                    <constraint firstItem="UgE-TE-gDD" firstAttribute="centerY" secondItem="Vhd-xl-Ovf" secondAttribute="centerY" id="4N1-Vq-yZS"/>
                     <constraint firstItem="UgE-TE-gDD" firstAttribute="leading" secondItem="pbf-53-QJB" secondAttribute="trailing" constant="12" id="ANL-Vc-Dze"/>
-                    <constraint firstItem="0k1-Ge-98U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Hgu-gL-b5Y"/>
-                    <constraint firstItem="NOd-Ze-Gu7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="LgN-5Y-wSC"/>
+                    <constraint firstItem="Vhd-xl-Ovf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Feh-vN-s0Z"/>
                     <constraint firstAttribute="trailing" secondItem="UgE-TE-gDD" secondAttribute="trailing" constant="20" id="R2z-qf-bBv"/>
-                    <constraint firstItem="NOd-Ze-Gu7" firstAttribute="top" secondItem="0k1-Ge-98U" secondAttribute="bottom" constant="12" id="eJT-iJ-HTE"/>
-                    <constraint firstItem="pbf-53-QJB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gyr-Ze-akt"/>
-                    <constraint firstItem="UgE-TE-gDD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lST-kk-Uu8"/>
+                    <constraint firstItem="Vhd-xl-Ovf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="S7G-pt-49B"/>
+                    <constraint firstAttribute="bottom" secondItem="Vhd-xl-Ovf" secondAttribute="bottom" constant="12" id="oOK-5P-1d5"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -73,7 +77,7 @@
                 <outlet property="orderPrice" destination="pbf-53-QJB" id="ew6-eo-Opa"/>
                 <outlet property="productName" destination="NOd-Ze-Gu7" id="wvT-XP-J8e"/>
             </connections>
-            <point key="canvasLocation" x="270.99236641221376" y="29.577464788732396"/>
+            <point key="canvasLocation" x="233.58778625954199" y="29.577464788732396"/>
         </tableViewCell>
     </objects>
     <resources>

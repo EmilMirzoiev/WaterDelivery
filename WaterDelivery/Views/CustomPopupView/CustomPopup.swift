@@ -33,7 +33,7 @@ class CustomPopup: UIViewController {
         self.view.backgroundColor = .clear
         self.backView.backgroundColor = .black.withAlphaComponent(0.2)
         self.backView.alpha = 0
-        
+
         self.contentView.alpha = 0
         self.contentView.layer.cornerRadius = 15
         self.contentView.clipsToBounds = true
@@ -56,18 +56,8 @@ class CustomPopup: UIViewController {
         }
     }
     
-    func hide() {
-        UIView.animate(withDuration: 1, delay: 0.0, options: .curveEaseOut) {
-            self.backView.alpha = 0
-            self.contentView.alpha = 0
-        } completion: { _ in
-            self.dismiss(animated: false)
-            self.removeFromParent()
-        }
-    }
-    
     func hideWithDelay() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             UIView.animate(withDuration: 1, delay: 0.0, options: .curveEaseOut) {
                 self.backView.alpha = 0
                 self.contentView.alpha = 0

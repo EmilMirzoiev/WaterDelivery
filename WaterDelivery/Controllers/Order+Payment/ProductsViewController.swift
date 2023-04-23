@@ -99,6 +99,9 @@ extension ProductsViewController: UICollectionViewDelegate,
             guard let self = self else { return }
             self.basketManager.add(product: self.products[indexPath.row])
             let popup = CustomPopup()
+//            self.present(popup, animated: true) {
+//                popup.hideWithDelay()
+//            }
             popup.appear(sender: self)
             popup.hideWithDelay()
         }
